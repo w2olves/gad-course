@@ -1,0 +1,35 @@
+# .gitignore for an Unreal Engine 5 project (save this file as ".gitignore" in the project folder,
+# .gitignore для проєкту Unreal Engine 5 (збережи цей файл як ".gitignore" у теці проєкту,
+# next to the .uproject file). Folders Unreal can rebuild by itself are left out of Git.
+# поруч із файлом .uproject). Теки, які Unreal може перебудувати сам, не потрапляють у Git.
+
+Binaries/
+Intermediate/
+Saved/
+DerivedDataCache/
+Build/
+.vs/
+.idea/
+*.sln
+*.suo
+*.VC.db
+*.opensdf
+*.sdf
+*.xcworkspace
+
+# Keep: Config/, Content/, Plugins/ (without their Binaries and Intermediate), Source/ if any, and the .uproject file.
+# Залиш: Config/, Content/, Plugins/ (без їхніх Binaries та Intermediate), Source/ якщо є, і файл .uproject.
+Plugins/**/Binaries/
+Plugins/**/Intermediate/
+
+# ---------------------------------------------------------------------------------------------
+# Git LFS (large file storage): run these once in the project folder, then commit .gitattributes first:
+# Git LFS (сховище великих файлів): виконай це один раз у теці проєкту, потім першим закоміть .gitattributes:
+#   git lfs install
+#   git lfs track "*.uasset" "*.umap" "*.fbx" "*.blend" "*.png" "*.tga" "*.psd" "*.wav" "*.mp4"
+# GitHub's free plan includes 10 GiB of LFS storage and 10 GiB of download a month: keep raw
+# Безкоштовний план GitHub містить 10 GiB сховища LFS і 10 GiB завантаження на місяць: тримай сирі
+# sources (big textures, videos) outside the repository, and keep the repository small.
+# джерела (великі текстури, відео) поза репозиторієм, а сам репозиторій тримай малим.
+# If GitHub offers an "Unreal" .gitignore template when you create the repository, you can use it instead.
+# Якщо GitHub пропонує шаблон .gitignore "Unreal", коли ти створюєш репозиторій, можеш скористатися ним.

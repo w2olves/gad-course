@@ -1,0 +1,4 @@
+Name,Style,MinFloors,MaxFloors,MinBays,MaxBays,Weight,ShopChance
+Harbour,/Game/Tools/Data/DA_Style_Harbour.DA_Style_Harbour,2,3,2,4,6,0.5
+Ochre,/Game/Tools/Data/DA_Style_Ochre.DA_Style_Ochre,2,4,2,3,3,0.3
+Stone,/Game/Tools/Data/DA_Style_Stone.DA_Style_Stone,3,4,3,5,1,0.2
