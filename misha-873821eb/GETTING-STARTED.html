@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta name="robots" content="noindex,nofollow">
+<meta charset="utf-8">
+<script>try{var t=localStorage.getItem('devteam:theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Jost:wght@400;500;600&display=swap">
+<title>Розробка ігрових асетів: як почати</title>
+<style>
+/* Course look: editorial liquid glass. Words unchanged. */
+/* Course look: soft UI. Light is frosted glass on soft extruded surfaces; dark is liquid glass on deep slate. */
+:root{
+--bg:#e6e7ec;--solid:#eef0f4;
+--card:rgba(255,255,255,.34);--cardB:rgba(255,255,255,.75);
+--raise:-10px -10px 26px rgba(255,255,255,.9),12px 14px 30px rgba(146,154,176,.42);
+--raiseS:-5px -5px 12px rgba(255,255,255,.95),6px 6px 14px rgba(146,154,176,.45);
+--press:inset 4px 4px 9px rgba(146,154,176,.45),inset -4px -4px 9px rgba(255,255,255,.95);
+--well:rgba(214,217,226,.55);
+--spec:rgba(255,255,255,.95);--sheen:rgba(255,255,255,.55);
+--ink:#262a38;--muted:#5d6273;--faint:#7f8495;--line:rgba(38,42,56,.09);--line2:rgba(38,42,56,.16);
+--acc:#5b50e6;--acc2:#8f86ff;--accT:#4b40d4;--accBg:rgba(91,80,230,.10);--glow:rgba(108,96,255,.45);
+--ok:#1f8a4c;--okL:#2fbf6a;--okBg:rgba(47,191,106,.12);--bad:#c9353b;--badL:#ef4d55;--badBg:rgba(239,77,85,.10);
+--boss:#c0307a;--bossL:#ff5fa8;--bossBg:rgba(255,95,168,.12);--gold:#9a6a06;--goldL:#f2b632;--goldBg:rgba(242,182,50,.16);
+--lcd:#c4c8ba;--lcdOn:#262a23;--lcdGh:rgba(38,42,35,.07);--lcdSh:inset 3px 3px 7px rgba(110,116,100,.45),inset -3px -3px 7px rgba(255,255,255,.7);
+--dsHi:rgba(255,255,255,.95);--dsLo:rgba(146,154,176,.5);
+--o1:#cdc6ff;--o2:#ffd3e6;--o3:#c4ece0;--o4:#cfe0ff;
+--topo:rgba(38,42,56,.28);--topo2:rgba(38,42,56,.12);--land:rgba(91,80,230,.06);--face:#e9eaef;
+--blur:blur(22px) saturate(170%);
+--head:"Montserrat","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+--sans:"Jost","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+--mono:ui-monospace,"Cascadia Mono",Consolas,"Courier New",monospace}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#2a2e3d;--solid:#353a4b;
+--card:rgba(255,255,255,.06);--cardB:rgba(255,255,255,.13);
+--raise:0 24px 50px -22px rgba(6,8,16,.75),0 2px 6px rgba(6,8,16,.3);
+--raiseS:0 6px 14px rgba(6,8,16,.45),inset 0 1px 0 rgba(255,255,255,.18);
+--press:inset 3px 3px 8px rgba(6,8,16,.55),inset -2px -2px 6px rgba(255,255,255,.05);
+--well:rgba(10,12,22,.28);
+--spec:rgba(255,255,255,.16);--sheen:rgba(255,255,255,.07);
+--ink:#f1f2f7;--muted:#b2b7c6;--faint:#8b90a2;--line:rgba(255,255,255,.08);--line2:rgba(255,255,255,.16);
+--acc:#8b7dff;--acc2:#c4bcff;--accT:#b8afff;--accBg:rgba(139,125,255,.16);--glow:rgba(139,125,255,.7);
+--ok:#5fe39a;--okL:#4ade80;--okBg:rgba(74,222,128,.13);--bad:#ff8b8b;--badL:#ff5d5d;--badBg:rgba(255,93,93,.13);
+--boss:#ff8cc4;--bossL:#ff5fa8;--bossBg:rgba(255,95,168,.14);--gold:#f6cd6e;--goldL:#f5c35b;--goldBg:rgba(245,195,91,.13);
+--lcd:rgba(8,10,18,.35);--lcdOn:#f4f5ff;--lcdGh:rgba(255,255,255,.06);--lcdSh:inset 3px 3px 9px rgba(0,0,0,.55),inset -1px -1px 0 rgba(255,255,255,.06);
+--o1:#5b3fd6;--o2:#c2367f;--o3:#147a74;--o4:#2a4fb8;
+--topo:rgba(241,242,247,.30);--topo2:rgba(241,242,247,.10);--land:rgba(139,125,255,.08);--face:rgba(255,255,255,.055);
+--dsHi:rgba(255,255,255,.06);--dsLo:rgba(0,0,0,.55);}html:not([data-theme=light]){color-scheme:dark}html:not([data-theme=light]) body.boss .sea{--o1:#8a2a62;--o4:#4b2d9a}html:not([data-theme=light]) body.fin .sea{--o1:#7a5410;--o2:#7a3a1c}}
+:root[data-theme=dark]{--bg:#2a2e3d;--solid:#353a4b;
+--card:rgba(255,255,255,.06);--cardB:rgba(255,255,255,.13);
+--raise:0 24px 50px -22px rgba(6,8,16,.75),0 2px 6px rgba(6,8,16,.3);
+--raiseS:0 6px 14px rgba(6,8,16,.45),inset 0 1px 0 rgba(255,255,255,.18);
+--press:inset 3px 3px 8px rgba(6,8,16,.55),inset -2px -2px 6px rgba(255,255,255,.05);
+--well:rgba(10,12,22,.28);
+--spec:rgba(255,255,255,.16);--sheen:rgba(255,255,255,.07);
+--ink:#f1f2f7;--muted:#b2b7c6;--faint:#8b90a2;--line:rgba(255,255,255,.08);--line2:rgba(255,255,255,.16);
+--acc:#8b7dff;--acc2:#c4bcff;--accT:#b8afff;--accBg:rgba(139,125,255,.16);--glow:rgba(139,125,255,.7);
+--ok:#5fe39a;--okL:#4ade80;--okBg:rgba(74,222,128,.13);--bad:#ff8b8b;--badL:#ff5d5d;--badBg:rgba(255,93,93,.13);
+--boss:#ff8cc4;--bossL:#ff5fa8;--bossBg:rgba(255,95,168,.14);--gold:#f6cd6e;--goldL:#f5c35b;--goldBg:rgba(245,195,91,.13);
+--lcd:rgba(8,10,18,.35);--lcdOn:#f4f5ff;--lcdGh:rgba(255,255,255,.06);--lcdSh:inset 3px 3px 9px rgba(0,0,0,.55),inset -1px -1px 0 rgba(255,255,255,.06);
+--o1:#5b3fd6;--o2:#c2367f;--o3:#147a74;--o4:#2a4fb8;
+--topo:rgba(241,242,247,.30);--topo2:rgba(241,242,247,.10);--land:rgba(139,125,255,.08);--face:rgba(255,255,255,.055);
+--dsHi:rgba(255,255,255,.06);--dsLo:rgba(0,0,0,.55);}html[data-theme=dark]{color-scheme:dark}html[data-theme=dark] body.boss .sea{--o1:#8a2a62;--o4:#4b2d9a}html[data-theme=dark] body.fin .sea{--o1:#7a5410;--o2:#7a3a1c}
+
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){:root{--card:var(--solid)}}
+@media (prefers-reduced-transparency:reduce){:root{--card:var(--solid);--blur:none}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;background:var(--bg);color-scheme:light}
+body{margin:0;font:400 17px/1.68 var(--sans);color:var(--ink);background:transparent;overflow-wrap:break-word;min-height:100vh;-webkit-font-smoothing:antialiased}
+/* the room behind the glass: soft coloured light, painted once */
+.sea{position:fixed;inset:0;z-index:-1;pointer-events:none;background:
+ radial-gradient(34% 30% at 10% 12%,var(--o1) 0,transparent 70%),
+ radial-gradient(30% 28% at 92% 22%,var(--o2) 0,transparent 70%),
+ radial-gradient(36% 32% at 84% 88%,var(--o4) 0,transparent 72%),
+ radial-gradient(32% 30% at 6% 86%,var(--o3) 0,transparent 70%),
+ var(--bg)}
+body.boss .sea{--o1:#ffc9e3;--o4:#e2d2ff}
+body.fin .sea{--o1:#ffe3a6;--o2:#ffd6b0}
+a{color:var(--accT);text-decoration-thickness:1px;text-underline-offset:3px}
+:focus-visible{outline:2px solid var(--acc);outline-offset:3px;border-radius:10px}
+::selection{background:var(--accBg)}
+.ic{width:1.1em;height:1.1em;flex:none;vertical-align:-.18em;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+/* surfaces: frosted glass, lifted off the page with a soft double shadow */
+.glass,.card,.toc,.note{position:relative;background:var(--card);-webkit-backdrop-filter:var(--blur);backdrop-filter:var(--blur);border:1px solid var(--cardB);box-shadow:var(--raise),inset 1px 1px 0 var(--spec);isolation:isolate}
+.glass::after,.card::after,.toc::after,.note::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;z-index:-1;background:linear-gradient(150deg,var(--sheen),transparent 38%)}
+.well{background:var(--well);box-shadow:var(--press);border-radius:16px}
+.lab{display:flex;align-items:center;gap:12px;margin:0 0 18px;font:600 11.5px/1.3 var(--head);letter-spacing:.16em;text-transform:uppercase;color:var(--faint)}
+.lab .dotc{width:8px;height:8px;border-radius:50%;background:var(--acc);box-shadow:0 0 10px var(--glow)}
+.lab.k-gold .dotc{background:var(--goldL);box-shadow:0 0 10px var(--goldL)}.lab.k-ok .dotc{background:var(--okL);box-shadow:0 0 10px var(--okL)}.lab.k-boss .dotc{background:var(--bossL);box-shadow:0 0 10px var(--bossL)}
+.eyebrow{font:600 11.5px/1.3 var(--head);letter-spacing:.16em;text-transform:uppercase;color:var(--faint)}
+/* segmented controls: theme and language */
+.ctrls{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.seg{display:inline-flex;padding:4px;border-radius:999px;background:var(--well);box-shadow:var(--press)}
+.seg button{font:600 12px/1 var(--head);letter-spacing:.08em;min-width:40px;min-height:34px;padding:0 11px;border:0;border-radius:999px;background:transparent;color:var(--faint);cursor:pointer;display:inline-flex;align-items:center;justify-content:center;transition:color .2s,background .2s,box-shadow .2s}
+.seg button .ic{width:17px;height:17px}
+.seg button:hover{color:var(--ink)}
+.seg button[aria-pressed=true]{background:var(--card);color:var(--ink);box-shadow:var(--raiseS)}
+/* LCD panel */
+.lcd{display:inline-flex;align-items:center;gap:8px;padding:9px 14px;border-radius:14px;background:var(--lcd);box-shadow:var(--lcdSh);color:var(--lcdOn);font:600 12px/1 var(--head);letter-spacing:.06em}
+.seg7{height:28px;width:auto;display:block;overflow:visible}
+.seg7 .on{fill:var(--lcdOn)}.seg7 .gh{fill:var(--lcdGh)}
+.lcd.sm .seg7{height:24px}
+/* knob slider used as a progress bar */
+.slider{position:relative;height:14px;border-radius:999px;background:var(--well);box-shadow:var(--press)}
+.slider>i{position:absolute;left:3px;top:3px;bottom:3px;border-radius:999px;background:linear-gradient(90deg,var(--acc2),var(--acc));box-shadow:0 0 12px var(--glow);min-width:8px;transition:width .5s}
+.slider>b{position:absolute;top:50%;width:26px;height:26px;margin:-13px 0 0 -13px;border-radius:50%;background:var(--solid);box-shadow:var(--raiseS);transition:left .5s}
+.slider>b::after{content:"";position:absolute;left:50%;top:50%;width:6px;height:6px;margin:-3px;border-radius:50%;background:var(--acc);box-shadow:0 0 8px var(--glow)}
+/* dial and island chart */
+.dial{display:block;width:100%;height:auto;overflow:visible}
+.dial .face{fill:var(--face);stroke:var(--cardB);stroke-width:1;filter:drop-shadow(-10px -10px 18px var(--dsHi)) drop-shadow(12px 14px 22px var(--dsLo))}
+.dial .track{fill:none;stroke:var(--line2);stroke-width:6}
+.dial .arc{fill:none;stroke-width:6;stroke-linecap:round;filter:drop-shadow(0 0 6px var(--glow))}
+.dial .knob{fill:var(--solid);stroke:var(--acc);stroke-width:3;filter:drop-shadow(0 0 8px var(--glow))}
+.dial .rimt{font:600 12px var(--head);letter-spacing:.32em;text-transform:uppercase;fill:var(--faint)}
+.topo .c{fill:none;stroke:var(--topo);stroke-width:1}
+.topo .c0{fill:var(--land);stroke:var(--topo);stroke-width:1.4}
+.topo .rt{fill:none;stroke:var(--acc);stroke-width:1.6;stroke-dasharray:1 7;stroke-linecap:round;opacity:.7}
+.topo .rtd{fill:none;stroke:var(--acc);stroke-width:2.4;filter:drop-shadow(0 0 4px var(--glow))}
+.topo .w .dot{fill:var(--face);stroke:var(--faint);stroke-width:1.4}
+.topo .w.b .dot{fill:var(--acc);stroke:var(--acc)}
+.topo .w.n .dot{fill:var(--solid);stroke:var(--acc);stroke-width:3;filter:drop-shadow(0 0 6px var(--glow))}
+.topo .w text{font:600 17px var(--head);fill:var(--faint)}
+.topo .w.b text{fill:var(--muted)}.topo .w.n text{fill:var(--accT)}
+.topo .w .halo{fill:none;stroke:var(--acc);stroke-width:1.5;opacity:.6;transform-box:fill-box;transform-origin:center;animation:halo 3.2s ease-out infinite}
+@keyframes halo{0%{transform:scale(.6);opacity:.8}100%{transform:scale(1.8);opacity:0}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto!important}}
+html{scroll-behavior:smooth}
+.wrap{max-width:840px;margin:0 auto;padding:16px 22px 96px}
+.top{display:flex;justify-content:flex-end;position:sticky;top:12px;z-index:5;pointer-events:none}
+.top .ctrls{pointer-events:auto;padding:6px;border-radius:999px;background:var(--card);-webkit-backdrop-filter:var(--blur);backdrop-filter:var(--blur);box-shadow:var(--raiseS);border:1px solid var(--cardB)}
+#sw{display:none}
+.banner{max-width:320px;margin:10px auto 18px}
+h1{font:700 clamp(30px,5vw,46px)/1.12 var(--head);margin:10px 0 14px;letter-spacing:-.02em;text-wrap:balance}
+.sub{font:500 18px/1.6 var(--sans);color:var(--muted);margin:0 0 30px}
+.card,.toc,.note{border-radius:28px}
+.card{padding:30px 34px;margin-bottom:26px;scroll-margin-top:90px}
+.note{padding:18px 22px;margin:0 0 22px;font-size:16px}
+.card .note{margin:18px 0 0;-webkit-backdrop-filter:none;backdrop-filter:none;background:var(--well);box-shadow:var(--press);border:0}
+.card .note::after{display:none}
+.toc{padding:24px 30px;margin-bottom:26px;scroll-margin-top:90px}
+.toc>b{display:block;font:600 11.5px/1.3 var(--head);letter-spacing:.16em;text-transform:uppercase;color:var(--faint);margin-bottom:12px}
+.toc ol{columns:2;column-gap:30px;padding-left:28px;margin:0}
+.toc li{break-inside:avoid;margin:6px 0}
+.toc a{text-decoration:none;color:var(--ink)}.toc a:hover{color:var(--accT)}
+h2{font:700 23px/1.28 var(--head);letter-spacing:-.015em;margin:0 0 14px;text-wrap:balance}
+h3{font:600 17px/1.35 var(--head);margin:24px 0 6px}
+ol,ul{margin:8px 0 0;padding-left:24px}
+li{margin:6px 0}
+li::marker{color:var(--accT);font-family:var(--head);font-weight:700}
+table{border-collapse:separate;border-spacing:0;width:100%;font-size:15.5px;margin-top:12px;border-radius:18px;overflow:hidden;background:var(--well);box-shadow:var(--press)}
+td{border-top:1px solid var(--line);padding:11px 14px;vertical-align:top}
+tr:first-child td{border-top:0}
+td:first-child{white-space:nowrap;font-family:var(--mono);font-size:13.5px;color:var(--accT)}
+code{font-family:var(--mono);background:var(--well);box-shadow:var(--press);padding:2px 8px;border-radius:8px;font-size:14px;overflow-wrap:anywhere}
+a{overflow-wrap:anywhere}
+.meta{list-style:none;padding:14px 18px;margin:0 0 14px;font-size:15px;color:var(--muted);border-radius:18px;background:var(--well);box-shadow:var(--press)}
+.meta li{margin:3px 0}
+.meta b{font-weight:600;color:var(--ink)}
+.res{margin:16px 0 0}
+.up{display:inline-flex;align-items:center;margin-top:18px;font:600 11px/1 var(--head);letter-spacing:.14em;text-transform:uppercase;text-decoration:none;padding:11px 16px;border-radius:999px;color:var(--muted);background:var(--card);box-shadow:var(--raiseS)}
+.up:hover{color:var(--accT)}
+[data-l]{display:none}
+html[lang=uk] [data-l=uk],html[lang=en] [data-l=en]{display:block}
+@media (max-width:640px){.wrap{padding:12px 14px 72px}.toc ol{columns:1}.card,.toc{padding:22px 18px;border-radius:24px}td:first-child{white-space:normal}}
+@media print{.sea,.top,.banner{display:none}.card,.toc,.note{background:#fff;box-shadow:none}}
+</style>
+<script>window.STUDENT={"en": "Misha", "uk": "Міша"};</script>
+</head>
+<body><div class="online-note" style="font:600 14px/1.4 system-ui,sans-serif;padding:8px 14px;margin:0;background:#5b5bd6;color:#fff;text-align:center"><span lang="uk">Курс онлайн. Роботу здавай у свою папку Google Drive: Work\Assignment\День-NN.</span> · <span lang="en">You are viewing the course online. Hand in your work in your Google Drive folder: Work\Assignment\Day-NN.</span></div>
+<div class="sea" aria-hidden="true"></div>
+<div class="wrap">
+<div class="top"><button class="pill" id="sw" onclick="toggleLang()">EN</button></div>
+<div class="banner" aria-hidden="true" id="isl"></div>
+
+<div data-l="uk">
+<p class="student-for" style="margin:0 0 6px;font-weight:650;letter-spacing:.02em;opacity:.85">Курс для: Міша</p><p class="student-for" style="margin:0 0 6px;font-weight:650;letter-spacing:.02em;opacity:.85">Course for: Misha</p><h1>🏝️ Розробка ігрових асетів у Blender і Unreal: 12 тижнів</h1>
+<p class="sub">Щодня навчання з власним безкоштовним ШІ-тьютором (Gemini або ChatGPT), а потім справжнє будівництво. За 12 тижнів: від першого предмета в Blender до власного острова з двома завершеними районами та польотом над усім островом. Починаєш з нуля, програмувати не потрібно.</p>
+<p class="note">⚠️ <b>Курс лежить у спільній папці Google Drive.</b> Встанови Google Drive для комп'ютера, знайди папку курсу (розділ 4) і відкривай сторінки днів із синхронізованої папки на своєму ПК подвійним кліком: вони відкриються у браузері. Не відкривай їх на drive.google.com і не через Google Docs: там кнопки «Копіювати» не працюють.</p>
+<p class="note">🧭 <b>Перший раз реєструєшся чи встановлюєш програми?</b> Відкрий <a href="ACCOUNTS-AND-INSTALLS.html">ACCOUNTS-AND-INSTALLS.html</a>: там покроково показано кожен акаунт (Google, ChatGPT, Epic, Fab), кожне встановлення і що робити, якщо щось пішло не так.</p>
+
+<div class="card"><h2>1. Що на тебе чекає</h2>
+<p style="margin:0">Курс іде від Дня 0 до Дня 60: понеділок–п'ятниця, вихідні вільні. День 0 — акаунти, програми, перша година в Blender і твій проєкт Unreal <code>IslandCourse</code>. Далі 12 тижнів:</p>
+<ul>
+<li><b>Тиждень 1 (Дні 1–5):</b> Blender з нуля: предмети в реальному розмірі.</li>
+<li><b>Тиждень 2 (Дні 6–10):</b> модульні набори.</li>
+<li><b>Тиждень 3 (Дні 11–15):</b> поверхні: UV, матеріали, текстури.</li>
+<li><b>Тиждень 4 (Дні 16–20):</b> вигляд в Unreal: колір, текстури, декалі, світло.</li>
+<li><b>Тиждень 5 (Дні 21–25):</b> твоє справжнє місце й острів на папері.</li>
+<li><b>Тиждень 6 (Дні 26–30):</b> рельєф і вода.</li>
+<li><b>Тиждень 7 (Дні 31–35):</b> дороги, великий світ і перший ліс.</li>
+<li><b>Тиждень 8 (Дні 36–40):</b> PCG-природа на весь острів.</li>
+<li><b>Тиждень 9 (Дні 41–45):</b> район 1: набережна.</li>
+<li><b>Тиждень 10 (Дні 46–50):</b> район 1 завершено, район 2 збудовано.</li>
+<li><b>Тиждень 11 (Дні 51–55):</b> район 2 завершено.</li>
+<li><b>Тиждень 12 (Дні 56–60):</b> весь острів: доведення, політ і презентація.</li></ul>
+<p style="margin:10px 0 0">🏁 <b>Фінал:</b> власний острів (близько 1 км) на основі справжнього приморського місця, з двома завершеними районами приблизно по 200 x 200 м і двохвилинним польотом над усім островом.</p>
+<p style="margin:10px 0 0">Кожна п'ятниця (День 5, 10, … 60) — 🏆 <b>день Боса</b>: будівництво на час із рівнями Бронза / Срібло / Золото.</p></div>
+
+<div class="card"><h2>2. Комп'ютер</h2><table>
+<tr><td>Система</td><td>Windows 10 або 11</td></tr>
+<tr><td>Відеокарта</td><td>рівня RTX 4060 (8 ГБ відеопам'яті) або краща</td></tr>
+<tr><td>Оперативна пам'ять</td><td>16 ГБ мінімум; <b>32 ГБ рекомендовано з тижня 7</b> (з 16 ГБ у Electric Dreams працюють лише малі рівні)</td></tr>
+<tr><td>Диск</td><td>швидкий SSD, щонайменше 250 ГБ вільного місця на весь курс: Unreal Engine 5.8 (≈40 ГБ), Electric Dreams (≈57–60 ГБ завантаження; тримай утричі більше вільного місця, бо шейдери й похідні дані розростаються) і твої проєкти</td></tr></table>
+<p style="margin:10px 0 0"><b>Слабший комп'ютер?</b> Перші тижні підуть і на скромнішій відеокарті з налаштуваннями Medium. Для важких тижнів (7–12) є варіанти:</p><ul>
+<li>з 16 ГБ пам'яті: збільш файл підкачки Windows до 32 ГБ або більше, закривай браузер, поки компілюються шейдери, і тримай Scalability на High;</li><li>знизь Scalability до Medium або Low і відкривай лише малі рівні, які радить сторінка дня;</li>
+<li>трансляція з потужнішого комп'ютера (свого чи когось із друзів) через <a href="https://parsec.app" target="_blank" rel="noopener">Parsec</a> або <a href="https://github.com/LizardByte/Sunshine" target="_blank" rel="noopener">Sunshine</a> + <a href="https://moonlight-stream.org" target="_blank" rel="noopener">Moonlight</a>: Unreal працює там, а ти бачиш екран у себе;</li>
+<li>оренда хмарного комп'ютера (наприклад <a href="https://shadow.tech" target="_blank" rel="noopener">Shadow</a> або <a href="https://vagon.io" target="_blank" rel="noopener">Vagon</a>). Ціни змінюються: перевір їх на сайті сервісу перед оплатою.</li></ul></div>
+
+<div class="card"><h2>3. Що встановити (усе безкоштовно)</h2><ol>
+<li><b>Blender</b> (остання стабільна версія 5.x): <a href="https://www.blender.org/download/">blender.org</a></li>
+<li><b>Krita</b> для малювання й фото: <a href="https://krita.org/en/download/">krita.org</a> (безкоштовна версія — звідти, не з магазинів). Можна також <a href="https://www.gimp.org/downloads/" target="_blank" rel="noopener">GIMP</a>, <a href="https://inkscape.org/release/" target="_blank" rel="noopener">Inkscape</a> або <a href="https://www.photopea.com" target="_blank" rel="noopener">Photopea</a> у браузері.</li>
+<li><b><a href="https://www.unrealengine.com/download" target="_blank" rel="noopener">Epic Games Launcher</a></b> і в ньому <b>Unreal Engine 5.8</b> (≈40 ГБ; почни завантаження звечора). Акаунт Epic дає доступ і до <b><a href="https://www.fab.com" target="_blank" rel="noopener">Fab</a></b> з безкоштовними паками.</li>
+<li><b>Безкоштовний акаунт <a href="https://gemini.google.com" target="_blank" rel="noopener">Gemini</a> або <a href="https://chatgpt.com" target="_blank" rel="noopener">ChatGPT</a></b> — це твій тьютор.</li>
+<li><b>Google Drive для комп'ютера</b> (<a href="https://www.google.com/drive/download/" target="_blank" rel="noopener">google.com/drive/download</a>): через нього відкриваєш папку курсу й здаєш роботи (розділ 4).</li>
+<li>З Дня 24: безкоштовний семпл <b><a href="https://www.fab.com/listings/d79688f5-29be-4fb2-a650-2d4a813f5306" target="_blank" rel="noopener">Electric Dreams</a></b> від Epic на Fab — окремий проєкт <code>ElectricDreamsSample</code> (≈57–60 ГБ). Завантаження запускаєш на Дні 24, а працювати з ним починаєш з Дня 34.</li>
+<li>З Дня 24: безкоштовні паки з Fab. Дозволене й інше безкоштовне джерело — <a href="https://polyhaven.com" target="_blank" rel="noopener">Poly Haven</a>.</li></ol>
+<p style="margin:10px 0 0">🛠️ На Дні 0 створюєш свій єдиний проєкт Unreal — <code>IslandCourse</code> (шаблон Third Person, плагін Water). Покроково: ACCOUNTS-AND-INSTALLS.html, розділ 5.</p>
+<p style="margin:10px 0 0">💸 Нічого не купуй. Перед тим як додати пак із Fab, переконайся, що ціна — 0, і прочитай ліцензію.</p></div>
+
+<div class="card" id="uk-checkin"><h2>4. Здача робіт і відгук: Google Drive</h2>
+<p style="margin:0">Папку курсу відкрито для тебе на Google Drive. Усе, що ти зберігаєш у своїй папці Work, автоматично потрапляє до координаторки курсу, а відгук повертається тобі тим самим шляхом.</p>
+<ol>
+<li><b>Встанови Google Drive для комп'ютера:</b> <a href="https://www.google.com/drive/download/" target="_blank" rel="noopener">google.com/drive/download</a>. Запусти інсталятор і увійди тим акаунтом Google, якому відкрито доступ до папки курсу.</li>
+<li><b>Знайди спільну папку:</b> у браузері відкрий drive.google.com → <b>Shared with me</b> → правий клік на папці курсу → <b>Organize</b> → <b>Add shortcut to Drive</b> → <b>My Drive</b> → <b>Add</b>. Лише після цього папка синхронізується з твоїм ПК.</li>
+<li><b>Відкрий її на своєму ПК:</b> Провідник Windows → диск <b>Google Drive</b> → <b>My Drive</b> → папка курсу. Сторінки (спершу COURSE.html) відкривай звідти подвійним кліком. Ніколи не відкривай їх на drive.google.com чи в Google Docs: там кнопки «Копіювати» не працюють.</li>
+<li><b>Щодня здавай у папку цього дня:</b> файли, скриншоти, 60-секундний кліп і summary.md зберігай у <code>Work\Assignment\Day-NN-…\</code>. Вона синхронізується автоматично: нічого надсилати не треба. Вимикаючи ПК, дочекайся, поки значок Google Drive біля годинника покаже, що синхронізацію завершено.</li>
+<li><b>Великі проєкти Unreal — не в синхронізованій папці.</b> <code>IslandCourse</code> і <code>ElectricDreamsSample</code> лежать на швидкому локальному диску (щонайменше 250 ГБ вільного місця на все), ніколи не всередині Work чи Google Drive. У Work кладеш лише те, що здаєш.</li>
+<li><b>Відгук приходить файлом THALIA-COMMENTS.md</b> у папці цього дня (<code>Work\Assignment\Day-NN-…\</code>): це відгук від Талії, координаторки курсу. Відкрий його Блокнотом (Notepad) і зазирай туди перед початком наступного дня.</li></ol></div>
+
+<div class="card"><h2>5. Що де лежить</h2><table>
+<tr><td>ACCOUNTS-AND-INSTALLS.html</td><td>Покрокові інструкції: акаунти, встановлення, паки, допомога.</td></tr>
+<tr><td>COURSE.html</td><td>Карта курсу: День 0 і 60 днів та твій прогрес. Починай тут щоранку.</td></tr>
+<tr><td>Learning\Day-NN-…\</td><td><b>START-HERE.html</b> — сторінка дня; у папці <b>assets</b> (якщо є) — файли на сьогодні.</td></tr>
+<tr><td>Work\Assignment\Day-NN-…\</td><td>Сюди зберігай здачу дня: роботу, скриншоти, кліп і <b>summary.md</b>. Папка синхронізується автоматично.</td></tr>
+<tr><td>THALIA-COMMENTS.md</td><td>Відгук від Талії, координаторки курсу, у папці відповідного дня.</td></tr>
+<tr><td>credits.md</td><td>Створи його у своїй папці Work і записуй джерело та ліцензію кожного фото, карти й паку.</td></tr></table></div>
+
+<div class="card"><h2>6. Кожен день (≈7 годин)</h2><ol>
+<li><b>🎯 Місія:</b> прочитай, що будуєш сьогодні і за якими вимогами.</li>
+<li><b>📘 4 уроки по ≈40 хв:</b> натисни <b>«Копіювати урок»</b> → відкрий <b>новий чат</b> у Gemini або ChatGPT → встав (Ctrl+V) → надішли. Тьютор перевірить, що ти вже знаєш (знайоме можна пропустити), навчить, дасть короткі завдання і перевірить скриншоти. Наприкінці — 3 запитання і «квитанція» з 2 рядків (Learned / Hard). Збережи її, потім натисни <b>«Готово»</b>.</li>
+<li><b>🏗️ Самостійне будівництво ≈4 год:</b> зроби деталь 2 за списком. Щось не виходить? <b>«Копіювати тьютора-помічника»</b> → новий чат → встав.</li>
+<li><b>✅ Перевір себе:</b> сторінка дня закінчується тестом «Перевір себе» (5 запитань; у п'ятницю — 8; на Дні 60 — 15). Результат запиши в summary.md.</li>
+<li><b>📦 Здача:</b> збережи файли в <code>Work\Assignment\Day-NN-…\</code>, запиши 60-секундний кліп (Win+Alt+R), натисни <b>«Копіювати звіт дня»</b>, встав у новий чат разом із квитанціями й результатом тесту і збережи відповідь як <b>summary.md</b>. У п'ятницю додай і докази Боса.</li></ol></div>
+
+<div class="card"><h2>7. Корисне</h2><ul>
+<li><b>Звичайний чат, без спеціальних режимів:</b> не вмикай Guided Learning у Gemini, Study mode у ChatGPT чи Canvas. Текст уроку сам робить чат тьютором.</li>
+<li><b>Новий чат для кожного уроку.</b> Закінчився безкоштовний ліміт — встав той самий текст в інший ШІ.</li>
+<li><b>Скриншот:</b> Win+Shift+S, потім Ctrl+V у чат. <b>Кліп:</b> Win+Alt+R (старт і стоп).</li>
+<li><b>Перевірка роботи:</b> у дні самоперевірки тьютор грає роль вимогливого арт-директора. Відгук від Талії, координаторки курсу, чекає у файлі THALIA-COMMENTS.md (розділ 4).</li>
+<li><b>Чесно з авторами:</b> карти OpenStreetMap підписуй «© OpenStreetMap contributors»; фото з Wikimedia Commons — з автором і ліцензією; паки з ліцензією CC-BY — з іменем автора. Усе це — у credits.md.</li>
+<li><b>EN / UA</b> угорі кожної сторінки перемикає мову. Прогрес зберігається в браузері: працюй на тому самому комп'ютері й у тому самому браузері.</li>
+<li>Паролі нікому не передаємо, нічого не купуємо.</li></ul></div>
+</div>
+
+<div data-l="en">
+<h1>🏝️ Game Asset Development with Blender and Unreal: 12 weeks</h1>
+<p class="sub">Every day you learn with your own free AI tutor (Gemini or ChatGPT), then you build for real. In 12 weeks: from your first prop in Blender to your own island with two finished districts and a flight over the whole island. You start from zero, and no programming is needed.</p>
+<p class="note">⚠️ <b>The course lives in a shared Google Drive folder.</b> Install Google Drive for desktop, find the course folder (section 4) and open the day pages from the synced folder on your own PC by double-clicking: they open in your browser. Don't open them on drive.google.com or with Google Docs: the Copy buttons don't work there.</p>
+<p class="note">🧭 <b>First time signing up or installing?</b> Open <a href="ACCOUNTS-AND-INSTALLS.html">ACCOUNTS-AND-INSTALLS.html</a>: it walks you step by step through every account (Google, ChatGPT, Epic, Fab), every install, and what to do if something goes wrong.</p>
+
+<div class="card"><h2>1. What's ahead</h2>
+<p style="margin:0">The course runs from Day 0 to Day 60: Monday to Friday, weekends free. Day 0 is accounts, installs, a first hour in Blender and your Unreal project <code>IslandCourse</code>. Then 12 weeks:</p>
+<ul>
+<li><b>Week 1 (Days 1 to 5):</b> Blender from zero: props at real size.</li>
+<li><b>Week 2 (Days 6 to 10):</b> modular kits.</li>
+<li><b>Week 3 (Days 11 to 15):</b> surfaces: UVs, materials, textures.</li>
+<li><b>Week 4 (Days 16 to 20):</b> the Unreal look: colour, textures, decals, light.</li>
+<li><b>Week 5 (Days 21 to 25):</b> your real place and your island on paper.</li>
+<li><b>Week 6 (Days 26 to 30):</b> terrain and water.</li>
+<li><b>Week 7 (Days 31 to 35):</b> roads, the big world and a first forest.</li>
+<li><b>Week 8 (Days 36 to 40):</b> PCG nature for the whole island.</li>
+<li><b>Week 9 (Days 41 to 45):</b> district 1: the waterfront.</li>
+<li><b>Week 10 (Days 46 to 50):</b> district 1 finished, district 2 built.</li>
+<li><b>Week 11 (Days 51 to 55):</b> district 2 finished.</li>
+<li><b>Week 12 (Days 56 to 60):</b> the whole island, polished, flown and presented.</li></ul>
+<p style="margin:10px 0 0">🏁 <b>The finish line:</b> your own island (about 1 km) grounded in a real coastal place, with two finished districts of about 200 x 200 m each and a 2-minute flight over the whole island.</p>
+<p style="margin:10px 0 0">Every Friday (Day 5, 10, … 60) is 🏆 <b>Boss day</b>: a timed build with Bronze, Silver and Gold tiers.</p></div>
+
+<div class="card"><h2>2. Your PC</h2><table>
+<tr><td>System</td><td>Windows 10 or 11</td></tr>
+<tr><td>Graphics card</td><td>RTX 4060 class (8 GB video memory) or better</td></tr>
+<tr><td>Memory</td><td>16 GB minimum; <b>32 GB recommended from week 7</b> (with 16 GB, only Electric Dreams' small levels work)</td></tr>
+<tr><td>Disk</td><td>A fast SSD with at least 250 GB free for the whole course: Unreal Engine 5.8 (about 40 GB), Electric Dreams (about 57 to 60 GB to download; keep three times that free, because shaders and derived data grow) and your projects</td></tr></table>
+<p style="margin:10px 0 0"><b>A weaker PC?</b> The first weeks run on a modest graphics card at Medium settings. For the heavy weeks (7 to 12) you have options:</p><ul>
+<li>with 16 GB of memory: raise the Windows page file to 32 GB or more, close the browser while shaders compile, and keep Scalability at High;</li><li>set Scalability to Medium or Low and open only the small levels the day page recommends;</li>
+<li>stream from a stronger PC (yours or a friend's) with <a href="https://parsec.app" target="_blank" rel="noopener">Parsec</a> or <a href="https://github.com/LizardByte/Sunshine" target="_blank" rel="noopener">Sunshine</a> + <a href="https://moonlight-stream.org" target="_blank" rel="noopener">Moonlight</a>: Unreal runs there and you see its screen on yours;</li>
+<li>rent a cloud PC (for example <a href="https://shadow.tech" target="_blank" rel="noopener">Shadow</a> or <a href="https://vagon.io" target="_blank" rel="noopener">Vagon</a>). Prices change: check them on the service's own site before paying.</li></ul></div>
+
+<div class="card"><h2>3. What to install (all free)</h2><ol>
+<li><b>Blender</b> (the latest stable 5.x): <a href="https://www.blender.org/download/">blender.org</a></li>
+<li><b>Krita</b> for painting and photos: <a href="https://krita.org/en/download/">krita.org</a> (the free version is from there, not from the stores). <a href="https://www.gimp.org/downloads/" target="_blank" rel="noopener">GIMP</a>, <a href="https://inkscape.org/release/" target="_blank" rel="noopener">Inkscape</a> or <a href="https://www.photopea.com" target="_blank" rel="noopener">Photopea</a> in the browser also work.</li>
+<li><b>The <a href="https://www.unrealengine.com/download" target="_blank" rel="noopener">Epic Games Launcher</a></b> and in it <b>Unreal Engine 5.8</b> (about 40 GB; start the download the evening before). Your Epic account also opens <b><a href="https://www.fab.com" target="_blank" rel="noopener">Fab</a></b> and its free packs.</li>
+<li><b>A free <a href="https://gemini.google.com" target="_blank" rel="noopener">Gemini</a> or <a href="https://chatgpt.com" target="_blank" rel="noopener">ChatGPT</a> account</b>: that's your tutor.</li>
+<li><b>Google Drive for desktop</b> (<a href="https://www.google.com/drive/download/" target="_blank" rel="noopener">google.com/drive/download</a>): through it you open the course folder and hand in your work (section 4).</li>
+<li>From Day 24: Epic's free <b><a href="https://www.fab.com/listings/d79688f5-29be-4fb2-a650-2d4a813f5306" target="_blank" rel="noopener">Electric Dreams</a></b> sample on Fab, a separate project called <code>ElectricDreamsSample</code> (about 57 to 60 GB). You start the download on Day 24 and start working with it on Day 34.</li>
+<li>From Day 24: free packs from Fab. Another free source is allowed too: <a href="https://polyhaven.com" target="_blank" rel="noopener">Poly Haven</a>.</li></ol>
+<p style="margin:10px 0 0">🛠️ On Day 0 you create your one Unreal project, <code>IslandCourse</code> (Third Person template, Water plugin). Step by step: ACCOUNTS-AND-INSTALLS.html, section 5.</p>
+<p style="margin:10px 0 0">💸 Don't buy anything. Before you add a pack from Fab, check that the price shows 0 and read its licence.</p></div>
+
+<div class="card" id="en-checkin"><h2>4. Handing in and feedback: Google Drive</h2>
+<p style="margin:0">The course folder is shared with you on Google Drive. Everything you save in your Work folder reaches the course coordinator automatically, and the feedback comes back to you the same way.</p>
+<ol>
+<li><b>Install Google Drive for desktop:</b> <a href="https://www.google.com/drive/download/" target="_blank" rel="noopener">google.com/drive/download</a>. Run the installer and sign in with the Google account that has access to the course folder.</li>
+<li><b>Find the shared folder:</b> in your browser open drive.google.com → <b>Shared with me</b> → right-click the course folder → <b>Organize</b> → <b>Add shortcut to Drive</b> → <b>My Drive</b> → <b>Add</b>. Only after this does the folder sync to your PC.</li>
+<li><b>Open it on your PC:</b> File Explorer → the <b>Google Drive</b> drive → <b>My Drive</b> → the course folder. Open the pages from there by double-clicking (COURSE.html first). Never open them on drive.google.com or in Google Docs: the Copy buttons fail there.</li>
+<li><b>Hand in every day, into that day's folder:</b> save your files, screenshots, the 60-second clip and summary.md in <code>Work\Assignment\Day-NN-…\</code>. It syncs automatically: there is nothing to send. Before you shut the PC down, wait until the Google Drive icon near the clock says syncing is finished.</li>
+<li><b>Big Unreal projects stay out of the synced folder.</b> <code>IslandCourse</code> and <code>ElectricDreamsSample</code> live on a fast local drive (at least 250 GB free for everything), never inside Work or Google Drive. Work holds only what you hand in.</li>
+<li><b>Feedback arrives as THALIA-COMMENTS.md</b> in that day's folder (<code>Work\Assignment\Day-NN-…\</code>): it is feedback from Thalia, the course coordinator. Open it with Notepad and look for it before the next day starts.</li></ol></div>
+
+<div class="card"><h2>5. What's where</h2><table>
+<tr><td>ACCOUNTS-AND-INSTALLS.html</td><td>Step-by-step help: accounts, installs, packs, troubleshooting.</td></tr>
+<tr><td>COURSE.html</td><td>Your course map: Day 0 and 60 days, and your progress. Start here every morning.</td></tr>
+<tr><td>Learning\Day-NN-…\</td><td><b>START-HERE.html</b> is the day's page; the <b>assets</b> folder (when there is one) holds that day's files.</td></tr>
+<tr><td>Work\Assignment\Day-NN-…\</td><td>Save the day's hand-in here: work, screenshots, the clip and <b>summary.md</b>. The folder syncs automatically.</td></tr>
+<tr><td>THALIA-COMMENTS.md</td><td>Feedback from Thalia, the course coordinator, in that day's folder.</td></tr>
+<tr><td>credits.md</td><td>Create it in your Work folder and record the source and licence of every photo, map and pack you use.</td></tr></table></div>
+
+<div class="card"><h2>6. Every day (about 7 hours)</h2><ol>
+<li><b>🎯 Mission:</b> read what you build today and its spec.</li>
+<li><b>📘 4 lessons of about 40 min:</b> click <b>Copy lesson</b>, open a <b>new chat</b> in Gemini or ChatGPT, paste (Ctrl+V) and send. The tutor checks what you already know (you can skip it), teaches you, gives you short tasks and checks your screenshots. It ends with 3 questions and a two-line receipt (Learned / Hard): keep it, then click <b>Done</b>.</li>
+<li><b>🏗️ Build alone, about 4 h:</b> make piece 2 from the checklist. Stuck? Click <b>Copy the build coach</b>, open a new chat, paste.</li>
+<li><b>✅ Check yourself:</b> the day page ends with a "Check yourself" quiz (5 questions; 8 on Fridays; 15 on Day 60). Write your score in summary.md.</li>
+<li><b>📦 Ship:</b> save your files in <code>Work\Assignment\Day-NN-…\</code>, record a 60-second clip (Win+Alt+R), click <b>Copy the day report</b>, paste it into a new chat with your receipts and your quiz score, and save the answer as <b>summary.md</b>. On Fridays, add your Boss evidence too.</li></ol></div>
+
+<div class="card"><h2>7. Good to know</h2><ul>
+<li><b>A normal chat, no special modes:</b> don't turn on Guided Learning in Gemini, Study mode in ChatGPT, or Canvas. The lesson text turns the chat into your tutor by itself.</li>
+<li><b>A new chat for every lesson.</b> If a free limit runs out, paste the same text into the other AI.</li>
+<li><b>Screenshot:</b> Win+Shift+S, then Ctrl+V into the chat. <b>Clip:</b> Win+Alt+R to start and stop.</li>
+<li><b>Reviews:</b> on self-review days the tutor plays a demanding art director. Feedback from Thalia, the course coordinator, waits for you in THALIA-COMMENTS.md (section 4).</li>
+<li><b>Credit the makers:</b> OpenStreetMap maps as "© OpenStreetMap contributors"; Wikimedia Commons photos with author and licence; CC-BY packs with the author's name. All of it goes in credits.md.</li>
+<li><b>EN / UA</b> at the top of every page switches the language. Progress is saved in the browser: use the same computer and the same browser.</li>
+<li>Never share passwords, and don't buy anything.</li></ul></div>
+</div>
+</div>
+<script>
+let lang='uk';try{lang=localStorage.getItem('devteam:lang')||'uk'}catch(e){}
+function apply(){document.documentElement.lang=lang;document.getElementById('sw').textContent=lang==='uk'?'EN':'UA';document.title=lang==='uk'?'Розробка ігрових асетів: як почати':'Game Asset Development: getting started'}
+function toggleLang(){lang=lang==='uk'?'en':'uk';try{localStorage.setItem('devteam:lang',lang)}catch(e){};apply()}
+apply();
+/* icons: simple stroke drawings, no files fetched */
+const ICONS={map:'<path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2zM9 4v14M15 6v14"/>',flag:'<path d="M5 21V4M5 4h12l-2.5 4L17 12H5"/>',copy:'<rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15H4.5A1.5 1.5 0 0 1 3 13.5v-9A1.5 1.5 0 0 1 4.5 3h9A1.5 1.5 0 0 1 15 4.5V5"/>',check:'<path d="M5 12.5l4.5 4.5L19 7.5"/>',x:'<path d="M6 6l12 12M18 6 6 18"/>',cube:'<path d="M12 3 20 7.5v9L12 21 4 16.5v-9zM12 12l8-4.5M12 12v9M12 12 4 7.5"/>',trophy:'<path d="M8 4h8v5a4 4 0 0 1-8 0zM8 6H5v1.5A3.5 3.5 0 0 0 8.5 11M16 6h3v1.5a3.5 3.5 0 0 1-3.5 3.5M12 13v4M8 20h8M10 17h4v3h-4z"/>',bulb:'<path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.7.7 1 1.5 1 2.5h6c0-1 .3-1.8 1-2.5A6 6 0 0 0 12 3z"/>',boat:'<path d="M3 15h18l-2.5 5h-13zM12 3v12M12 4l7 9h-7"/>',film:'<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M8 5v14M16 5v14M3 10h5M3 14h5M16 10h5M16 14h5"/>',play:'<circle cx="12" cy="12" r="9"/><path d="M10 8.5v7l6-3.5z"/>',folder:'<path d="M3 6.5A1.5 1.5 0 0 1 4.5 5H9l2 2h8.5A1.5 1.5 0 0 1 21 8.5v9a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 17.5z"/>',cal:'<rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M8 3v4M16 3v4"/>',clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',pointer:'<path d="M5 3l14 7-6 2-2 6z"/>',receipt:'<path d="M6 3h12v18l-3-2-3 2-3-2-3 2zM9 8h6M9 12h6M9 16h3"/>',spark:'<path d="M12 3v5M12 16v5M3 12h5M16 12h5M6 6l2.5 2.5M15.5 15.5 18 18M6 18l2.5-2.5M15.5 8.5 18 6"/>',users:'<circle cx="9" cy="8" r="3.2"/><path d="M3 20a6 6 0 0 1 12 0M16 4.5a3.2 3.2 0 0 1 0 6.4M21 20a6 6 0 0 0-4-5.6"/>',chev:'<path d="M6 9l6 6 6-6"/>',star:'<path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/>',build:'<path d="M4 20h16M6 20V10l6-5 6 5v10M10 20v-5h4v5"/>',arrow:'<path d="M5 12h14M13 6l6 6-6 6"/>',left:'<path d="M15 5l-7 7 7 7"/>',right:'<path d="M9 5l7 7-7 7"/>',sun:'<circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/>',moon:'<path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/>',auto:'<circle cx="12" cy="12" r="8.5"/><path d="M12 3.5v17A8.5 8.5 0 0 0 12 3.5z" fill="currentColor"/>',target:'<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/>',quote:'<path d="M5 18c0-5 2-8 6-10M13 18c0-5 2-8 6-10"/>'};
+const ic=(n,c)=>'<svg class="ic'+(c?' '+c:'')+'" viewBox="0 0 24 24" aria-hidden="true" focusable="false">'+ICONS[n]+'</svg>';
+/* theme: auto (follows the computer), light or dark; a per-viewer convenience kept in devteam:theme */
+const TH={uk:{auto:'Як у системі',light:'Світла тема',dark:'Темна тема',theme:'Тема',lang:'Мова'},en:{auto:'Match my computer',light:'Light theme',dark:'Dark theme',theme:'Theme',lang:'Language'}};
+let theme='auto';try{theme=localStorage.getItem('devteam:theme')||'auto'}catch(e){}
+function applyTheme(){if(theme==='light'||theme==='dark')document.documentElement.setAttribute('data-theme',theme);else document.documentElement.removeAttribute('data-theme')}
+applyTheme();
+function setTheme(t){theme=t;try{localStorage.setItem('devteam:theme',t)}catch(e){}applyTheme();document.querySelectorAll('[data-th]').forEach(b=>b.setAttribute('aria-pressed',String(b.getAttribute('data-th')===theme)))}
+function controls(L,langFn){const T=TH[L]||TH.uk;
+ return '<div class="ctrls"><div class="seg" role="group" aria-label="'+T.theme+'">'+['light','auto','dark'].map(t=>'<button type="button" data-th="'+t+'" aria-pressed="'+(theme===t)+'" aria-label="'+T[t]+'" title="'+T[t]+'" onclick="setTheme(\''+t+'\')">'+ic(t==='light'?'sun':t==='dark'?'moon':'auto')+'</button>').join('')+'</div>'+
+ '<div class="seg" role="group" aria-label="'+T.lang+'">'+['uk','en'].map(l=>'<button type="button" lang="'+l+'" aria-pressed="'+(L===l)+'" onclick="'+langFn+'(\''+l+'\')">'+(l==='uk'?'UA':'EN')+'</button>').join('')+'</div></div>'}
+/* seven-segment display, like an LCD panel: ghost 8s behind the lit segments */
+const SEG={0:'abcdef',1:'bc',2:'abged',3:'abgcd',4:'fgbc',5:'afgcd',6:'afgedc',7:'abc',8:'abcdefg',9:'abcdfg'};
+function seg(str,cls){str=String(str);const W=15,H=26,t=2.8,g=.9,P={a:[[g+t/2,0],[W-g-t/2,0],[W-g-t,t],[g+t,t]],d:[[g+t,H-t],[W-g-t,H-t],[W-g-t/2,H],[g+t/2,H]],g:[[g+t,H/2-t/2],[W-g-t,H/2-t/2],[W-g-t/2,H/2],[W-g-t,H/2+t/2],[g+t,H/2+t/2],[g+t/2,H/2]],f:[[0,g+t/2],[t,g+t],[t,H/2-g-t/2],[t/2,H/2-g],[0,H/2-g-t/2]],b:[[W,g+t/2],[W,H/2-g-t/2],[W-t/2,H/2-g],[W-t,H/2-g-t/2],[W-t,g+t]],e:[[0,H/2+g+t/2],[t/2,H/2+g],[t,H/2+g+t/2],[t,H-g-t],[0,H-g-t/2]],c:[[W,H/2+g+t/2],[W,H-g-t/2],[W-t,H-g-t],[W-t,H/2+g+t/2],[W-t/2,H/2+g]]};
+ let x=0,o='';for(const ch of str){if(ch===' '){x+=8;continue}if(ch==='/'){o+='<path class="on" d="M'+(x+9)+' 2L'+(x+2)+' '+(H-2)+'L'+(x+4.5)+' '+(H-2)+'L'+(x+11.5)+' 2Z"/>';x+=15;continue}const on=SEG[ch]||'';
+  for(const k of 'abcdefg')o+='<polygon class="'+(on.includes(k)?'on':'gh')+'" points="'+P[k].map(p=>(p[0]+x).toFixed(1)+','+p[1].toFixed(1)).join(' ')+'"/>';x+=W+5}
+ return '<svg class="seg7'+(cls?' '+cls:'')+'" viewBox="-1 -1 '+(x-3)+' '+(H+2)+'" aria-hidden="true" focusable="false"><g transform="skewX(-6) translate(2 0)">'+o+'</g></svg>'}
+/* the chart: a topographic island inside a dial; week w is a waypoint, built (b), being built now (n) or still ahead (p) */
+function island(state,pct,label){
+ const cx=300,cy=205,R=172,TAU=Math.PI*2;
+ const rad=(t,s,k)=>R*s*(1+.11*Math.sin(2*t+.6+k*.05)+.07*Math.sin(3*t+1.9-k*.08)+.045*Math.sin(5*t+.3+k*.11)+.02*Math.sin(7*t+2.2));
+ const pt=(t,s,k)=>{const r=rad(t,s,k||0);return [cx+r*Math.cos(t),cy+r*Math.sin(t)*.78]};
+ const f=n=>n.toFixed(1);
+ const smooth=(P,closed)=>{let d='M'+f(P[0][0])+' '+f(P[0][1]);const n=P.length,g=i=>P[closed?(i+n)%n:Math.max(0,Math.min(n-1,i))];
+  for(let i=0;i<(closed?n:n-1);i++){const p0=g(i-1),p1=g(i),p2=g(i+1),p3=g(i+2);d+='C'+f(p1[0]+(p2[0]-p0[0])/6)+' '+f(p1[1]+(p2[1]-p0[1])/6)+' '+f(p2[0]-(p3[0]-p1[0])/6)+' '+f(p2[1]-(p3[1]-p1[1])/6)+' '+f(p2[0])+' '+f(p2[1])}return d+(closed?'Z':'')};
+ const ring=(s,k)=>{const P=[];for(let i=0;i<64;i++)P.push(pt(i/64*TAU,s,k));return smooth(P,true)};
+ let o='<path class="c0" d="'+ring(1,0)+'"/>';
+ [.84,.69,.55,.42,.3,.19,.1].forEach((s,k)=>o+='<path class="c" d="'+ring(s,k+1)+'"/>');
+ const t0=-2.2,turns=1.55,wp=w=>{const t=(w-1)/11;return {a:t0+t*turns*TAU,s:1.1-t*.98}};
+ const P=[],D=[];let last=0;for(let w=1;w<=12;w++)if(state(w)!=='p')last=w;
+ for(let i=0;i<=110;i++){const t=i/110,a=t0+t*turns*TAU,s=1.1-t*.98,q=pt(a,s,0);P.push(q);if(last&&t<=(last-1)/11+1e-9)D.push(q)}
+ o+='<path class="rt" d="'+smooth(P,false)+'"/>';
+ if(D.length>1)o+='<path class="rtd" d="'+smooth(D,false)+'"/>';
+ for(let w=1;w<=12;w++){const c=state(w),{a,s}=wp(w),q=pt(a,s,0),lx=q[0]+(Math.cos(a)>=0?15:-15),an=Math.cos(a)>=0?'start':'end';
+  o+='<g class="w '+c+'">'+(c==='n'?'<circle class="halo" cx="'+f(q[0])+'" cy="'+f(q[1])+'" r="12"/>':'')+'<circle class="dot" cx="'+f(q[0])+'" cy="'+f(q[1])+'" r="'+(c==='p'?4.5:c==='n'?8:6)+'"/><text x="'+f(lx)+'" y="'+f(q[1]+5.5)+'" text-anchor="'+an+'">'+String(w).padStart(2,'0')+'</text></g>'}
+ /* the dial around it: a ring with the progress arc and a label running along the rim */
+ const C=2*Math.PI*176,p=Math.max(0,Math.min(1,pct||0)),id='rim'+Math.random().toString(36).slice(2,7);
+ let s='<svg class="dial" viewBox="0 0 400 400" aria-hidden="true" focusable="false"><defs><linearGradient id="'+id+'g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" style="stop-color:var(--acc2)"/><stop offset="1" style="stop-color:var(--acc)"/></linearGradient><path id="'+id+'" d="M200 200m-191 0a191 191 0 1 1 382 0a191 191 0 1 1-382 0"/></defs>';
+ s+='<circle class="face" cx="200" cy="200" r="168"/><circle class="track" cx="200" cy="200" r="176"/>';
+ s+='<circle class="arc" cx="200" cy="200" r="176" stroke="url(#'+id+'g)" stroke-dasharray="'+(C*p).toFixed(1)+' '+C.toFixed(1)+'" transform="rotate(-90 200 200)"/>';
+ if(p>0){const A=-Math.PI/2+p*TAU;s+='<circle class="knob" cx="'+(200+176*Math.cos(A)).toFixed(1)+'" cy="'+(200+176*Math.sin(A)).toFixed(1)+'" r="7"/>'}
+ if(label)s+='<text class="rimt"><textPath href="#'+id+'" startOffset="25%" text-anchor="middle">'+label+'</textPath></text>';
+ s+='<svg class="topo" x="40" y="62" width="320" height="276" viewBox="40 20 520 370">'+o+'</svg>';
+ return s+'</svg>'}
+function setLangP(l){if(l!==lang)toggleLang();drawP()}
+function drawP(){var t=document.querySelector('.top');var c=t.querySelector('.ctrls');if(c)c.remove();t.insertAdjacentHTML('beforeend',controls(lang,'setLangP'))}
+try{document.getElementById('isl').innerHTML=island(()=>'b',1,'');drawP()}catch(e){}
+</script>
+</body>
+</html>
