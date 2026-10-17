@@ -1,1 +1,1 @@
-window.FB={"days":{}};
+window.FB={"days":{"0":{"s":"reviewed","at":"2026-10-17T19:10Z","score":6,"max":10,"note":{"en":"Great progress: the cube and bench block are exact and in Unreal beside the mannequin. Fill in hello.txt and summary.md and the score goes up.","uk":"Чудовий поступ: куб і лавка-блок точні й стоять в Unreal поруч із манекеном. Заповніть hello.txt і summary.md, і оцінка зросте."}}}};

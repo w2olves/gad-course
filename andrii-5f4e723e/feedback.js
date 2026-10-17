@@ -1,1 +1,1 @@
-window.FB={"days":{}};
+window.FB={"days":{"0":{"s":"reviewed","at":"2026-10-17T19:10Z","score":3,"max":10,"note":{"en":"A good start: lesson 1 done and your files are in the right place. The score goes up when Day 0 is complete.","uk":"Добрий початок: урок 1 пройдено, і файли на своєму місці. Оцінка зросте, коли День 0 буде завершено."}}}};
