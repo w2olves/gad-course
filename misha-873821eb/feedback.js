@@ -1,1 +1,1 @@
-window.FB={"days":{}};
+window.FB={"days":{"0":{"s":"reviewed","at":"2026-10-17T16:33Z","score":4,"max":10,"note":{"en":"Unreal is set up and your bench is real. Hand in the five listed files in this day's Work folder and the score goes up.","uk":"Unreal налаштовано, і лавка справжня. Здайте п'ять файлів зі списку в папку Work цього дня, і оцінка зросте."}}}};
