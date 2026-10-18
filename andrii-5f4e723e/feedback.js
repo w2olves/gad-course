@@ -1,1 +1,1 @@
-window.FB={"days":{"0":{"s":"reviewed","at":"2026-10-17T19:10Z","score":3,"max":10,"note":{"en":"A good start: lesson 1 done and your files are in the right place. The score goes up when Day 0 is complete.","uk":"Добрий початок: урок 1 пройдено, і файли на своєму місці. Оцінка зросте, коли День 0 буде завершено."}}}};
+window.FB={"days":{"0":{"s":"reviewed","at":"2026-10-18T15:05Z","score":4,"max":10,"note":{"en":"Good progress: lesson 2 and hello.txt are done. Next, the 1 m cube in lesson 3.","uk":"Добрий поступ: урок 2 і hello.txt готові. Далі куб 1 м в уроці 3."}}}};
