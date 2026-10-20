@@ -1,1 +1,1 @@
-window.FB={"days":{"0":{"s":"reviewed","at":"2026-10-18T15:05Z","score":4,"max":10,"note":{"en":"Good progress: lesson 2 and hello.txt are done. Next, the 1 m cube in lesson 3.","uk":"Добрий поступ: урок 2 і hello.txt готові. Далі куб 1 м в уроці 3."}}}};
+window.FB={"days":{"0":{"s":"reviewed","at":"2026-10-20T23:24Z","score":9,"max":10,"note":{"en":"Day 0 complete and correct: the 1 m cube, the bench block and IslandCourse with Water. Well done!","uk":"День 0 завершено й правильно: куб 1 м, лавка-блок і IslandCourse з Water. Чудово!"}}}};
