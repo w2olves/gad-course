@@ -1,10 +1,10 @@
 # Шаблон credits.md
 
-Тримай один `credits.md` у своїй папці Work на весь курс. Кожне фото, кожна карта, кожен пак і кожна текстура, які ти використовуєш, отримують один рядок у день першого використання. Вказуй **автора** (того, хто це створив), а не лише того, хто завантажив, і копіюй ліцензію точно так, як її показує сторінка джерела.
+Тримай один `credits.md` у папці GAD на ПК, на рівень вище за робочу папку дня, на весь курс. Фото-референси, на які ти лише дивишся, рядка не потребують: підійде будь-яке фото. Рядок отримує все, що видно в роботі, яку ти показуєш: фото на аркушах порівняння й аркушах референсів, у портфоліо, а також мапи, паки й текстури. Рядок пишеш того дня, коли вперше це показуєш. Вказуй **автора** (того, хто це створив), а не лише того, хто завантажив, і копіюй ліцензію точно так, як її показує сторінка джерела.
 
-## Фото з Wikimedia Commons
+## Фото з Wikimedia Commons (лише ті, що показуєш)
 
-Відкрий сторінку файлу кожного фото й прочитай його ліцензію, перш ніж зберегти. Одні фото потребують лише згадки автора (CC BY), інші ще й вимагають, щоб змінені копії зберігали ту саму ліцензію (CC BY-SA), а фото з суспільного надбання (public domain) не потребують жодної згадки, але ти все одно записуєш, звідки вони.
+Ліцензія стоїть під зображенням, у розділі «Licensing». Кнопка «Use this file» над фото дає готовий рядок авторства: скопіюй його сюди. Навіщо: так ти можеш законно показати аркуш у портфоліо. Для фото, які показуєш, підходять public domain, CC0, CC BY і CC BY-SA.
 
 Формат:
 
@@ -52,7 +52,7 @@ CC0 не вимагає згадки автора, але ти все одно �
 
 ## Перевірки перед здачею
 
-- Кожне фото в папці references має рядок.
+- Кожне фото, яке видно на аркуші чи сторінці портфоліо, має рядок. Фото-референси лише для очей рядка не потребують.
 - Кожен безкоштовний пак, розміщений у твоєму рівні, має рядок з ліцензією; так само кожна текстура з Poly Haven і семпл Electric Dreams.
 - Жоден рядок не містить лише «з Google» чи «з інтернету»: це не джерело.
 
@@ -62,11 +62,11 @@ CC0 не вимагає згадки автора, але ти все одно �
 
 # credits.md template
 
-Keep one `credits.md` in your Work folder for the whole course. Every photo, map, pack and texture you use gets one line, the day you first use it. Credit the **author** (the person who made it), not only the person who uploaded it, and copy the licence exactly as the source page shows it.
+Keep one `credits.md` in GAD on your PC, one level above the day work folder, for the whole course. Reference photos you only look at need no line: any photo is fine. Everything people can see in work you show gets a line: photos on comparison sheets and boards, in your portfolio, and maps, packs and textures. Write the line the day you first show it. Credit the **author** (the person who made it), not only the person who uploaded it, and copy the licence exactly as the source page shows it.
 
-## Photos from Wikimedia Commons
+## Photos from Wikimedia Commons (only the ones you show)
 
-Open each photo's file page and read its licence before you save it. Some photos need only a credit (CC BY), some also ask that changed copies keep the same licence (CC BY-SA), and public-domain photos need no credit at all, but you still record where they came from.
+The licence is under the picture, in "Licensing". The "Use this file" button above the photo gives the ready credit line: copy it here. Why: so you can legally show the sheet in your portfolio. For photos you show, use public domain, CC0, CC BY or CC BY-SA.
 
 Format:
 
@@ -114,6 +114,6 @@ CC0 does not require a credit, but you still record where the item came from.
 
 ## Checks before you hand in
 
-- Every photo in your references folder has a line.
+- Every photo people can see on a sheet or a portfolio page has a line. Reference photos for your eyes only need none.
 - Every free pack placed in your level has a line, with its licence; so does every Poly Haven texture and the Electric Dreams sample.
 - No line says only "from Google" or "from the internet": that is not a source.
