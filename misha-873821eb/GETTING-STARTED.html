@@ -168,7 +168,7 @@ html[lang=uk] [data-l=uk],html[lang=en] [data-l=en]{display:block}
 </style>
 <script>window.STUDENT={"en": "Misha", "uk": "Міша"};</script>
 </head>
-<body><div class="online-note" style="font:600 14px/1.4 system-ui,sans-serif;padding:8px 14px;margin:0;background:#5b5bd6;color:#fff;text-align:center"><span lang="uk">Курс онлайн. Роботу здавай у свою папку Google Drive: Work\Assignment\День-NN.</span> · <span lang="en">You are viewing the course online. Hand in your work in your Google Drive folder: Work\Assignment\Day-NN.</span></div>
+<body><style>html[lang=en] .online-note [lang=uk],html:not([lang=en]) .online-note [lang=en]{display:none}</style><div class="online-note" style="font:600 14px/1.4 system-ui,sans-serif;padding:8px 14px;margin:0;background:#5b5bd6;color:#fff;text-align:center"><span lang="uk">Курс онлайн. Здавай роботу кнопкою «Відкрити мою папку здачі» на сторінці кожного дня.</span><span lang="en">You are viewing the course online. Hand in with the Open my hand-in folder button on each day page.</span></div>
 <div class="sea" aria-hidden="true"></div>
 <div class="wrap">
 <div class="top"><button class="pill" id="sw" onclick="toggleLang()">EN</button></div>
@@ -176,14 +176,14 @@ html[lang=uk] [data-l=uk],html[lang=en] [data-l=en]{display:block}
 
 <div data-l="uk">
 <p class="student-for" style="margin:0 0 6px;font-weight:650;letter-spacing:.02em;opacity:.85">Курс для: Міша</p><p class="student-for" style="margin:0 0 6px;font-weight:650;letter-spacing:.02em;opacity:.85">Course for: Misha</p><h1>🏝️ Розробка ігрових асетів у Blender і Unreal: 12 тижнів</h1>
-<p class="sub">Щодня навчання з власним безкоштовним ШІ-тьютором (Gemini або ChatGPT), а потім справжнє будівництво. За 12 тижнів: від першого предмета в Blender до власного острова з двома завершеними районами та польотом над усім островом. Починаєш з нуля, програмувати не потрібно.</p>
-<p class="note">⚠️ <b>Курс лежить у спільній папці Google Drive.</b> Встанови Google Drive для комп'ютера, знайди папку курсу (розділ 4) і відкривай сторінки днів із синхронізованої папки на своєму ПК подвійним кліком: вони відкриються у браузері. Не відкривай їх на drive.google.com і не через Google Docs: там кнопки «Копіювати» не працюють.</p>
-<p class="note">🧭 <b>Перший раз реєструєшся чи встановлюєш програми?</b> Відкрий <a href="ACCOUNTS-AND-INSTALLS.html">ACCOUNTS-AND-INSTALLS.html</a>: там покроково показано кожен акаунт (Google, ChatGPT, Epic, Fab), кожне встановлення і що робити, якщо щось пішло не так.</p>
+<p class="sub">Щодня навчання з власним безкоштовним ШІ-тьютором (Gemini або ChatGPT), а потім справжнє будівництво. За 12 тижнів: від першої моделі в Blender до власного острова з двома завершеними районами та прольотом над усім островом. Починаєш з нуля, програмувати не потрібно.</p>
+<p class="note">⚠️ <b>Курс відкривається онлайн за твоїм особистим посиланням із листа.</b> Додай його в закладки (Ctrl+D) і відкривай щодня в тому самому браузері на тому самому ПК: там зберігається твій прогрес. Твоя папка на Google Drive — лише для здачі робіт (розділ 4). Сторінки курсу з Google Drive не відкривай: там не працюють кнопки «Копіювати».</p>
+<p class="note">🧭 <b>Ще до Дня 0 пройди список «До Дня 0».</b> Це акаунти (Google, Gemini або ChatGPT, Epic і Fab) і програми (Unreal Engine 5.8, Blender, Krita): близько 1 години 30 хвилин плюс довге завантаження Unreal. Покроково, з порадами для слабкого ПК і незвичної клавіатури: <a href="ACCOUNTS-AND-INSTALLS.html#uk-s0">ACCOUNTS-AND-INSTALLS.html</a>.</p>
 
 <div class="card"><h2>1. Що на тебе чекає</h2>
-<p style="margin:0">Курс іде від Дня 0 до Дня 60: понеділок–п'ятниця, вихідні вільні. День 0 — акаунти, програми, перша година в Blender і твій проєкт Unreal <code>IslandCourse</code>. Далі 12 тижнів:</p>
+<p style="margin:0">Курс іде від Дня 0 до Дня 60: понеділок–п'ятниця, вихідні вільні. Ще до Дня 0 ти створюєш акаунти й встановлюєш програми за списком «До Дня 0». Сам День 0 (близько 4 годин) — твої папки, перша година в Blender і твій проєкт Unreal <code>IslandCourse</code>. Далі 12 тижнів:</p>
 <ul>
-<li><b>Тиждень 1 (Дні 1–5):</b> Blender з нуля: предмети в реальному розмірі.</li>
+<li><b>Тиждень 1 (Дні 1–5):</b> Blender з нуля: пропси в реальному розмірі.</li>
 <li><b>Тиждень 2 (Дні 6–10):</b> модульні набори.</li>
 <li><b>Тиждень 3 (Дні 11–15):</b> поверхні: UV, матеріали, текстури.</li>
 <li><b>Тиждень 4 (Дні 16–20):</b> вигляд в Unreal: колір, текстури, декалі, світло.</li>
@@ -194,74 +194,103 @@ html[lang=uk] [data-l=uk],html[lang=en] [data-l=en]{display:block}
 <li><b>Тиждень 9 (Дні 41–45):</b> район 1: набережна.</li>
 <li><b>Тиждень 10 (Дні 46–50):</b> район 1 завершено, район 2 збудовано.</li>
 <li><b>Тиждень 11 (Дні 51–55):</b> район 2 завершено.</li>
-<li><b>Тиждень 12 (Дні 56–60):</b> весь острів: доведення, політ і презентація.</li></ul>
-<p style="margin:10px 0 0">🏁 <b>Фінал:</b> власний острів (близько 1 км) на основі справжнього приморського місця, з двома завершеними районами приблизно по 200 x 200 м і двохвилинним польотом над усім островом.</p>
-<p style="margin:10px 0 0">Кожна п'ятниця (День 5, 10, … 60) — 🏆 <b>день Боса</b>: будівництво на час із рівнями Бронза / Срібло / Золото.</p></div>
+<li><b>Тиждень 12 (Дні 56–60):</b> весь острів: доведення, проліт і презентація.</li></ul>
+<p style="margin:10px 0 0">🏁 <b>Фінал:</b> власний острів (близько 1 км) на основі справжнього приморського місця, з двома завершеними районами приблизно по 200 × 200 м і двохвилинним прольотом над усім островом.</p>
+<p style="margin:10px 0 0">Кожна п'ятниця (День 5, 10, … 60) — 🏆 <b>День боса</b>: будівництво на час із медалями Бронза, Срібло й Золото. Уроки в День боса короткі, близько 20 хв кожен, а самостійна робота триває близько 4 годин.</p></div>
 
 <div class="card"><h2>2. Комп'ютер</h2><table>
 <tr><td>Система</td><td>Windows 10 або 11</td></tr>
-<tr><td>Відеокарта</td><td>рівня RTX 4060 (8 ГБ відеопам'яті) або краща</td></tr>
-<tr><td>Оперативна пам'ять</td><td>16 ГБ мінімум; <b>32 ГБ рекомендовано з тижня 7</b> (з 16 ГБ у Electric Dreams працюють лише малі рівні)</td></tr>
-<tr><td>Диск</td><td>швидкий SSD, щонайменше 250 ГБ вільного місця на весь курс: Unreal Engine 5.8 (≈40 ГБ), Electric Dreams (≈57–60 ГБ завантаження; тримай утричі більше вільного місця, бо шейдери й похідні дані розростаються) і твої проєкти</td></tr></table>
-<p style="margin:10px 0 0"><b>Слабший комп'ютер?</b> Перші тижні підуть і на скромнішій відеокарті з налаштуваннями Medium. Для важких тижнів (7–12) є варіанти:</p><ul>
-<li>з 16 ГБ пам'яті: збільш файл підкачки Windows до 32 ГБ або більше, закривай браузер, поки компілюються шейдери, і тримай Scalability на High;</li><li>знизь Scalability до Medium або Low і відкривай лише малі рівні, які радить сторінка дня;</li>
+<tr><td>Відеокарта</td><td>класу RTX 4060 (8 ГБ відеопам'яті) або краща</td></tr>
+<tr><td>Оперативна пам'ять</td><td>16 ГБ мінімум; <b>32 ГБ рекомендовано з 7-го тижня</b> (з 16 ГБ у Electric Dreams працюють лише малі рівні)</td></tr>
+<tr><td>Диск</td><td>швидкий SSD, щонайменше 250 ГБ вільного місця на весь курс: Unreal Engine 5.8 (40 ГБ і більше), Electric Dreams (≈57–60 ГБ завантаження; тримай утричі більше вільного місця, бо шейдери й похідні дані розростаються) і твої проєкти</td></tr></table>
+<p style="margin:10px 0 0"><b>Слабший комп'ютер?</b> Курс можна пройти в Unreal 5.8 і на ноутбуці з відеокартою на 4 ГБ (класу GTX 1650) та 16 ГБ пам'яті. Для цього ти змінюєш кілька налаштувань лише для себе, а проєкт лишається таким, як у курсі. Покроково: <a href="ACCOUNTS-AND-INSTALLS.html#uk-s16">ACCOUNTS-AND-INSTALLS, розділ 16</a>. Коротко:</p><ul>
+<li>працюй на Scalability Medium (Settings → Engine Scalability Settings), а Screen Percentage знизь до 50–75 %;</li>
+<li>з 16 ГБ пам'яті у День 24 збільш файл підкачки Windows до 32 ГБ або більше і закривай браузер, поки компілюються шейдери;</li>
+<li>з відеокартою на 4 ГБ або менше у День 34 ти обираєш полегшений варіант (light route), без Electric Dreams;</li>
+<li>не переходь на Unreal 4.27: у ньому немає багатьох інструментів, яких навчає курс;</li>
 <li>трансляція з потужнішого комп'ютера (свого чи когось із друзів) через <a href="https://parsec.app" target="_blank" rel="noopener">Parsec</a> або <a href="https://github.com/LizardByte/Sunshine" target="_blank" rel="noopener">Sunshine</a> + <a href="https://moonlight-stream.org" target="_blank" rel="noopener">Moonlight</a>: Unreal працює там, а ти бачиш екран у себе;</li>
 <li>оренда хмарного комп'ютера (наприклад <a href="https://shadow.tech" target="_blank" rel="noopener">Shadow</a> або <a href="https://vagon.io" target="_blank" rel="noopener">Vagon</a>). Ціни змінюються: перевір їх на сайті сервісу перед оплатою.</li></ul></div>
 
-<div class="card"><h2>3. Що встановити (усе безкоштовно)</h2><ol>
+<div class="card"><h2>3. Що встановити (усе безкоштовно)</h2>
+<p style="margin:0">Усе це є в списку «До Дня 0»: <a href="ACCOUNTS-AND-INSTALLS.html#uk-s0">ACCOUNTS-AND-INSTALLS, розділ 0</a>.</p><ol>
 <li><b>Blender</b> (остання стабільна версія 5.x): <a href="https://www.blender.org/download/">blender.org</a></li>
 <li><b>Krita</b> для малювання й фото: <a href="https://krita.org/en/download/">krita.org</a> (безкоштовна версія — звідти, не з магазинів). Можна також <a href="https://www.gimp.org/downloads/" target="_blank" rel="noopener">GIMP</a>, <a href="https://inkscape.org/release/" target="_blank" rel="noopener">Inkscape</a> або <a href="https://www.photopea.com" target="_blank" rel="noopener">Photopea</a> у браузері.</li>
-<li><b><a href="https://www.unrealengine.com/download" target="_blank" rel="noopener">Epic Games Launcher</a></b> і в ньому <b>Unreal Engine 5.8</b> (≈40 ГБ; почни завантаження звечора). Акаунт Epic дає доступ і до <b><a href="https://www.fab.com" target="_blank" rel="noopener">Fab</a></b> з безкоштовними паками.</li>
+<li><b><a href="https://www.unrealengine.com/download" target="_blank" rel="noopener">Epic Games Launcher</a></b> і в ньому <b>Unreal Engine 5.8</b> (40 ГБ і більше; почни завантаження за день до Дня 0). Акаунт Epic дає доступ і до <b><a href="https://www.fab.com" target="_blank" rel="noopener">Fab</a></b> з безкоштовними паками.</li>
 <li><b>Безкоштовний акаунт <a href="https://gemini.google.com" target="_blank" rel="noopener">Gemini</a> або <a href="https://chatgpt.com" target="_blank" rel="noopener">ChatGPT</a></b> — це твій тьютор.</li>
-<li><b>Google Drive для комп'ютера</b> (<a href="https://www.google.com/drive/download/" target="_blank" rel="noopener">google.com/drive/download</a>): через нього відкриваєш папку курсу й здаєш роботи (розділ 4).</li>
-<li>З Дня 24: безкоштовний семпл <b><a href="https://www.fab.com/listings/d79688f5-29be-4fb2-a650-2d4a813f5306" target="_blank" rel="noopener">Electric Dreams</a></b> від Epic на Fab — окремий проєкт <code>ElectricDreamsSample</code> (≈57–60 ГБ). Завантаження запускаєш на Дні 24, а працювати з ним починаєш з Дня 34.</li>
+<li><b>Акаунт Google</b> — той, якому відкрито твою папку здачі (адресу вказано в листі). Не створюй для курсу нову адресу Gmail. Google Drive для комп'ютера не потрібен: роботу здаєш у браузері (розділ 4).</li>
+<li>З Дня 24: безкоштовний проєкт-зразок <b><a href="https://www.fab.com/listings/d79688f5-29be-4fb2-a650-2d4a813f5306" target="_blank" rel="noopener">Electric Dreams</a></b> від Epic на Fab — окремий проєкт <code>ElectricDreamsSample</code> (≈57–60 ГБ). Завантаження запускаєш у День 24, а працювати з ним починаєш з Дня 34.</li>
 <li>З Дня 24: безкоштовні паки з Fab. Дозволене й інше безкоштовне джерело — <a href="https://polyhaven.com" target="_blank" rel="noopener">Poly Haven</a>.</li></ol>
-<p style="margin:10px 0 0">🛠️ На Дні 0 створюєш свій єдиний проєкт Unreal — <code>IslandCourse</code> (шаблон Third Person, плагін Water). Покроково: ACCOUNTS-AND-INSTALLS.html, розділ 5.</p>
+<p style="margin:10px 0 0">🛠️ У День 0 створюєш свій єдиний проєкт Unreal — <code>IslandCourse</code> (шаблон Third Person, плагін Water). Покроково: <a href="ACCOUNTS-AND-INSTALLS.html#uk-s5">ACCOUNTS-AND-INSTALLS, розділ 5</a>.</p>
 <p style="margin:10px 0 0">💸 Нічого не купуй. Перед тим як додати пак із Fab, переконайся, що ціна — 0, і прочитай ліцензію.</p></div>
 
-<div class="card" id="uk-checkin"><h2>4. Здача робіт і відгук: Google Drive</h2>
-<p style="margin:0">Папку курсу відкрито для тебе на Google Drive. Усе, що ти зберігаєш у своїй папці Work, автоматично потрапляє до координаторки курсу, а відгук повертається тобі тим самим шляхом.</p>
+<div class="card" id="uk-checkin"><h2>4. Здача робіт, відгук і питання</h2>
+<p style="margin:0">Курс ти читаєш онлайн, а Google Drive потрібен лише для здачі. Ти працюєш у робочій папці дня на своєму ПК, а наприкінці дня перетягуєш готові файли в папку здачі цього дня на Google Drive. Талія, координаторка курсу, повертає відгук у ту саму папку здачі. Здача щодня однакова.</p>
+<h3>Дві папки дня</h3>
+<table>
+<tr><td>Робоча папка дня</td><td>На твоєму ПК: <code>&lt;диск&gt;\GAD\Day-NN-…</code>, наприклад <code>D:\GAD\Day-01-bollard</code>. Тут ти працюєш і зберігаєш усе за день.</td></tr>
+<tr><td>Папка здачі</td><td>На Google Drive: Work → Assignment → папка цього дня, у ній лежить <code>HAND-IN-HERE.txt</code>. Сюди ти лише перетягуєш готові файли.</td></tr></table>
+<h3>Як здавати</h3>
 <ol>
-<li><b>Встанови Google Drive для комп'ютера:</b> <a href="https://www.google.com/drive/download/" target="_blank" rel="noopener">google.com/drive/download</a>. Запусти інсталятор і увійди тим акаунтом Google, якому відкрито доступ до папки курсу.</li>
-<li><b>Знайди спільну папку:</b> у браузері відкрий drive.google.com → <b>Shared with me</b> → правий клік на папці курсу → <b>Organize</b> → <b>Add shortcut to Drive</b> → <b>My Drive</b> → <b>Add</b>. Лише після цього папка синхронізується з твоїм ПК.</li>
-<li><b>Відкрий її на своєму ПК:</b> Провідник Windows → диск <b>Google Drive</b> → <b>My Drive</b> → папка курсу. Сторінки (спершу COURSE.html) відкривай звідти подвійним кліком. Ніколи не відкривай їх на drive.google.com чи в Google Docs: там кнопки «Копіювати» не працюють.</li>
-<li><b>Щодня здавай у папку цього дня:</b> файли, скриншоти, 60-секундний кліп і summary.md зберігай у <code>Work\Assignment\Day-NN-…\</code>. Вона синхронізується автоматично: нічого надсилати не треба. Вимикаючи ПК, дочекайся, поки значок Google Drive біля годинника покаже, що синхронізацію завершено.</li>
-<li><b>Великі проєкти Unreal — не в синхронізованій папці.</b> <code>IslandCourse</code> і <code>ElectricDreamsSample</code> лежать на швидкому локальному диску (щонайменше 250 ГБ вільного місця на все), ніколи не всередині Work чи Google Drive. У Work кладеш лише те, що здаєш.</li>
-<li><b>Відгук приходить файлом THALIA-COMMENTS.md</b> у папці цього дня (<code>Work\Assignment\Day-NN-…\</code>): це відгук від Талії, координаторки курсу. Відкрий його Блокнотом (Notepad) і зазирай туди перед початком наступного дня.</li></ol></div>
+<li><b>Щоранку створи робочу папку дня.</b> Папка GAD лежить на твоєму найшвидшому диску (часто D:), поруч із папкою Unreal: її створюєш у День 0. Перед першим уроком створи в GAD папку з такою самою назвою, як папка здачі цього дня: <code>&lt;диск&gt;\GAD\Day-NN-…</code>, наприклад <code>D:\GAD\Day-01-bollard</code>. Сюди зберігаєш .blend, експорти, фото й скриншоти.</li>
+<li><b>Спершу звіт дня.</b> Наприкінці дня натисни «Копіювати звіт дня», встав у новий чат і відповідай тьютору. Відповідь збережи в summary.md у робочій папці дня. Файл уже є? Відкрий його в Блокноті, натисни Ctrl+End, встав відповідь і натисни Ctrl+S. Нічого з написаного раніше не стирай.</li>
+<li><b>Відкрий папку здачі.</b> Угорі сторінки дня, на картці «Що здаєш сьогодні», натисни «Відкрити мою папку здачі». На Google Drive відкриється папка здачі саме цього дня. Ти в правильному місці, якщо в ній лежить <code>HAND-IN-HERE.txt</code>.</li>
+<li><b>Перетягни файли.</b> Виділи в Провіднику (File Explorer) усі файли зі списку «Що здати», разом із summary.md, і перетягни їх у вікно браузера. Лише файли: ніколи не створюй і не завантажуй папки, особливо Work, Assignment чи Day-…. Інакше Google Drive тримає дві папки з однаковою назвою, і твоя робота губиться.</li>
+<li><b>Перевір.</b> Кожна назва зі списку «Що здати» є в папці. У колонці «Розмір файлу» (File size) кліп менший за 50 МБ. Файл .blend чи .glb розміром лише кілька КБ зазвичай порожній: відкрий його на ПК, виправ і перетягни ще раз.</li>
+<li><b>Виправляєш файл?</b> Перетягни його ще раз з тією самою назвою: Google Drive збереже нову версію того самого файлу. Не обирай варіант зі збереженням обох файлів (Keep both files).</li>
+</ol>
+<p style="margin:10px 0 0">Проєкти Unreal (<code>IslandCourse</code>, <code>ElectricDreamsSample</code>) ніколи не здаються й не лежать на Google Drive.</p>
+<h3>Що здавати</h3>
+<p style="margin:0">Щодня список «Що здати» має не більше 4 рядків, а в День боса — не більше 6. Один рядок може назвати кілька файлів; усі файли дня названо на картці «Що здаєш сьогодні». Рядки бувають такі:</p>
+<ol>
+<li><b>summary.md (звіт дня)</b>;</li>
+<li><b>файл, який відкриє пізніший день</b>, з позначкою «(→ День N)»;</li>
+<li><b>один скриншот-доказ</b>, що мету дня досягнуто, з позначкою «(доказ)»;</li>
+<li><b>файл нотаток</b> — лише якщо він знадобиться пізніше (→ День N).</li></ol>
+<p style="margin:10px 0 0">🏆 У День боса додай скриншоти боса, свою таблицю оцінювання й один кліп на 30–60 секунд, 1080p, менше 50 МБ (Win+Alt+R). Збережи кліп і на ПК: з кліпів складеш ролик прогресу в День 60. Кліп більший? Відкрий його в Clipchamp (є у Windows 11) → Export → 720p: 720p теж приймається.</p>
+<p style="margin:10px 0 0">Усе інше, що ти робиш (тренувальні файли, експорти, пробні скриншоти), лишається в робочій папці дня на ПК. Здавати це не треба.</p>
+<p style="margin:10px 0 0">⛔ <b>Ніколи не здавай</b> папку проєкту чи рівня Unreal, кліп понад 50 МБ або копію папки.</p>
+<p style="margin:10px 0 0">📒 <b>Два файли ведеш увесь курс:</b> <code>credits.md</code> (джерело й ліцензія кожного фото, мапи й паку) і <code>kit_rules.md</code> (правила твого набору). Тримай їх у папці GAD на ПК, на рівень вище за робочу папку дня, і доповнюй по ходу. Коли список «Що здати» їх називає, перетягни їх у папку здачі цього дня, як усі інші файли.</p>
+<h3>Відгук, оцінка й питання</h3>
+<ul>
+<li><b>Відгук</b> від Талії з'являється в папці здачі того самого дня: файл <code>THALIA-COMMENTS.md</code>. Google Drive відкриває його просто в браузері. Зазирай туди перед наступним днем.</li>
+<li><b>Оцінка з 10</b> — на сторінці дня й на мапі курсу.</li>
+<li><b>Питання</b> пиши в рядку «Question for Thalia» у звіті дня, над яким працюєш, навіть якщо воно про інший день. Почни з номера дня: «День 0: …». Відповідь з'являється в THALIA-COMMENTS.md у папці здачі цього дня.</li>
+<li><b>Щось блокує роботу?</b> Відповідай на лист Талії: номер дня, що ти пробуєш, і скриншот.</li></ul></div>
 
 <div class="card"><h2>5. Що де лежить</h2><table>
-<tr><td>ACCOUNTS-AND-INSTALLS.html</td><td>Покрокові інструкції: акаунти, встановлення, паки, допомога.</td></tr>
-<tr><td>COURSE.html</td><td>Карта курсу: День 0 і 60 днів та твій прогрес. Починай тут щоранку.</td></tr>
-<tr><td>Learning\Day-NN-…\</td><td><b>START-HERE.html</b> — сторінка дня; у папці <b>assets</b> (якщо є) — файли на сьогодні.</td></tr>
-<tr><td>Work\Assignment\Day-NN-…\</td><td>Сюди зберігай здачу дня: роботу, скриншоти, кліп і <b>summary.md</b>. Папка синхронізується автоматично.</td></tr>
-<tr><td>THALIA-COMMENTS.md</td><td>Відгук від Талії, координаторки курсу, у папці відповідного дня.</td></tr>
-<tr><td>credits.md</td><td>Створи його у своїй папці Work і записуй джерело та ліцензію кожного фото, карти й паку.</td></tr></table></div>
+<tr><td>Твоє особисте посилання (закінчується на COURSE.html)</td><td>Мапа курсу: День 0 і 60 днів, твій прогрес і оцінки. Додай у закладки й починай тут щоранку.</td></tr>
+<tr><td>Сторінка дня</td><td>Відкривається з мапи курсу. Угорі — картка «Що здаєш сьогодні» з кнопкою «Відкрити мою папку здачі»; далі місія, уроки, самостійна робота, «Перевір себе» і звіт дня. Файли на сьогодні (якщо є) — теж там.</td></tr>
+<tr><td>ACCOUNTS-AND-INSTALLS.html</td><td>Список «До Дня 0», акаунти, встановлення, слабкий ПК, клавіатура й допомога.</td></tr>
+<tr><td>&lt;диск&gt;\GAD\Day-NN-…\ на твоєму ПК (наприклад, D:\GAD\Day-01-bollard)</td><td>Робоча папка дня: створюєш її щоранку, тут працюєш і зберігаєш усе за день.</td></tr>
+<tr><td>Google Drive: Work\Assignment\Day-NN-…\</td><td>Папка здачі цього дня, у ній лежить <b>HAND-IN-HERE.txt</b>. Відкривається кнопкою «Відкрити мою папку здачі».</td></tr>
+<tr><td>THALIA-COMMENTS.md</td><td>Відгук від Талії, координаторки курсу, у папці здачі цього дня.</td></tr>
+<tr><td>credits.md і kit_rules.md</td><td>Ведеш у GAD на ПК; здаєш у папку здачі дня, коли список «Що здати» їх називає.</td></tr></table></div>
 
-<div class="card"><h2>6. Кожен день (≈7 годин)</h2><ol>
-<li><b>🎯 Місія:</b> прочитай, що будуєш сьогодні і за якими вимогами.</li>
-<li><b>📘 4 уроки по ≈40 хв:</b> натисни <b>«Копіювати урок»</b> → відкрий <b>новий чат</b> у Gemini або ChatGPT → встав (Ctrl+V) → надішли. Тьютор перевірить, що ти вже знаєш (знайоме можна пропустити), навчить, дасть короткі завдання і перевірить скриншоти. Наприкінці — 3 запитання і «квитанція» з 2 рядків (Learned / Hard). Збережи її, потім натисни <b>«Готово»</b>.</li>
-<li><b>🏗️ Самостійне будівництво ≈4 год:</b> зроби деталь 2 за списком. Щось не виходить? <b>«Копіювати тьютора-помічника»</b> → новий чат → встав.</li>
-<li><b>✅ Перевір себе:</b> сторінка дня закінчується тестом «Перевір себе» (5 запитань; у п'ятницю — 8; на Дні 60 — 15). Результат запиши в summary.md.</li>
-<li><b>📦 Здача:</b> збережи файли в <code>Work\Assignment\Day-NN-…\</code>, запиши 60-секундний кліп (Win+Alt+R), натисни <b>«Копіювати звіт дня»</b>, встав у новий чат разом із квитанціями й результатом тесту і збережи відповідь як <b>summary.md</b>. У п'ятницю додай і докази Боса.</li></ol></div>
+<div class="card"><h2>6. Як минає день</h2><ol>
+<li><b>🎯 Зранку:</b> створи робочу папку дня (розділ 4) і прочитай місію: що будуєш сьогодні, за якими вимогами і що здаєш (картка «Що здаєш сьогодні» вгорі). Рядок «Повернеться в» показує, у який пізніший день твоя робота знадобиться знову.</li>
+<li><b>📘 Уроки по 40–50 хв:</b> натисни <b>«Копіювати урок»</b> → відкрий <b>новий чат</b> у Gemini або ChatGPT → встав (Ctrl+V) → надішли. Тьютор питає, чи тобі вже доводилося це робити; лише якщо так — дає 3 короткі запитання, і за правильних відповідей ти одразу переходиш до практики. Далі ти робиш завдання крок за кроком, а тьютор пояснює кожну нову річ там, де вона вперше потрібна, і перевіряє скриншоти. Наприкінці — одне запитання й підсумок уроку з 2 рядків: «Засвоєно: …» і «Було важко: …». Встав його в поле під уроком, потім натисни <b>«Готово»</b>.</li>
+<li><b>🏗️ Самостійна робота, близько 3 годин 30 хвилин</b> (у День боса — близько 4 годин): іди за кроками на сторінці дня. Перший крок перевіряє, чи файли з уроків лежать у робочій папці дня. Пропущено урок? Спершу пройди його кроки «Разом із тьютором» (близько 25 хв). Щось не виходить? <b>«Копіювати тьютора-помічника»</b> → новий чат → встав.</li>
+<li><b>✅ Перевір себе:</b> сторінка дня закінчується тестом «Перевір себе» (5 запитань; у п'ятницю — 8; у День 60 — 15). Результат знадобиться для звіту дня.</li>
+<li><b>📦 Звіт, потім здача:</b> спершу натисни <b>«Копіювати звіт дня»</b>, встав у новий чат, відповідай і збережи відповідь у <b>summary.md</b> у робочій папці дня. Потім перетягни всі файли зі списку «Що здати», разом із summary.md, у папку здачі (розділ 4).</li></ol></div>
 
 <div class="card"><h2>7. Корисне</h2><ul>
 <li><b>Звичайний чат, без спеціальних режимів:</b> не вмикай Guided Learning у Gemini, Study mode у ChatGPT чи Canvas. Текст уроку сам робить чат тьютором.</li>
-<li><b>Новий чат для кожного уроку.</b> Закінчився безкоштовний ліміт — встав той самий текст в інший ШІ.</li>
-<li><b>Скриншот:</b> Win+Shift+S, потім Ctrl+V у чат. <b>Кліп:</b> Win+Alt+R (старт і стоп).</li>
-<li><b>Перевірка роботи:</b> у дні самоперевірки тьютор грає роль вимогливого арт-директора. Відгук від Талії, координаторки курсу, чекає у файлі THALIA-COMMENTS.md (розділ 4).</li>
-<li><b>Чесно з авторами:</b> карти OpenStreetMap підписуй «© OpenStreetMap contributors»; фото з Wikimedia Commons — з автором і ліцензією; паки з ліцензією CC-BY — з іменем автора. Усе це — у credits.md.</li>
-<li><b>EN / UA</b> угорі кожної сторінки перемикає мову. Прогрес зберігається в браузері: працюй на тому самому комп'ютері й у тому самому браузері. Сторінка курсу також передає координаторці, які дні відкрито і скільки зроблено (без імені, лише код курсу), щоб ми могли вчасно допомогти.</li>
-<li>Паролі нікому не передаємо, нічого не купуємо.</li></ul></div>
+<li><b>Новий чат для кожного уроку.</b> Закінчився безкоштовний ліміт — встав той самий текст у новий чат іншого тьютора (Gemini або ChatGPT).</li>
+<li><b>Скриншот:</b> Win+Shift+S, потім Ctrl+V у чат. <b>Кліп</b> (лише в День боса): Win+Alt+R — старт і стоп.</li>
+<li><b>Огляд роботи:</b> у дні самоперевірки тьютор грає роль вимогливого арт-директора. Відгук від Талії, координаторки курсу, чекає у файлі THALIA-COMMENTS.md (розділ 4).</li>
+<li><b>Чесно з авторами:</b> мапи OpenStreetMap підписуй «© OpenStreetMap contributors»; фото з Wikimedia Commons — з автором і ліцензією; паки з ліцензією CC-BY — з іменем автора. Усе це — рядками авторства в credits.md.</li>
+<li><b>Слабкий ПК чи незвична клавіатура</b> (немає цифрового блока, Alt+Z відкриває оверлей NVIDIA, Home показує вид згори): <a href="ACCOUNTS-AND-INSTALLS.html#uk-s16">розділ 16</a> і <a href="ACCOUNTS-AND-INSTALLS.html#uk-s17">розділ 17</a> на сторінці ACCOUNTS-AND-INSTALLS.</li>
+<li><b>EN / UA</b> угорі кожної сторінки перемикає мову. Прогрес зберігається в браузері: відкривай курс за тим самим посиланням, на тому самому комп'ютері й у тому самому браузері. Сторінка курсу також передає координаторці, які дні відкрито і скільки зроблено (без імені, лише код курсу), щоб ми могли вчасно допомогти.</li>
+<li>Паролі нікому не передавай і нічого не купуй.</li></ul></div>
 </div>
-
 <div data-l="en">
 <h1>🏝️ Game Asset Development with Blender and Unreal: 12 weeks</h1>
-<p class="sub">Every day you learn with your own free AI tutor (Gemini or ChatGPT), then you build for real. In 12 weeks: from your first prop in Blender to your own island with two finished districts and a flight over the whole island. You start from zero, and no programming is needed.</p>
-<p class="note">⚠️ <b>The course lives in a shared Google Drive folder.</b> Install Google Drive for desktop, find the course folder (section 4) and open the day pages from the synced folder on your own PC by double-clicking: they open in your browser. Don't open them on drive.google.com or with Google Docs: the Copy buttons don't work there.</p>
-<p class="note">🧭 <b>First time signing up or installing?</b> Open <a href="ACCOUNTS-AND-INSTALLS.html">ACCOUNTS-AND-INSTALLS.html</a>: it walks you step by step through every account (Google, ChatGPT, Epic, Fab), every install, and what to do if something goes wrong.</p>
+<p class="sub">Every day you learn with your own free AI tutor (Gemini or ChatGPT), then you build for real. In 12 weeks: from your first model in Blender to your own island with two finished districts and a flythrough over the whole island. You start from zero, and no programming is needed.</p>
+<p class="note">⚠️ <b>The course opens online at the personal link in your email.</b> Bookmark it (Ctrl+D) and open it every day in the same browser on the same PC: that is where your progress is saved. Your Google Drive folder is only for handing in work (section 4). Don't open course pages from Google Drive: the Copy buttons don't work there.</p>
+<p class="note">🧭 <b>Before Day 0, do the Before Day 0 list.</b> It covers the accounts (Google, Gemini or ChatGPT, Epic and Fab) and the programs (Unreal Engine 5.8, Blender, Krita): about 1 hour 30 minutes, plus the long Unreal download. Step by step, with tips for a weak PC and an unusual keyboard: <a href="ACCOUNTS-AND-INSTALLS.html#en-s0">ACCOUNTS-AND-INSTALLS.html</a>.</p>
 
 <div class="card"><h2>1. What's ahead</h2>
-<p style="margin:0">The course runs from Day 0 to Day 60: Monday to Friday, weekends free. Day 0 is accounts, installs, a first hour in Blender and your Unreal project <code>IslandCourse</code>. Then 12 weeks:</p>
+<p style="margin:0">The course runs from Day 0 to Day 60: Monday to Friday, weekends free. Before Day 0 you make your accounts and install the programs from the Before Day 0 list. Day 0 itself (about 4 hours) is your folders, a first hour in Blender and your Unreal project <code>IslandCourse</code>. Then 12 weeks:</p>
 <ul>
 <li><b>Week 1 (Days 1 to 5):</b> Blender from zero: props at real size.</li>
 <li><b>Week 2 (Days 6 to 10):</b> modular kits.</li>
@@ -275,62 +304,92 @@ html[lang=uk] [data-l=uk],html[lang=en] [data-l=en]{display:block}
 <li><b>Week 10 (Days 46 to 50):</b> district 1 finished, district 2 built.</li>
 <li><b>Week 11 (Days 51 to 55):</b> district 2 finished.</li>
 <li><b>Week 12 (Days 56 to 60):</b> the whole island, polished, flown and presented.</li></ul>
-<p style="margin:10px 0 0">🏁 <b>The finish line:</b> your own island (about 1 km) grounded in a real coastal place, with two finished districts of about 200 x 200 m each and a 2-minute flight over the whole island.</p>
-<p style="margin:10px 0 0">Every Friday (Day 5, 10, … 60) is 🏆 <b>Boss day</b>: a timed build with Bronze, Silver and Gold tiers.</p></div>
+<p style="margin:10px 0 0">🏁 <b>The finish line:</b> your own island (about 1 km) grounded in a real coastal place, with two finished districts of about 200 × 200 m each and a 2-minute flythrough over the whole island.</p>
+<p style="margin:10px 0 0">Every Friday (Day 5, 10, … 60) is 🏆 <b>Boss day</b>: a timed build with Bronze, Silver and Gold medals. Boss-day lessons are short, about 20 minutes each, and the build takes about 4 hours.</p></div>
 
 <div class="card"><h2>2. Your PC</h2><table>
 <tr><td>System</td><td>Windows 10 or 11</td></tr>
 <tr><td>Graphics card</td><td>RTX 4060 class (8 GB video memory) or better</td></tr>
 <tr><td>Memory</td><td>16 GB minimum; <b>32 GB recommended from week 7</b> (with 16 GB, only Electric Dreams' small levels work)</td></tr>
-<tr><td>Disk</td><td>A fast SSD with at least 250 GB free for the whole course: Unreal Engine 5.8 (about 40 GB), Electric Dreams (about 57 to 60 GB to download; keep three times that free, because shaders and derived data grow) and your projects</td></tr></table>
-<p style="margin:10px 0 0"><b>A weaker PC?</b> The first weeks run on a modest graphics card at Medium settings. For the heavy weeks (7 to 12) you have options:</p><ul>
-<li>with 16 GB of memory: raise the Windows page file to 32 GB or more, close the browser while shaders compile, and keep Scalability at High;</li><li>set Scalability to Medium or Low and open only the small levels the day page recommends;</li>
+<tr><td>Disk</td><td>A fast SSD with at least 250 GB free for the whole course: Unreal Engine 5.8 (40 GB or more), Electric Dreams (about 57 to 60 GB to download; keep three times that free, because shaders and derived data grow) and your projects</td></tr></table>
+<p style="margin:10px 0 0"><b>A weaker PC?</b> You can do the course in Unreal 5.8 even on a laptop with a 4 GB graphics card (GTX 1650 class) and 16 GB of memory. You change a few settings for yourself only, and the project stays as the course sets it up. Step by step: <a href="ACCOUNTS-AND-INSTALLS.html#en-s16">ACCOUNTS-AND-INSTALLS, section 16</a>. In short:</p><ul>
+<li>work at Scalability Medium (Settings → Engine Scalability Settings) and lower Screen Percentage to 50 to 75%;</li>
+<li>with 16 GB of memory, on Day 24 raise the Windows page file to 32 GB or more, and close the browser while shaders compile;</li>
+<li>with a graphics card of 4 GB or less, you take the light route on Day 34, without Electric Dreams;</li>
+<li>don't switch to Unreal 4.27: it lacks many of the tools the course teaches;</li>
 <li>stream from a stronger PC (yours or a friend's) with <a href="https://parsec.app" target="_blank" rel="noopener">Parsec</a> or <a href="https://github.com/LizardByte/Sunshine" target="_blank" rel="noopener">Sunshine</a> + <a href="https://moonlight-stream.org" target="_blank" rel="noopener">Moonlight</a>: Unreal runs there and you see its screen on yours;</li>
 <li>rent a cloud PC (for example <a href="https://shadow.tech" target="_blank" rel="noopener">Shadow</a> or <a href="https://vagon.io" target="_blank" rel="noopener">Vagon</a>). Prices change: check them on the service's own site before paying.</li></ul></div>
 
-<div class="card"><h2>3. What to install (all free)</h2><ol>
+<div class="card"><h2>3. What to install (all free)</h2>
+<p style="margin:0">All of it is on the Before Day 0 list: <a href="ACCOUNTS-AND-INSTALLS.html#en-s0">ACCOUNTS-AND-INSTALLS, section 0</a>.</p><ol>
 <li><b>Blender</b> (the latest stable 5.x): <a href="https://www.blender.org/download/">blender.org</a></li>
 <li><b>Krita</b> for painting and photos: <a href="https://krita.org/en/download/">krita.org</a> (the free version is from there, not from the stores). <a href="https://www.gimp.org/downloads/" target="_blank" rel="noopener">GIMP</a>, <a href="https://inkscape.org/release/" target="_blank" rel="noopener">Inkscape</a> or <a href="https://www.photopea.com" target="_blank" rel="noopener">Photopea</a> in the browser also work.</li>
-<li><b>The <a href="https://www.unrealengine.com/download" target="_blank" rel="noopener">Epic Games Launcher</a></b> and in it <b>Unreal Engine 5.8</b> (about 40 GB; start the download the evening before). Your Epic account also opens <b><a href="https://www.fab.com" target="_blank" rel="noopener">Fab</a></b> and its free packs.</li>
+<li><b>The <a href="https://www.unrealengine.com/download" target="_blank" rel="noopener">Epic Games Launcher</a></b> and in it <b>Unreal Engine 5.8</b> (40 GB or more; start the download the day before Day 0). Your Epic account also opens <b><a href="https://www.fab.com" target="_blank" rel="noopener">Fab</a></b> and its free packs.</li>
 <li><b>A free <a href="https://gemini.google.com" target="_blank" rel="noopener">Gemini</a> or <a href="https://chatgpt.com" target="_blank" rel="noopener">ChatGPT</a> account</b>: that's your tutor.</li>
-<li><b>Google Drive for desktop</b> (<a href="https://www.google.com/drive/download/" target="_blank" rel="noopener">google.com/drive/download</a>): through it you open the course folder and hand in your work (section 4).</li>
+<li><b>A Google account</b>: the one your hand-in folder was shared with (the address is in your email). Don't make a new Gmail address for the course. You don't need Google Drive for desktop: you hand in your work in the browser (section 4).</li>
 <li>From Day 24: Epic's free <b><a href="https://www.fab.com/listings/d79688f5-29be-4fb2-a650-2d4a813f5306" target="_blank" rel="noopener">Electric Dreams</a></b> sample on Fab, a separate project called <code>ElectricDreamsSample</code> (about 57 to 60 GB). You start the download on Day 24 and start working with it on Day 34.</li>
 <li>From Day 24: free packs from Fab. Another free source is allowed too: <a href="https://polyhaven.com" target="_blank" rel="noopener">Poly Haven</a>.</li></ol>
-<p style="margin:10px 0 0">🛠️ On Day 0 you create your one Unreal project, <code>IslandCourse</code> (Third Person template, Water plugin). Step by step: ACCOUNTS-AND-INSTALLS.html, section 5.</p>
+<p style="margin:10px 0 0">🛠️ On Day 0 you create your one Unreal project, <code>IslandCourse</code> (Third Person template, Water plugin). Step by step: <a href="ACCOUNTS-AND-INSTALLS.html#en-s5">ACCOUNTS-AND-INSTALLS, section 5</a>.</p>
 <p style="margin:10px 0 0">💸 Don't buy anything. Before you add a pack from Fab, check that the price shows 0 and read its licence.</p></div>
 
-<div class="card" id="en-checkin"><h2>4. Handing in and feedback: Google Drive</h2>
-<p style="margin:0">The course folder is shared with you on Google Drive. Everything you save in your Work folder reaches the course coordinator automatically, and the feedback comes back to you the same way.</p>
+<div class="card" id="en-checkin"><h2>4. Handing in, feedback and questions</h2>
+<p style="margin:0">You read the course online; Google Drive is only for handing in. You work in your day work folder on your PC, and at the end of the day you drag your finished files into that day's hand-in folder on Google Drive. Thalia, the course coordinator, puts her feedback in the same hand-in folder. Handing in works the same way every day.</p>
+<h3>The day's two folders</h3>
+<table>
+<tr><td>Day work folder</td><td>On your PC: <code>&lt;drive&gt;\GAD\Day-NN-…</code>, for example <code>D:\GAD\Day-01-bollard</code>. You work here and save everything for the day.</td></tr>
+<tr><td>Hand-in folder</td><td>On Google Drive: Work → Assignment → that day's folder, with <code>HAND-IN-HERE.txt</code> in it. You only drag finished files in here.</td></tr></table>
+<h3>How to hand in</h3>
 <ol>
-<li><b>Install Google Drive for desktop:</b> <a href="https://www.google.com/drive/download/" target="_blank" rel="noopener">google.com/drive/download</a>. Run the installer and sign in with the Google account that has access to the course folder.</li>
-<li><b>Find the shared folder:</b> in your browser open drive.google.com → <b>Shared with me</b> → right-click the course folder → <b>Organize</b> → <b>Add shortcut to Drive</b> → <b>My Drive</b> → <b>Add</b>. Only after this does the folder sync to your PC.</li>
-<li><b>Open it on your PC:</b> File Explorer → the <b>Google Drive</b> drive → <b>My Drive</b> → the course folder. Open the pages from there by double-clicking (COURSE.html first). Never open them on drive.google.com or in Google Docs: the Copy buttons fail there.</li>
-<li><b>Hand in every day, into that day's folder:</b> save your files, screenshots, the 60-second clip and summary.md in <code>Work\Assignment\Day-NN-…\</code>. It syncs automatically: there is nothing to send. Before you shut the PC down, wait until the Google Drive icon near the clock says syncing is finished.</li>
-<li><b>Big Unreal projects stay out of the synced folder.</b> <code>IslandCourse</code> and <code>ElectricDreamsSample</code> live on a fast local drive (at least 250 GB free for everything), never inside Work or Google Drive. Work holds only what you hand in.</li>
-<li><b>Feedback arrives as THALIA-COMMENTS.md</b> in that day's folder (<code>Work\Assignment\Day-NN-…\</code>): it is feedback from Thalia, the course coordinator. Open it with Notepad and look for it before the next day starts.</li></ol></div>
+<li><b>Each morning, make your day work folder.</b> Your GAD folder is on your fastest drive (often D:), beside your Unreal folder: you make it on Day 0. Before the first lesson, make a folder in GAD with the same name as that day's hand-in folder: <code>&lt;drive&gt;\GAD\Day-NN-…</code>, such as <code>D:\GAD\Day-01-bollard</code>. Save your .blend files, exports, photos and screenshots there.</li>
+<li><b>The day report first.</b> At the end of the day, click "Copy the day report", paste it into a new chat and answer the tutor. Save the answer as summary.md in your day work folder. The file already exists? Open it in Notepad, press Ctrl+End, paste the answer and press Ctrl+S. Never delete what is already there.</li>
+<li><b>Open your hand-in folder.</b> At the top of the day page, on the "What you hand in today" card, click "Open my hand-in folder". That day's hand-in folder opens on Google Drive. You're in the right place if you see <code>HAND-IN-HERE.txt</code> in it.</li>
+<li><b>Drag in the files.</b> In File Explorer, select all the files on the "Hand in" list, summary.md included, and drag them into the browser window. Files only: never create or upload a folder, especially not Work, Assignment or Day-…. Otherwise Google Drive keeps two folders with the same name, and your work gets lost.</li>
+<li><b>Check.</b> Every name on the "Hand in" list shows in the folder. The File size column shows the clip under 50 MB. A .blend or .glb file of only a few KB is usually empty: open it on your PC, fix it and drag it in again.</li>
+<li><b>Fixing a file?</b> Drag it in again with the same name: Google Drive saves it as a new version of the same file. Don't choose Keep both files.</li>
+</ol>
+<p style="margin:10px 0 0">Unreal projects (<code>IslandCourse</code>, <code>ElectricDreamsSample</code>) are never handed in and never go on Google Drive.</p>
+<h3>What to hand in</h3>
+<p style="margin:0">Each day the "Hand in" list has at most 4 lines, 6 on a Boss day. One line may name several files; the "What you hand in today" card names every file for the day. The lines are:</p>
+<ol>
+<li><b>summary.md</b>, the day report;</li>
+<li><b>the file a later day opens</b>, marked "(→ Day N)";</li>
+<li><b>one proof screenshot</b> that shows today's goal is met, marked "(proof)";</li>
+<li><b>a notes file</b>, only when a later day uses it (→ Day N).</li></ol>
+<p style="margin:10px 0 0">🏆 On a Boss day, add the Boss screenshots, your rubric and one clip of 30 to 60 seconds, 1080p, under 50 MB (Win+Alt+R). Keep the clip on your PC too: on Day 60 you cut your clips into a progress reel. Clip too big? Open it in Clipchamp (built into Windows 11) → Export → 720p: 720p is accepted too.</p>
+<p style="margin:10px 0 0">Everything else you make (practice files, exports, test screenshots) stays in your day work folder on your PC. You don't hand it in.</p>
+<p style="margin:10px 0 0">⛔ <b>Never hand in</b> an Unreal project or level folder, a clip over 50 MB, or a copy of a folder.</p>
+<p style="margin:10px 0 0">📒 <b>Two files run for the whole course:</b> <code>credits.md</code> (the source and licence of every photo, map and pack) and <code>kit_rules.md</code> (your kit's rules). Keep them in your GAD folder on your PC, one level above your day work folder, and add to them as you go. When the "Hand in" list names them, drag them into that day's hand-in folder like any other file.</p>
+<h3>Feedback, score and questions</h3>
+<ul>
+<li><b>Feedback</b> from Thalia appears in that day's hand-in folder, as <code>THALIA-COMMENTS.md</code>. Google Drive opens it right in the browser. Look for it before the next day.</li>
+<li><b>Your score out of 10</b> appears on the day page and on the course map.</li>
+<li><b>A question?</b> Write it on the "Question for Thalia" line of the report for the day you're working on, even if it's about another day. Start with the day number: "Day 0: …". The answer appears in THALIA-COMMENTS.md in that day's hand-in folder.</li>
+<li><b>Something blocks you?</b> Reply to Thalia's email with the day number, what you tried and a screenshot.</li></ul></div>
 
 <div class="card"><h2>5. What's where</h2><table>
-<tr><td>ACCOUNTS-AND-INSTALLS.html</td><td>Step-by-step help: accounts, installs, packs, troubleshooting.</td></tr>
-<tr><td>COURSE.html</td><td>Your course map: Day 0 and 60 days, and your progress. Start here every morning.</td></tr>
-<tr><td>Learning\Day-NN-…\</td><td><b>START-HERE.html</b> is the day's page; the <b>assets</b> folder (when there is one) holds that day's files.</td></tr>
-<tr><td>Work\Assignment\Day-NN-…\</td><td>Save the day's hand-in here: work, screenshots, the clip and <b>summary.md</b>. The folder syncs automatically.</td></tr>
-<tr><td>THALIA-COMMENTS.md</td><td>Feedback from Thalia, the course coordinator, in that day's folder.</td></tr>
-<tr><td>credits.md</td><td>Create it in your Work folder and record the source and licence of every photo, map and pack you use.</td></tr></table></div>
+<tr><td>Your personal link (ends in COURSE.html)</td><td>Your course map: Day 0 and 60 days, with your progress and scores. Bookmark it and start here every morning.</td></tr>
+<tr><td>The day page</td><td>Opens from the course map. At the top is the "What you hand in today" card with the "Open my hand-in folder" button; then the mission, lessons, build, "Check yourself" and the day report. Today's files (when there are any) are there too.</td></tr>
+<tr><td>ACCOUNTS-AND-INSTALLS.html</td><td>The Before Day 0 list, accounts, installs, weak PCs, keyboards and troubleshooting.</td></tr>
+<tr><td>&lt;drive&gt;\GAD\Day-NN-…\ on your PC (for example D:\GAD\Day-01-bollard)</td><td>Your day work folder: you make it each morning, work in it and save everything for the day there.</td></tr>
+<tr><td>Google Drive: Work\Assignment\Day-NN-…\</td><td>That day's hand-in folder, with <b>HAND-IN-HERE.txt</b> in it. The "Open my hand-in folder" button opens it.</td></tr>
+<tr><td>THALIA-COMMENTS.md</td><td>Feedback from Thalia, the course coordinator, in that day's hand-in folder.</td></tr>
+<tr><td>credits.md and kit_rules.md</td><td>Kept in GAD on your PC; handed in to that day's hand-in folder when the "Hand in" list names them.</td></tr></table></div>
 
-<div class="card"><h2>6. Every day (about 7 hours)</h2><ol>
-<li><b>🎯 Mission:</b> read what you build today and its spec.</li>
-<li><b>📘 4 lessons of about 40 min:</b> click <b>Copy lesson</b>, open a <b>new chat</b> in Gemini or ChatGPT, paste (Ctrl+V) and send. The tutor checks what you already know (you can skip it), teaches you, gives you short tasks and checks your screenshots. It ends with 3 questions and a two-line receipt (Learned / Hard): keep it, then click <b>Done</b>.</li>
-<li><b>🏗️ Build alone, about 4 h:</b> make piece 2 from the checklist. Stuck? Click <b>Copy the build coach</b>, open a new chat, paste.</li>
-<li><b>✅ Check yourself:</b> the day page ends with a "Check yourself" quiz (5 questions; 8 on Fridays; 15 on Day 60). Write your score in summary.md.</li>
-<li><b>📦 Ship:</b> save your files in <code>Work\Assignment\Day-NN-…\</code>, record a 60-second clip (Win+Alt+R), click <b>Copy the day report</b>, paste it into a new chat with your receipts and your quiz score, and save the answer as <b>summary.md</b>. On Fridays, add your Boss evidence too.</li></ol></div>
+<div class="card"><h2>6. How a day works</h2><ol>
+<li><b>🎯 In the morning:</b> make your day work folder (section 4) and read the mission: what you build today, its spec and what you hand in (the "What you hand in today" card at the top). The "Comes back on" line shows the later day where your work is used again.</li>
+<li><b>📘 Lessons of 40 to 50 minutes:</b> click <b>Copy lesson</b>, open a <b>new chat</b> in Gemini or ChatGPT, paste (Ctrl+V) and send. The tutor asks whether you've done this before; only if you have does it ask 3 short questions, and if you answer them right you go straight to the practice. Then you do the task step by step, and the tutor explains each new thing where you first need it and checks your screenshots. It ends with one question and a two-line lesson summary: "Learned: …" and "Hard: …". Paste it into the box under the lesson, then click <b>Done</b>.</li>
+<li><b>🏗️ Build on your own, about 3 hours 30 minutes</b> (about 4 hours on a Boss day): follow the steps on the day page. The first step checks that your lesson files are in your day work folder. Skipped a lesson? Do its "with your tutor" steps first (about 25 minutes). Stuck? Click <b>Copy the build coach</b>, open a new chat, paste.</li>
+<li><b>✅ Check yourself:</b> the day page ends with a "Check yourself" quiz (5 questions; 8 on Fridays; 15 on Day 60). You need your score for the day report.</li>
+<li><b>📦 Report, then hand in:</b> first click <b>Copy the day report</b>, paste it into a new chat, answer, and save the answer in <b>summary.md</b> in your day work folder. Then drag all the files on the "Hand in" list, summary.md included, into your hand-in folder (section 4).</li></ol></div>
 
 <div class="card"><h2>7. Good to know</h2><ul>
 <li><b>A normal chat, no special modes:</b> don't turn on Guided Learning in Gemini, Study mode in ChatGPT, or Canvas. The lesson text turns the chat into your tutor by itself.</li>
-<li><b>A new chat for every lesson.</b> If a free limit runs out, paste the same text into the other AI.</li>
-<li><b>Screenshot:</b> Win+Shift+S, then Ctrl+V into the chat. <b>Clip:</b> Win+Alt+R to start and stop.</li>
+<li><b>A new chat for every lesson.</b> If a free limit runs out, paste the same text into a new chat with the other tutor (Gemini or ChatGPT).</li>
+<li><b>Screenshot:</b> Win+Shift+S, then Ctrl+V into the chat. <b>Clip</b> (Boss days only): Win+Alt+R to start and stop.</li>
 <li><b>Reviews:</b> on self-review days the tutor plays a demanding art director. Feedback from Thalia, the course coordinator, waits for you in THALIA-COMMENTS.md (section 4).</li>
-<li><b>Credit the makers:</b> OpenStreetMap maps as "© OpenStreetMap contributors"; Wikimedia Commons photos with author and licence; CC-BY packs with the author's name. All of it goes in credits.md.</li>
-<li><b>EN / UA</b> at the top of every page switches the language. Progress is saved in the browser: use the same computer and the same browser. Your course page also tells your coordinator which days you opened and how far you got (no name, only your course code), so we can help in time.</li>
+<li><b>Credit the makers:</b> OpenStreetMap maps as "© OpenStreetMap contributors"; Wikimedia Commons photos with author and licence; CC-BY packs with the author's name. All of it goes in credits.md, one line per source.</li>
+<li><b>A weak PC or an unusual keyboard</b> (no numpad, Alt+Z opens the NVIDIA overlay, Home shows the top view): <a href="ACCOUNTS-AND-INSTALLS.html#en-s16">section 16</a> and <a href="ACCOUNTS-AND-INSTALLS.html#en-s17">section 17</a> of ACCOUNTS-AND-INSTALLS.</li>
+<li><b>EN / UA</b> at the top of every page switches the language. Progress is saved in the browser: open the course from the same link, on the same computer and in the same browser. Your course page also tells your coordinator which days you opened and how far you got (no name, only your course code), so we can help in time.</li>
 <li>Never share passwords, and don't buy anything.</li></ul></div>
 </div>
 </div>

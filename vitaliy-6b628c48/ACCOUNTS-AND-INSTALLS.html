@@ -168,7 +168,7 @@ html[lang=uk] [data-l=uk],html[lang=en] [data-l=en]{display:block}
 </style>
 <script>window.STUDENT={"en": "Vitaliy", "uk": "Віталій"};</script>
 </head>
-<body><div class="online-note" style="font:600 14px/1.4 system-ui,sans-serif;padding:8px 14px;margin:0;background:#5b5bd6;color:#fff;text-align:center"><span lang="uk">Курс онлайн. Роботу здавай у свою папку Google Drive: Work\Assignment\День-NN.</span> · <span lang="en">You are viewing the course online. Hand in your work in your Google Drive folder: Work\Assignment\Day-NN.</span></div>
+<body><style>html[lang=en] .online-note [lang=uk],html:not([lang=en]) .online-note [lang=en]{display:none}</style><div class="online-note" style="font:600 14px/1.4 system-ui,sans-serif;padding:8px 14px;margin:0;background:#5b5bd6;color:#fff;text-align:center"><span lang="uk">Курс онлайн. Здавай роботу кнопкою «Відкрити мою папку здачі» на сторінці кожного дня.</span><span lang="en">You are viewing the course online. Hand in with the Open my hand-in folder button on each day page.</span></div>
 <div class="sea" aria-hidden="true"></div>
 <div class="wrap">
 <div class="top"><button class="pill" id="sw" onclick="toggleLang()">EN</button></div>
@@ -176,11 +176,11 @@ html[lang=uk] [data-l=uk],html[lang=en] [data-l=en]{display:block}
 
 <div data-l="uk">
 <p class="student-for" style="margin:0 0 6px;font-weight:650;letter-spacing:.02em;opacity:.85">Курс для: Віталій</p><p class="student-for" style="margin:0 0 6px;font-weight:650;letter-spacing:.02em;opacity:.85">Course for: Vitaliy</p><h1>🔑 Акаунти й встановлення: крок за кроком</h1>
-<p class="sub">Усе, що потрібно для курсу: кожен акаунт, кожне завантаження і кожне встановлення, по кроках. Відкрий потрібний розділ і йди за пунктами. Назви кнопок і меню написано англійською, так, як вони виглядають на екрані.</p>
+<p class="sub">Усе, що потрібно для курсу: кожен акаунт, кожне завантаження і кожне встановлення, по кроках. Почни зі списку «До Дня 0» (розділ 0), далі відкривай потрібний розділ і йди за пунктами. Назви кнопок і меню написано англійською, так, як вони виглядають на екрані.</p>
 <p class="note">💡 Сайти іноді переставляють кнопки. Якщо твій екран виглядає інакше, ніж тут описано, зроби скриншот (Win+Shift+S) і спитай свого тьютора в Gemini або ChatGPT: опиши, що натиснуто і що видно на екрані.</p>
 
 <nav class="toc" id="uk-toc"><b>Зміст</b><ol start="0">
-<li><a href="#uk-s0">Перед початком</a></li>
+<li><a href="#uk-s0">До Дня 0: список</a></li>
 <li><a href="#uk-s1">Акаунт Google і Gemini</a></li>
 <li><a href="#uk-s2">Акаунт ChatGPT</a></li>
 <li><a href="#uk-s3">Акаунт Epic Games</a></li>
@@ -194,25 +194,41 @@ html[lang=uk] [data-l=uk],html[lang=en] [data-l=en]{display:block}
 <li><a href="#uk-s11">Карти висот (День 26)</a></li>
 <li><a href="#uk-s12">Скриншоти й кліпи</a></li>
 <li><a href="#uk-s13">Потужніший ПК через трансляцію</a></li>
-<li><a href="#uk-s14">Google Drive для комп'ютера</a></li>
+<li><a href="#uk-s14">Папка здачі на Google Drive</a></li>
 <li><a href="#uk-s15">Якщо все заплуталось</a></li>
+<li><a href="#uk-s16">Слабкий ПК</a></li>
+<li><a href="#uk-s17">Клавіатура й скорочення</a></li>
 </ol></nav>
 
-<div class="card" id="uk-s0"><h2>0. Перед початком</h2>
+<div class="card" id="uk-s0"><h2>0. До Дня 0: список</h2>
 <ul class="meta">
-<li><b>Для чого:</b> щоб усі реєстрації пройшли спокійно й без сюрпризів.</li>
+<li><b>Для чого:</b> акаунти й програми готові заздалегідь, тож сам День 0 займає близько 4 годин.</li>
 <li><b>Ціна:</b> безкоштовно.</li>
-<li><b>Коли:</b> до Дня 0.</li>
+<li><b>Коли:</b> за день-два до Дня 0: близько 1 години 30 хвилин плюс завантаження Unreal (його можна лишити на ніч).</li>
 </ul>
 <ol>
-<li><b>Пошта, яку можна відкрити просто зараз.</b> Найпростіше — адреса Gmail: той самий акаунт Google відкриває й Gemini (розділ 1). Одна адреса для всіх сервісів курсу — менше плутанини.</li>
+<li><b>Посилання на курс.</b> Відкрий особисте посилання з листа (воно закінчується на COURSE.html) і додай його в закладки (Ctrl+D). Відкривай курс щодня в тому самому браузері на тому самому ПК: там зберігається твій прогрес.</li>
+<li><b>Акаунт Google.</b> Користуйся тим акаунтом, якому відкрито твою папку здачі: адресу вказано в листі. Ніколи не створюй для курсу нову адресу Gmail, бо до неї папку не відкрито. На цю адресу ще немає акаунта Google? Створи його саме на неї (<a href="#uk-s1">розділ 1</a>).</li>
+<li><b>Папка здачі.</b> Відкрий посилання на папку з листа в браузері, де вгорі праворуч видно саме цей акаунт Google. Має відкритися папка з твоїм ім'ям, а в ній Work. Порожньо або «Потрібен доступ» (You need access)? Відповідай на лист Талії й нічого не створюй (<a href="#uk-s14">розділ 14</a>).</li>
+<li><b>Тьютор.</b> Відкрий Gemini в тому самому акаунті Google і надішли перше повідомлення (<a href="#uk-s1">розділ 1</a>). Запасний тьютор — ChatGPT (<a href="#uk-s2">розділ 2</a>). Перевірка: тьютор відповідає українською.</li>
+<li><b>Epic Games і Fab.</b> Створи акаунт Epic Games (<a href="#uk-s3">розділ 3</a>), потім відкрий fab.com і увійди тим самим акаунтом (<a href="#uk-s6">розділ 6</a>, крок 1). Паки з Fab знадобляться з Дня 24.</li>
+<li><b>Epic Games Launcher.</b> Встанови його й увійди акаунтом Epic (<a href="#uk-s4">розділ 4</a>, кроки 1–3). Перевірка: Launcher показує твоє публічне ім'я (Display Name).</li>
+<li><b>Unreal Engine 5.8.</b> Запусти встановлення (<a href="#uk-s4">розділ 4</a>, кроки 4–10). Це 40 ГБ і більше: тримай на диску щонайменше 100 ГБ вільного місця й почни звечора. Перевірка: на плитці 5.8 видно смугу завантаження або кнопку Launch.</li>
+<li><b>Blender.</b> Встанови й відкрий один раз (<a href="#uk-s8">розділ 8</a>). Перевірка: на вітальному екрані номер версії починається з 5.</li>
+<li><b>Krita.</b> Встанови й відкрий один раз (<a href="#uk-s8">розділ 8</a>). Перевірка: Krita відкривається з вітальною сторінкою.</li>
+<li><b>Слабкий ПК чи незвична клавіатура?</b> Прочитай <a href="#uk-s16">розділ 16</a> і <a href="#uk-s17">розділ 17</a> (5 хвилин). Меню Blender чи Krita відкриваються українською? Переключи їх на англійську (розділ 17): курс називає меню англійською.</li>
+</ol>
+<p class="note">📌 <b>Завантаження Unreal ще триває, а вже День 0?</b> Однаково починай: спершу уроки 1 і 2, а до Unreal повернешся, коли завантаження завершиться.</p>
+<h3>Перед будь-якою реєстрацією</h3>
+<ol>
+<li><b>Пошта, яку можна відкрити просто зараз.</b> Найкраще — адреса, якій відкрито твою папку здачі (її вказано в листі): той самий акаунт Google відкриває й Gemini (розділ 1). Одна адреса для всіх сервісів курсу — менше плутанини.</li>
 <li><b>Паролі.</b> Для кожного сайту свій пароль, довгий: 12 символів і більше (зручно скласти з трьох-чотирьох випадкових слів і цифр). Запиши паролі в паперовий записник, що лежить удома, або в менеджер паролів. Нікому їх не передавай: ні друзям, ні «підтримці» в листах, ні тьютору в чаті. Справжня підтримка ніколи не просить пароль чи код.</li>
 <li><b>Вік.</b> Кожен сервіс має власне правило щодо мінімального віку, і правила змінюються, тож перевір їх на сайті сервісу. На жовтень 2026 року офіційні сторінки кажуть таке:
 <ul>
 <li><b>Google:</b> керувати власним акаунтом можна з 13 років (загальне правило Google для країн, яких немає в його окремому списку; України там немає).</li>
 <li><b>Gemini:</b> з 13 років (або з віку, встановленого у твоїй країні) з особистим акаунтом Google. Акаунти під керуванням Family Link у вебверсії Gemini не працюють.</li>
 <li><b>ChatGPT:</b> з 13 років; до 18 потрібен дозвіл батьків або опікуна.</li>
-<li><b>Epic Games і Fab:</b> якщо тобі менше 13 (або менше віку цифрової згоди у твоїй країні, якщо він вищий), акаунт стає обмеженим (Cabined Account), доки батьки чи опікун не підтвердять згоду через email.</li>
+<li><b>Epic Games і Fab:</b> якщо тобі менше 13 (або менше віку цифрової згоди у твоїй країні, якщо він вищий), акаунт стає обмеженим (Cabined Account), доки батьки чи опікун не підтвердять згоду електронною поштою.</li>
 </ul>
 Якщо тобі менше 18 років, покажи цю сторінку батькам або опікунам і зареєструйтеся разом там, де сервіс просить їхньої згоди.</li>
 <li><b>Листи підтвердження</b> іноді потрапляють у папку «Спам» (Spam) або, у Gmail, у вкладку «Промоакції» (Promotions). Листа немає 5 хвилин — зазирни туди.</li>
@@ -227,14 +243,15 @@ html[lang=uk] [data-l=uk],html[lang=en] [data-l=en]{display:block}
 <ul class="meta">
 <li><b>Для чого:</b> у Gemini ти щодня вставляєш уроки: це твій тьютор.</li>
 <li><b>Ціна:</b> безкоштовного плану достатньо.</li>
-<li><b>Коли:</b> День 0, далі щодня.</li>
+<li><b>Коли:</b> до Дня 0, далі щодня.</li>
 </ul>
+<p class="note">📌 <b>Потрібен акаунт Google саме на ту адресу, якій відкрито твою папку здачі</b> (її вказано в листі). Це адреса Gmail? Отже, акаунт уже є: увійди й переходь до кроку 9. Інша адреса (наприклад, @ukr.net)? Створи на неї акаунт Google за кроками нижче. Нову адресу Gmail для курсу не створюй.</p>
 <h3>Акаунт Google</h3>
 <ol>
 <li>Відкрий <a href="https://accounts.google.com/signup" target="_blank" rel="noopener">accounts.google.com/signup</a>. (Довідка Google: <a href="https://support.google.com/accounts/answer/27441" target="_blank" rel="noopener">Create a Google Account</a>.)</li>
 <li>Введи ім'я (<b>First name</b>); прізвище — за бажанням (<b>Last name (optional)</b>). Натисни <b>Next</b>.</li>
 <li>Вкажи дату народження (<b>Birthday</b>) і стать (<b>Gender</b>) → <b>Next</b>. Дата має бути справжня: від неї залежить, які сервіси відкриються.</li>
-<li>Обери одну із запропонованих адрес Gmail або <b>Create your own Gmail address</b> і придумай свою → <b>Next</b>.</li>
+<li>На кроці з адресою Gmail не обирай запропоновану адресу: натисни <b>Use your existing email or phone number</b>, введи адресу з листа → <b>Next</b>. Google надішле на неї код: введи його.</li>
 <li>Придумай пароль і повтори його → <b>Next</b>. Запиши пароль.</li>
 <li>Номер телефону: Google може попросити його для перевірки (прийде SMS з кодом) або дозволить пропустити (<b>Skip</b>).</li>
 <li>Перевір дані → <b>Next</b> → прочитай <b>Privacy and Terms</b> → <b>I agree</b>. Відкриється сторінка акаунта.</li>
@@ -242,7 +259,7 @@ html[lang=uk] [data-l=uk],html[lang=en] [data-l=en]{display:block}
 </ol>
 <h3>Gemini</h3>
 <ol start="9">
-<li>Відкрий <a href="https://gemini.google.com" target="_blank" rel="noopener">gemini.google.com</a>. Якщо вгорі праворуч є <b>Sign in</b>, натисни й увійди своїм акаунтом Google.</li>
+<li>Відкрий <a href="https://gemini.google.com" target="_blank" rel="noopener">gemini.google.com</a>. Якщо вгорі праворуч є <b>Sign in</b>, натисни й увійди акаунтом Google, якому відкрито твою папку здачі.</li>
 <li>Новий чат: кнопка <b>New chat</b> угорі ліворуч (не видно — спершу натисни <b>Menu</b> ☰).</li>
 <li>Як вставити урок: на сторінці дня натисни «Копіювати урок» → у Gemini клацни в поле повідомлення внизу → <b>Ctrl+V</b> → <b>Enter</b> (або стрілка надсилання). Кожен урок — у новому чаті.</li>
 <li>Перша перевірка: напиши «Привіт! Відповідай українською.» і надішли.</li>
@@ -254,6 +271,7 @@ html[lang=uk] [data-l=uk],html[lang=en] [data-l=en]{display:block}
 <li>Закінчився безкоштовний ліміт (Gemini пише про ліміт): цей урок пройди в ChatGPT (розділ 2) — встав той самий текст уроку в новий чат там. Ліміт Gemini згодом поновлюється.</li>
 <li>Gemini не відкривається з цим акаунтом: перевір дату народження в акаунті Google і чи це не акаунт Family Link (<a href="https://support.google.com/gemini/answer/13278668" target="_blank" rel="noopener">вимоги Gemini</a>). Поки що працюй у ChatGPT.</li>
 <li>SMS не приходить: перевір номер і код країни (для України +380), зачекай кілька хвилин і попроси код ще раз.</li>
+<li>Не виходить створити акаунт Google на адресу з листа? Створи адресу Gmail (<b>Create your own Gmail address</b>), напиши Талії нову адресу й зачекай, поки вона відкриє для неї папку здачі.</li>
 </ul>
 <p class="res">🔒 <b>Безпека:</b> не вставляй у чат паролі, коди, номери документів чи домашню адресу.</p>
 <a class="up" href="#uk-toc">↑ Зміст</a></div>
@@ -262,12 +280,12 @@ html[lang=uk] [data-l=uk],html[lang=en] [data-l=en]{display:block}
 <ul class="meta">
 <li><b>Для чого:</b> другий тьютор, коли в Gemini закінчився ліміт (або якщо ChatGPT зручніший).</li>
 <li><b>Ціна:</b> безкоштовного плану достатньо.</li>
-<li><b>Коли:</b> День 0 (за бажанням), далі за потреби.</li>
+<li><b>Коли:</b> до Дня 0 (за бажанням), далі за потреби.</li>
 </ul>
 <ol>
 <li>Відкрий <a href="https://chatgpt.com" target="_blank" rel="noopener">chatgpt.com</a> і натисни <b>Sign up for free</b> (або <b>Sign up</b>).</li>
-<li>Обери спосіб: <b>Continue with Google</b> — найпростіше, якщо вже є Gmail (обери свій акаунт і підтверди); або введи email і придумай пароль.</li>
-<li>Якщо реєстрація через email: відкрий лист від OpenAI і підтверди адресу (код або кнопка в листі). Лист може бути в «Спамі».</li>
+<li>Обери спосіб: <b>Continue with Google</b> — найпростіше: обери акаунт Google з розділу 1 і підтверди. Або введи email і придумай пароль.</li>
+<li>Якщо реєструєшся з email: відкрий лист від OpenAI і підтверди адресу (код або кнопка в листі). Лист може бути в «Спамі».</li>
 <li>Введи ім'я та дату народження й продовжуй. Іноді сервіс просить номер телефону для перевірки.</li>
 <li>Новий чат: <b>New chat</b> у лівій панелі. Встав урок (<b>Ctrl+V</b>) і надішли (<b>Enter</b>).</li>
 </ol>
@@ -286,13 +304,13 @@ html[lang=uk] [data-l=uk],html[lang=en] [data-l=en]{display:block}
 <ul class="meta">
 <li><b>Для чого:</b> один акаунт відкриває Epic Games Launcher, Unreal Engine і Fab з безкоштовними паками.</li>
 <li><b>Ціна:</b> безкоштовно.</li>
-<li><b>Коли:</b> День 0.</li>
+<li><b>Коли:</b> до Дня 0.</li>
 </ul>
 <ol>
 <li>Відкрий <a href="https://www.epicgames.com/id/register" target="_blank" rel="noopener">epicgames.com/id/register</a>. (Акаунт можна створити й просто в Launcher кнопкою <b>Create account</b>, розділ 4.)</li>
 <li>Введи дату народження (<b>Date of birth</b>) → <b>Continue</b>.</li>
 <li>Заповни email, ім'я, прізвище, <b>Display Name</b> і пароль. Display Name — публічне ім'я, його бачать інші: краще не писати повне справжнє ім'я.</li>
-<li>Постав галочку біля <b>Terms of Service</b> (умови Epic і угода Epic Games Store EULA) → <b>Continue</b>. Галочки про новини й розсилки не обов'язкові.</li>
+<li>Познач прапорець <b>Terms of Service</b> (умови Epic і угода Epic Games Store EULA) → <b>Continue</b>. Прапорці про новини й розсилки не обов'язкові.</li>
 <li>Відкрий пошту: Epic надсилає числовий код. Введи його → <b>Verify email</b>.</li>
 <li>Прочитай <b>Privacy Policy</b> → <b>Continue</b>. Готово.</li>
 <li><b>Двофакторна автентифікація (рекомендовано):</b> відкрий <a href="https://www.epicgames.com/account/password" target="_blank" rel="noopener">epicgames.com/account/password</a> (<b>Password and security</b>) → у розділі <b>Two-Factor Authentication</b> біля зручного способу натисни <b>Set up</b> → введи код з листа, SMS або застосунку-автентифікатора. Прийде лист-підтвердження. Способи: застосунок-автентифікатор (наприклад Google Authenticator чи Microsoft Authenticator), код на email, SMS (працює не в усіх регіонах), Epic Authenticator у мобільному застосунку Epic. (<a href="https://www.epicgames.com/help/account-c-45487929/account-security-c-38978022/two-factor-authentication-2fa-and-how-to-enable-it-a10075388" target="_blank" rel="noopener">Довідка Epic про 2FA</a>.)</li>
@@ -311,17 +329,17 @@ html[lang=uk] [data-l=uk],html[lang=en] [data-l=en]{display:block}
 <ul class="meta">
 <li><b>Для чого:</b> Unreal Engine — головна програма курсу; Launcher встановлює й оновлює його.</li>
 <li><b>Ціна:</b> безкоштовно.</li>
-<li><b>Коли:</b> День 0 — почни завантаження звечора (близько 40 ГБ).</li>
+<li><b>Коли:</b> до Дня 0 — почни завантаження звечора (40 ГБ і більше).</li>
 </ul>
 <ol>
 <li>Відкрий <a href="https://www.unrealengine.com/download" target="_blank" rel="noopener">unrealengine.com/download</a> → <b>Download Launcher</b>. Інсталятор (файл .msi) збережеться в папку «Завантаження» (Downloads).</li>
-<li>Запусти його подвійним кліком → на запит Windows натисни <b>Yes</b> → <b>Install</b> → дочекайся кінця.</li>
+<li>Двічі клацни його → на запит Windows натисни <b>Yes</b> → <b>Install</b> → дочекайся кінця.</li>
 <li>Відкрий Epic Games Launcher і увійди (<b>Sign In</b>) акаунтом Epic: email, пароль і код 2FA, якщо його увімкнено. Без входу рушій не завантажується.</li>
 <li>Ліворуч натисни <b>Unreal Engine</b>, угорі — вкладку <b>Library</b>.</li>
-<li>Натисни <b>+</b> біля <b>ENGINE VERSIONS</b>: з'явиться плитка рушія. Клацни номер версії на плитці й обери <b>5.8</b> (найновішу 5.8.x). Навіть якщо за замовчуванням стоїть новіша версія, обирай 5.8: курс зроблено для неї.</li>
-<li>Натисни <b>Install</b> → прочитай <b>Unreal Engine Pricing</b> → <b>Accept</b> → прочитай <b>End User License Agreement</b>, постав галочку → <b>Accept</b>.</li>
-<li>У вікні <b>Choose install location</b> натисни <b>Browse</b> і обери швидкий диск (SSD) з вільним місцем. Рушій займає близько 40 ГБ; точний розмір показує вікно <b>Options</b>.</li>
-<li><b>Options</b>: залиш галочки як є. <b>Core Components</b> обов'язкові, а <b>Templates and Feature Packs</b> потрібні для шаблону Third Person. Натисни <b>Apply</b>.</li>
+<li>Натисни <b>+</b> біля <b>ENGINE VERSIONS</b>: з'явиться плитка рушія. Клацни номер версії на плитці й обери <b>5.8</b> (найновішу 5.8.x). Навіть якщо типово стоїть новіша версія, обирай 5.8: курс зроблено для неї.</li>
+<li>Натисни <b>Install</b> → прочитай <b>Unreal Engine Pricing</b> → <b>Accept</b> → прочитай <b>End User License Agreement</b>, познач прапорець → <b>Accept</b>.</li>
+<li>У вікні <b>Choose install location</b> натисни <b>Browse</b> і обери швидкий диск (SSD) з вільним місцем. Рушій займає 40 ГБ і більше, тож тримай на цьому диску щонайменше 100 ГБ вільного місця; точний розмір показує вікно <b>Options</b>.</li>
+<li><b>Options</b>: залиш прапорці як є. <b>Core Components</b> обов'язкові, а <b>Templates and Feature Packs</b> потрібні для шаблону Third Person. Натисни <b>Apply</b>.</li>
 <li>Натисни <b>Install</b>. Прогрес видно на плитці й у розділі <b>Downloads</b> ліворуч; встановлення можна поставити на паузу й продовжити пізніше.</li>
 <li>Коли все готово, на плитці з'явиться <b>Launch</b>. Перший запуск довгий: Unreal готує шейдери. Не закривай вікно, навіть якщо здається, що прогрес стоїть.</li>
 </ol>
@@ -329,7 +347,7 @@ html[lang=uk] [data-l=uk],html[lang=en] [data-l=en]{display:block}
 <p class="res">✅ <b>Вийшло, якщо:</b> на плитці 5.8 є кнопка Launch, а після запуску відкривається вікно Unreal Project Browser.</p>
 <p class="res">🆘 <b>Якщо щось не так:</b></p>
 <ul>
-<li>Мало місця: звільни диск або обери інший через Browse.</li>
+<li>Мало місця: звільни диск або обери інший кнопкою Browse.</li>
 <li>Завантаження застрягло: пауза → продовжити; перезапусти Launcher; перевір інтернет і вільне місце.</li>
 <li>Замість Launch видно Update: вийшло виправлення (HotFix) — натисни Update.</li>
 <li>Пошкоджені файли або дивні помилки: на плитці стрілка ▼ → <b>Verify</b>; Launcher докачає лише те, що зіпсовано.</li>
@@ -348,22 +366,22 @@ html[lang=uk] [data-l=uk],html[lang=en] [data-l=en]{display:block}
 <ol>
 <li>Launcher → <b>Unreal Engine</b> → <b>Library</b> → <b>Launch</b> на плитці 5.8. Відкриється <b>Unreal Project Browser</b>.</li>
 <li>Ліворуч обери категорію <b>Games</b>, потім шаблон <b>Third Person</b>.</li>
-<li>Праворуч, у <b>Project Defaults</b>: <b>Blueprint</b> (не C++); <b>Target Platform</b> — Desktop; <b>Quality Preset</b> — Maximum; <b>Ray Tracing</b> — не чіпай.</li>
-<li><b>Project Location</b>: папка на швидкому локальному диску поза синхронізованою папкою курсу, наприклад <code>D:\Unreal\</code>. <b>Project Name</b>: <code>IslandCourse</code>.</li>
-<li>Натисни <b>Create</b>. Перше відкриття довге (шейдери) — дочекайся.</li>
+<li>Праворуч, у <b>Project Defaults</b>: <b>Blueprint</b> (не C++); <b>Target Platform</b> — Desktop; <b>Quality Preset</b> — Maximum, навіть на слабкому ПК (розділ 16); <b>Ray Tracing</b> — не чіпай.</li>
+<li><b>Project Location</b>: папка Unreal на твоєму найшвидшому диску, наприклад <code>D:\Unreal\</code>, ніколи не на Google Drive. <b>Project Name</b>: <code>IslandCourse</code>.</li>
+<li>Натисни <b>Create</b>. Перше відкриття довге (шейдери): 10–30 хвилин, на слабкому ПК — до 45–60 хвилин. Закрий зайві вкладки браузера й дочекайся.</li>
 <li>Перевірка: зелена кнопка <b>Play</b> угорі → ходи манекеном клавішами W A S D, камера — мишкою → <b>Esc</b> зупиняє гру.</li>
-<li>Увімкни плагін <b>Water</b> (додаткова частина Unreal, яка дає океани, озера й річки): <b>Edit</b> → <b>Plugins</b> → у полі пошуку введи <code>Water</code> → постав галочку біля <b>Water</b>. Якщо Unreal пише, що плагін у статусі Beta або потребує інших плагінів, натисни <b>Yes</b>. Потім натисни <b>Restart Now</b>.</li>
+<li>Увімкни плагін <b>Water</b> (додаткова частина Unreal, яка дає океани, озера й річки): <b>Edit</b> → <b>Plugins</b> → у полі пошуку введи <code>Water</code> → познач прапорець лише біля плагіна, який зветься <b>Water</b> (не Water Advanced і не Water Extras). Якщо Unreal попереджає, що це Experimental (рання версія), або просить увімкнути інші потрібні плагіни, натисни <b>Yes</b>. Потім натисни <b>Restart Now</b>.</li>
 </ol>
-<p class="res">✅ <b>Вийшло, якщо:</b> манекен бігає рівнем, у <b>Content Drawer</b> (Ctrl+Space) є папка <b>LevelPrototyping</b>, а після перезапуску в <b>Edit</b> → <b>Plugins</b> біля <b>Water</b> досі стоїть галочка.</p>
+<p class="res">✅ <b>Вийшло, якщо:</b> манекен бігає рівнем, у <b>Content Drawer</b> (Ctrl+Space) є папка <b>LevelPrototyping</b>, а після перезапуску в <b>Edit</b> → <b>Plugins</b> біля <b>Water</b> досі позначено прапорець.</p>
 <h3>Що вже є в проєкті</h3>
 <p>Для блокаутів, замінників і перевірок масштабу курс бере те, що вже є в Unreal, і безкоштовні паки з розділу 6:</p>
 <ul>
 <li><b>LevelPrototyping</b> (приходить із шаблоном Third Person): прості сірі блоки <code>SM_Cube</code>, <code>SM_ChamferCube</code>, <code>SM_Cylinder</code>, <code>SM_Plane</code>, <code>SM_Ramp</code>, <code>SM_QuarterCylinder</code> і <code>SM_QuarterCylinderOuter</code>; сіткові матеріали <code>M_PrototypeGrid</code>, <code>MI_PrototypeGrid_Gray</code> та інші; двері <code>SM_Door</code> і <code>SM_DoorFrame_Edge</code> у <code>LevelPrototyping/Interactable/Door/Meshes</code>.</li>
-<li><b>Базові форми</b>: Cube, Sphere, Cylinder, Cone і Plane у панелі <b>Place Actors</b> → <b>Shapes</b>. У Content Browser вони лежать у <code>/Engine/BasicShapes</code>, коли в його <b>Settings</b> стоїть галочка <b>Show Engine Content</b>.</li>
-<li><b>Вода</b>: плагін <b>Water</b>, який ти вмикаєш у кроці 7, додає в Place Actors <b>Water Body Lake</b>, <b>Water Body River</b> і <b>Water Body Ocean</b>. На Дні 29 ти будуєш ними океан, річку, озеро й водоспад.</li>
+<li><b>Базові форми</b>: Cube, Sphere, Cylinder, Cone і Plane у панелі <b>Place Actors</b> → <b>Shapes</b>. У Content Browser вони лежать у <code>/Engine/BasicShapes</code>, коли в його <b>Settings</b> позначено прапорець <b>Show Engine Content</b>.</li>
+<li><b>Вода</b>: плагін <b>Water</b>, який ти вмикаєш у кроці 7, додає в Place Actors <b>Water Body Lake</b>, <b>Water Body River</b> і <b>Water Body Ocean</b>. У День 29 ти будуєш ними океан, річку, озеро й водоспад.</li>
 </ul>
-<p>📁 <b>Папки в Content:</b> <code>Course/DayNN</code> — для вправ, <code>Island/…</code> — для острова. Рівень <code>L_Island</code> ти створиш на Дні 26. Папки з'являються за сторінками днів.</p>
-<p class="res">🆘 <b>Якщо щось не так:</b> папки LevelPrototyping немає — отже, проєкт створено з іншого шаблону. Створи новий: <b>Games</b> → <b>Third Person</b>. Вікно виглядає інакше — скриншот і питання тьютору.</p>
+<p>📁 <b>Папки в Content:</b> <code>Course/DayNN</code> — для вправ, <code>Island/…</code> — для острова. Рівень <code>L_Island</code> ти створиш у День 26. Папки з'являються за сторінками днів.</p>
+<p class="res">🆘 <b>Якщо щось не так:</b> папки LevelPrototyping немає — отже, проєкт створено з іншого шаблону. Створи новий: <b>Games</b> → <b>Third Person</b>. Вікно виглядає інакше — скриншот і питання тьютору. Редактор гальмує — налаштуй його для слабкого ПК (розділ 16).</p>
 <a class="up" href="#uk-toc">↑ Зміст</a></div>
 
 <div class="card" id="uk-s6"><h2>6. Fab, Poly Haven і безкоштовні паки</h2>
@@ -374,22 +392,22 @@ html[lang=uk] [data-l=uk],html[lang=en] [data-l=en]{display:block}
 </ul>
 <ol>
 <li>Відкрий <a href="https://www.fab.com" target="_blank" rel="noopener">fab.com</a> → <b>Sign In</b> угорі праворуч → увійди акаунтом Epic (тим самим, що в Launcher).</li>
-<li>Знайди пак: через пошук або за посиланням зі сторінки дня (наприклад, зі списку <code>free-packs-list.md</code>).</li>
-<li>Перевір, що пак справді безкоштовний: праворуч ціна <b>Free</b> (або 0) на кожному варіанті ліцензії. Перекреслена ціна з відсотком (наприклад −50 %) — це знижка, а не безкоштовний пак. Є сумнів — не додавай і спитай.</li>
+<li>Знайди пак пошуком або за посиланням зі сторінки дня (наприклад, зі списку <code>free-packs-list.md</code>).</li>
+<li>Перевір, чи пак справді безкоштовний: праворуч ціна <b>Free</b> (або 0) на кожному варіанті ліцензії. Перекреслена ціна з відсотком (наприклад −50 %) — це знижка, а не безкоштовний пак. Є сумнів — не додавай і спитай.</li>
 <li>Прочитай ліцензію (<b>License terms</b>). <b>Standard License</b> — можна використовувати у своїх проєктах; позначка <b>UE-Only Content</b> означає «лише в проєктах Unreal Engine». <b>CC-BY</b> (Creative Commons Attribution) — можна, але автора треба вказати: запиши назву, автора, ліцензію й посилання в <code>credits.md</code>.</li>
-<li>Натисни <b>Add to My Library</b>. Першого разу з'явиться вікно з угодою Fab (EULA): прочитай і погодься; галочка про новини не обов'язкова.</li>
+<li>Натисни <b>Add to My Library</b>. Першого разу з'явиться вікно з угодою Fab (EULA): прочитай і погодься; прапорець про новини не обов'язковий.</li>
 <li>Launcher → <b>Unreal Engine</b> → <b>Library</b> → прокрути вниз до <b>Fab Library</b> → знайди пак за назвою. Нового паку не видно — натисни <b>Refresh</b> або перезапусти Launcher.</li>
 <li>На плитці паку буде одна з кнопок:
 <ul>
-<li><b>Add to Project</b> (паки ассетів): обери <b>IslandCourse</b> → <b>Add to Project</b>. Якщо IslandCourse немає в списку, постав галочку <b>Show all projects</b> і обери найновішу версію, яку пропонує пак.</li>
+<li><b>Add to Project</b> (паки асетів): обери <b>IslandCourse</b> → <b>Add to Project</b>. Якщо IslandCourse немає в списку, познач прапорець <b>Show all projects</b> і обери найновішу версію, яку пропонує пак.</li>
 <li><b>Create Project</b> (цілі проєкти, як Electric Dreams у розділі 7).</li>
 <li><b>Install to Engine</b> (плагіни).</li>
 </ul></li>
 <li>Коли завантаження закінчиться, відкрий IslandCourse → <b>Content Drawer</b>: там з'явиться нова папка паку.</li>
-<li>Пак лише у форматі FBX або glTF (кнопки Add to Project немає): на fab.com відкрий пак (або <b>My Library</b>) → <b>Download</b> (іконка завантаження) → обери формат → архів збережеться в «Завантаження» → правий клік → <b>Extract All</b>. В Unreal: <b>Content Drawer</b> → <b>Import</b> (або перетягни файли у вікно) → <b>Import All</b>. Імпортуй у папку свого дня (Course/DayNN).</li>
-<li>Ще один шлях — Fab всередині Unreal: меню <b>Window</b> → <b>Fab</b> (або кнопка <b>Fab</b> поруч із <b>+ Add</b> у Content Drawer) → іконка <b>My Library</b> → <b>+</b> у правому нижньому куті плитки додає пак у відкритий проєкт (<a href="https://dev.epicgames.com/documentation/unreal-engine/fab-window-in-unreal-engine" target="_blank" rel="noopener">довідка Epic</a>).</li>
+<li>Пак лише у форматі FBX або glTF (кнопки Add to Project немає): на fab.com відкрий пак (або <b>My Library</b>) → <b>Download</b> (значок завантаження) → обери формат → архів збережеться в папку «Завантаження» (Downloads) → клацни його правою кнопкою → «Видобути все» (<b>Extract All</b>). В Unreal: <b>Content Drawer</b> → <b>Import</b> (або перетягни файли у вікно) → <b>Import All</b>. Імпортуй у папку дня в Content Drawer (Course/DayNN).</li>
+<li>Ще один шлях — Fab всередині Unreal: меню <b>Window</b> → <b>Fab</b> (або кнопка <b>Fab</b> поруч із <b>+ Add</b> у Content Drawer) → значок <b>My Library</b> → <b>+</b> у правому нижньому куті плитки додає пак у відкритий проєкт (<a href="https://dev.epicgames.com/documentation/unreal-engine/fab-window-in-unreal-engine" target="_blank" rel="noopener">довідка Epic</a>).</li>
 </ol>
-<p class="note">🌿 <b>Poly Haven</b> — ще одне дозволене безкоштовне джерело: текстури, HDRI-небо й моделі на <a href="https://polyhaven.com" target="_blank" rel="noopener">polyhaven.com</a>, акаунт не потрібен, ліцензія CC0. Завантаж файл, імпортуй його в папку свого дня (<code>Course/DayNN</code>) і все одно запиши рядок у <code>credits.md</code>.</p>
+<p class="note">🌿 <b>Poly Haven</b> — ще одне дозволене безкоштовне джерело: текстури, HDRI-небо й моделі на <a href="https://polyhaven.com" target="_blank" rel="noopener">polyhaven.com</a>, акаунт не потрібен, ліцензія CC0. Завантаж файл, імпортуй його у папку дня в Content Drawer (<code>Course/DayNN</code>) і все одно запиши рядок у <code>credits.md</code>.</p>
 <p class="res">✅ <b>Вийшло, якщо:</b> пак є в My Library на fab.com, у Fab Library в Launcher і як папка в Content Drawer.</p>
 <p class="res">🆘 <b>Якщо щось не так:</b></p>
 <ul>
@@ -402,15 +420,15 @@ html[lang=uk] [data-l=uk],html[lang=en] [data-l=en]{display:block}
 
 <div class="card" id="uk-s7"><h2>7. Electric Dreams (завантаження з Дня 24, робота з Дня 34)</h2>
 <ul class="meta">
-<li><b>Для чого:</b> безкоштовний семпл Epic — джунглі, зібрані за допомогою PCG. Це окремий проєкт, <code>ElectricDreamsSample</code>: ти розбираєш його PCG і переносиш ліс у свій IslandCourse.</li>
+<li><b>Для чого:</b> безкоштовний проєкт-зразок Epic — джунглі, зібрані за допомогою PCG. Це окремий проєкт, <code>ElectricDreamsSample</code>: ти розбираєш його PCG і переносиш ліс у свій IslandCourse.</li>
 <li><b>Ціна:</b> безкоштовно (Standard License, лише для Unreal Engine).</li>
 <li><b>Коли:</b> День 24 — запусти завантаження першим ділом (воно триває години); близько 57–60 ГБ. Працювати з ним починаєш з Дня 34 (тижні 7–12).</li>
 </ul>
 <ol>
-<li><b>Якщо в ПК 16 ГБ пам'яті</b>, спершу збільш файл підкачки Windows до 32 ГБ або більше (Epic вказує 32 ГБ RAM для цього семплу; з 16 ГБ відкривай лише його малі рівні): <b>Win+R</b> → <code>sysdm.cpl</code> → <b>Enter</b> → вкладка <b>Advanced</b> → <b>Performance: Settings</b> → вкладка <b>Advanced</b> → <b>Virtual memory: Change</b> → зніми галочку <b>Automatically manage paging file size for all drives</b> → обери диск SSD → <b>Custom size</b>: Initial size <code>32768</code>, Maximum size <code>49152</code> (це МБ) → <b>Set</b> → <b>OK</b> → перезапусти ПК.</li>
+<li><b>Якщо в ПК 16 ГБ пам'яті</b>, спершу збільш файл підкачки Windows до 32 ГБ або більше (Epic вказує 32 ГБ RAM для цього проєкту-зразка; з 16 ГБ відкривай лише його малі рівні): <b>Win+R</b> → <code>sysdm.cpl</code> → <b>Enter</b> → вкладка <b>Advanced</b> → <b>Performance: Settings</b> → вкладка <b>Advanced</b> → <b>Virtual memory: Change</b> → зніми прапорець <b>Automatically manage paging file size for all drives</b> → обери диск SSD → <b>Custom size</b>: Initial size <code>32768</code>, Maximum size <code>49152</code> (це МБ) → <b>Set</b> → <b>OK</b> → перезапусти ПК.</li>
 <li>Відкрий <a href="https://www.fab.com/listings/d79688f5-29be-4fb2-a650-2d4a813f5306" target="_blank" rel="noopener">Electric Dreams Env на Fab</a> → перевір, що там <b>Free</b> → <b>Add to My Library</b>.</li>
 <li>Launcher → <b>Unreal Engine</b> → <b>Library</b> → <b>Fab Library</b> → пошук «Electric Dreams» → <b>Create Project</b>. Семпл видно в Fab Library лише тоді, коли встановлено сумісну версію рушія (у тебе — 5.8).</li>
-<li>Назва: <code>ElectricDreamsSample</code>. Папка: швидкий локальний SSD поза синхронізованою папкою курсу, де вільно щонайменше втричі більше, ніж розмір завантаження (близько 57–60 ГБ, тобто приблизно 180 ГБ вільного місця; точний розмір показує Launcher). Версія: 5.8 → <b>Create</b>.</li>
+<li>Назва: <code>ElectricDreamsSample</code>. Папка: швидкий локальний SSD (не Google Drive), де вільно щонайменше втричі більше, ніж розмір завантаження (близько 57–60 ГБ, тобто приблизно 180 ГБ вільного місця; точний розмір показує Launcher). Версія: 5.8 → <b>Create</b>.</li>
 <li>Поки триває завантаження (Downloads), можна працювати над іншими завданнями дня.</li>
 <li>Перше відкриття: Launcher → <b>Library</b> → <b>My Projects</b> → ElectricDreamsSample. Unreal довго компілює шейдери — інколи понад годину. Не закривай редактор; закрий браузер, щоб звільнити пам'ять.</li>
 <li>Відкриється рівень <b>Startup</b> з підказками. Інші рівні — у Content Browser → <b>Content</b> → <b>Levels</b>; відкривай лише ті, які називає сторінка дня.</li>
@@ -423,6 +441,7 @@ html[lang=uk] [data-l=uk],html[lang=en] [data-l=en]{display:block}
 <li>Electric Dreams немає в Fab Library: перевір, що встановлено 5.8 і що пак додано тим самим акаунтом; натисни Refresh.</li>
 <li>Мало місця: обери інший диск або звільни поточний.</li>
 <li>Редактор гальмує чи вилітає: закрий інші програми, перевір файл підкачки, знизь Scalability до Medium (<b>Settings</b> → <b>Engine Scalability Settings</b>) і постав Screen Percentage 50 % у меню Viewport Options (угорі ліворуч у вікні перегляду) — так радить Epic для слабших ПК. Потрібні DirectX 12 і свіжий драйвер відеокарти.</li>
+<li>Відеокарта на 4 ГБ або менше (наприклад, GTX 1650): відкрий проєкт-зразок один раз на Medium з <code>r.ScreenPercentage 50</code> і на цьому зупинись. У День 34 ти обереш полегшений варіант (light route, розділ 16).</li>
 </ul>
 <a class="up" href="#uk-toc">↑ Зміст</a></div>
 
@@ -430,7 +449,7 @@ html[lang=uk] [data-l=uk],html[lang=en] [data-l=en]{display:block}
 <ul class="meta">
 <li><b>Для чого:</b> Blender — 3D-моделі; Krita — малювання, текстури й обробка фото.</li>
 <li><b>Ціна:</b> безкоштовно, акаунт не потрібен.</li>
-<li><b>Коли:</b> День 0 (GIMP, Inkscape і Photopea — за бажанням).</li>
+<li><b>Коли:</b> до Дня 0 (GIMP, Inkscape і Photopea — за бажанням).</li>
 </ul>
 <h3>Blender</h3>
 <ol>
@@ -457,7 +476,7 @@ html[lang=uk] [data-l=uk],html[lang=en] [data-l=en]{display:block}
 <ul class="meta">
 <li><b>Для чого:</b> справжні фотографії місць і предметів, з яких ти будуєш.</li>
 <li><b>Ціна:</b> безкоштовно, акаунт не потрібен.</li>
-<li><b>Коли:</b> з Дня 1; найбільше на Дні 21, коли збираєш 15 фото свого місця.</li>
+<li><b>Коли:</b> з Дня 1; найбільше в День 21, коли збираєш 15 фото свого місця.</li>
 </ul>
 <ol>
 <li>Відкрий <a href="https://commons.wikimedia.org" target="_blank" rel="noopener">commons.wikimedia.org</a> → поле <b>Search Wikimedia Commons</b>. Англійські слова працюють найкраще (наприклад «Odesa harbour» чи «quay bollard»).</li>
@@ -467,25 +486,25 @@ html[lang=uk] [data-l=uk],html[lang=en] [data-l=en]{display:block}
 <li>Над фото натисни <b>Download</b> → обери найбільший розмір (оригінал) → збережи. Інший шлях — посилання <b>Original file</b> під фото.</li>
 <li>Додай рядок у <code>credits.md</code>: назва файлу, автор, ліцензія і посилання на сторінку файлу. Наприклад: <code>Day01 | File:… | автор … | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:…</code></li>
 </ol>
-<p class="res">✅ <b>Вийшло, якщо:</b> фото в папці дня, а в credits.md є рядок про нього.</p>
+<p class="res">✅ <b>Вийшло, якщо:</b> фото в робочій папці дня, а в credits.md є рядок про нього.</p>
 <p class="res">🆘 <b>Якщо щось не так:</b> кнопки Download не видно — скористайся посиланням Original file під фото. Ліцензія незрозуміла — не бери це фото.</p>
 <a class="up" href="#uk-toc">↑ Зміст</a></div>
 
-<div class="card" id="uk-s10"><h2>10. OpenStreetMap (карти)</h2>
+<div class="card" id="uk-s10"><h2>10. OpenStreetMap (мапи)</h2>
 <ul class="meta">
-<li><b>Для чого:</b> карта й масштаб твого місця для плану ділянки.</li>
+<li><b>Для чого:</b> мапа й масштаб твого місця для плану ділянки.</li>
 <li><b>Ціна:</b> безкоштовно, акаунт не потрібен.</li>
 <li><b>Коли:</b> з Дня 21 (твоє справжнє місце); далі за потреби.</li>
 </ul>
 <ol>
 <li>Відкрий <a href="https://www.openstreetmap.org" target="_blank" rel="noopener">openstreetmap.org</a> → поле пошуку вгорі ліворуч → назва міста чи вулиці → <b>Go</b> → клацни результат.</li>
 <li>Наблизь потрібну ділянку коліщатком миші.</li>
-<li>Праворуч натисни кнопку <b>Share</b> (іконка «поділитися»): відкриється панель.</li>
-<li>У розділі <b>Image</b>: <b>Format</b> — PNG; <b>Scale</b> — масштаб (наприклад 1 : 2000), або постав галочку <b>Set custom dimensions</b> і рамкою на карті обери ділянку.</li>
-<li>Натисни <b>Download</b>: файл збережеться в «Завантаження». Перенеси його в папку дня.</li>
+<li>Праворуч натисни кнопку <b>Share</b> (значок «поділитися»): відкриється панель.</li>
+<li>У розділі <b>Image</b>: <b>Format</b> — PNG; <b>Scale</b> — масштаб (наприклад 1 : 2000), або познач прапорець <b>Set custom dimensions</b> і рамкою на мапі обери ділянку.</li>
+<li>Натисни <b>Download</b>: файл збережеться в папку «Завантаження». Перенеси його в робочу папку дня.</li>
 <li>Підпис: «© OpenStreetMap contributors» на зображенні або поруч, і рядок у <code>credits.md</code> (<a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">правила OpenStreetMap</a>).</li>
 </ol>
-<p class="res">✅ <b>Вийшло, якщо:</b> PNG карти лежить у папці дня, а підпис записано в credits.md.</p>
+<p class="res">✅ <b>Вийшло, якщо:</b> PNG мапи лежить у робочій папці дня, а підпис записано в credits.md.</p>
 <p class="res">🆘 <b>Якщо щось не так:</b> Download видає помилку — зменш ділянку або масштаб і спробуй ще раз.</p>
 <a class="up" href="#uk-toc">↑ Зміст</a></div>
 
@@ -498,7 +517,7 @@ html[lang=uk] [data-l=uk],html[lang=en] [data-l=en]{display:block}
 <ol>
 <li><b>Найпростіше, 16-біт:</b> <a href="https://manticorp.github.io/unrealheightmap/" target="_blank" rel="noopener">Unreal Heightmap (manticorp)</a> — наведи рамку на своє місце, вибери розмір зі сторінки дня й завантаж 16-бітний PNG.</li>
 <li><b>Запасний варіант, 8-біт:</b> <a href="https://tangrams.github.io/heightmapper/" target="_blank" rel="noopener">Tangram Heightmapper</a> — теж у браузері, але 8-бітне зображення дає грубіші «сходинки» рельєфу.</li>
-<li><b>Для досвідчених, за бажанням:</b> висоти <a href="https://registry.opendata.aws/copernicus-dem/" target="_blank" rel="noopener">Copernicus DEM 30 м</a> і безкоштовна програма для карт <a href="https://qgis.org/download/" target="_blank" rel="noopener">QGIS</a>, щоб їх обрізати.</li>
+<li><b>Для досвідчених, за бажанням:</b> висоти <a href="https://registry.opendata.aws/copernicus-dem/" target="_blank" rel="noopener">Copernicus DEM 30 м</a> і безкоштовна програма для мап <a href="https://qgis.org/download/" target="_blank" rel="noopener">QGIS</a>, щоб їх обрізати.</li>
 </ol>
 <p class="res">✅ <b>Вийшло, якщо:</b> файл відкривається в Krita, а в рядку стану видно Grayscale і 16-bit.</p>
 <p class="res">🆘 <b>Якщо щось не так:</b> сайт не відкривається або «висить» — спробуй інший браузер або Tangram Heightmapper. Джерело висот теж запиши в credits.md.</p>
@@ -508,14 +527,14 @@ html[lang=uk] [data-l=uk],html[lang=en] [data-l=en]{display:block}
 <ul class="meta">
 <li><b>Для чого:</b> здача робіт і питання тьютору.</li>
 <li><b>Ціна:</b> вбудовано у Windows.</li>
-<li><b>Коли:</b> День 0, далі щодня.</li>
+<li><b>Коли:</b> скриншоти — щодня; кліп — у День боса.</li>
 </ul>
 <ol>
 <li><b>Скриншот:</b> <b>Win+Shift+S</b> → обери область → картинка скопійована → <b>Ctrl+V</b> у чат. У Windows 11 знімок зазвичай ще й зберігається в «Зображення» (Pictures) → Screenshots.</li>
-<li><b>Кліп:</b> клацни у вікно Unreal → <b>Win+Alt+R</b> — старт, ще раз <b>Win+Alt+R</b> — стоп (екран коротко блимне). <b>Win+Alt+M</b> вмикає мікрофон, <b>Win+G</b> відкриває панель Xbox Game Bar.</li>
+<li><b>Кліп:</b> клацни у вікно Unreal → <b>Win+Alt+R</b> — старт, ще раз <b>Win+Alt+R</b> — стоп (екран коротко блимне). <b>Win+Alt+M</b> вмикає мікрофон, <b>Win+G</b> відкриває панель Xbox Game Bar. Запасний варіант — Snipping Tool → Record: обведи рамку не більшу за одне вікно, тоді файл буде менший.</li>
 <li><b>Якщо Win+Alt+R нічого не робить:</b> <b>Win+I</b> → у пошуку налаштувань набери <code>xbox</code> → <b>Enable Xbox Game Bar</b> → увімкни перемикач. Game Bar зовсім немає — встанови безкоштовний застосунок Microsoft <a href="https://apps.microsoft.com/detail/9nzkpstsnw4p" target="_blank" rel="noopener">Game Bar</a> з Microsoft Store.</li>
 <li><b>Де кліпи:</b> «Відео» (Videos) → <b>Captures</b>, файли MP4 з назвою програми, датою й часом. Папку та якість змінюють у <b>Settings</b> → <b>Gaming</b> → <b>Captures</b> (<a href="https://support.xbox.com/en-US/help/friends-social-activity/share-socialize/record-game-clips-game-bar-windows-10" target="_blank" rel="noopener">довідка Xbox</a>).</li>
-<li><b>Куди покласти:</b> перенеси MP4 і скриншоти в папку дня <code>Work\Assignment\Day-NN-…\</code> у синхронізованій папці курсу (розділ 14).</li>
+<li><b>Куди покласти:</b> перенеси MP4 і скриншоти в робочу папку дня на ПК (наприклад, <code>D:\GAD\Day-NN-…\</code>). Наприкінці дня здай їх кнопкою «Відкрити мою папку здачі» на картці «Що здаєш сьогодні» вгорі сторінки дня (<a href="GETTING-STARTED.html#uk-checkin">GETTING-STARTED, розділ 4</a>). Кліп: 30–60 секунд, менше 50 МБ. Більший? Відкрий його в Clipchamp (є у Windows 11) → Export → 720p: 720p теж приймається.</li>
 </ol>
 <p class="res">✅ <b>Вийшло, якщо:</b> у Videos → Captures з'явився MP4, а скриншот вставляється в чат.</p>
 <p class="res">🆘 <b>Якщо щось не так:</b> кліп порожній або чорний — перед стартом клацни у вікно Unreal: Game Bar записує вікно програми, а не робочий стіл чи Провідник.</p>
@@ -537,31 +556,27 @@ html[lang=uk] [data-l=uk],html[lang=en] [data-l=en]{display:block}
 <p class="res">🔒 <b>Безпека:</b> підключайся лише до комп'ютерів людей, яким довіряєш, і нікому незнайомому не давай доступу до свого.</p>
 <a class="up" href="#uk-toc">↑ Зміст</a></div>
 
-<div class="card" id="uk-s14"><h2>14. Google Drive для комп'ютера (здача робіт)</h2>
+<div class="card" id="uk-s14"><h2>14. Твоя папка здачі на Google Drive (без встановлення)</h2>
 <ul class="meta">
-<li><b>Для чого:</b> папка курсу лежить на Google Drive. Google Drive для комп'ютера синхронізує її з твоїм ПК, а твої роботи автоматично потрапляють до координаторки курсу.</li>
+<li><b>Для чого:</b> сюди ти здаєш роботу, а Талія, координаторка курсу, кладе сюди відгук. Курс ти читаєш онлайн, а не з цієї папки.</li>
 <li><b>Ціна:</b> безкоштовно (потрібен акаунт Google з розділу 1).</li>
-<li><b>Коли:</b> День 0.</li>
+<li><b>Коли:</b> перевір до Дня 0, далі — наприкінці кожного дня.</li>
 </ul>
 <ol>
-<li>Відкрий <a href="https://www.google.com/drive/download/" target="_blank" rel="noopener">google.com/drive/download</a> → завантаж <b>Drive for desktop</b> для Windows.</li>
-<li>Запусти завантажений файл-інсталятор → на запит Windows натисни <b>Yes</b> → дочекайся кінця.</li>
-<li>Натисни <b>Sign in with browser</b> → у браузері увійди тим акаунтом Google, якому відкрито доступ до папки курсу, і підтверди вхід.</li>
-<li>Біля годинника з'явиться значок Google Drive, а в Провіднику Windows — диск <b>Google Drive</b> з папкою <b>My Drive</b>.</li>
-<li>Знайди спільну папку: у браузері відкрий <a href="https://drive.google.com" target="_blank" rel="noopener">drive.google.com</a> → ліворуч <b>Shared with me</b> → правий клік на папці курсу → <b>Organize</b> → <b>Add shortcut to Drive</b> → <b>My Drive</b> → <b>Add</b>. Лише після цього папка синхронізується з ПК.</li>
-<li>Через кілька хвилин папка з'явиться в Провіднику: Google Drive → My Drive → папка курсу. Відкрий у ній <b>COURSE.html</b> подвійним кліком.</li>
-<li>Сторінка відкривається повільно? Правий клік на папці курсу → <b>Google Drive</b> → <b>Offline access</b> → <b>Available offline</b> (у Windows 11 це меню може ховатися за пунктом <b>Show more options</b>).</li>
-<li>Щодня зберігай здачу в <code>Work\Assignment\Day-NN-…\</code>; вимикаючи ПК, дочекайся, поки значок Google Drive покаже, що синхронізацію завершено. Відгук від Талії, координаторки курсу, з'явиться у файлі <code>THALIA-COMMENTS.md</code> у папці того ж дня.</li>
+<li>Відкрий посилання на папку з листа в браузері, де вгорі праворуч видно акаунт Google, якому відкрито доступ. Інший акаунт? Клацни своє фото чи літеру вгорі праворуч на <a href="https://drive.google.com" target="_blank" rel="noopener">drive.google.com</a> і перемкнися.</li>
+<li>Має відкритися папка з твоїм ім'ям. У ній — Work, у Work — Assignment, а в Assignment — папки днів: Day-00-setup, Day-01-bollard і так далі. У кожній папці дня лежить HAND-IN-HERE.txt.</li>
+<li>Загубилося посилання? На drive.google.com ліворуч відкрий «Доступні мені» (<b>Shared with me</b>) і знайди папку зі своїм ім'ям. За бажанням додай ярлик: клацни папку правою кнопкою → «Упорядкувати» (<b>Organize</b>) → «Додати ярлик» (<b>Add shortcut</b>) → «Мій диск» (<b>My Drive</b>) → «Додати» (<b>Add</b>).</li>
+<li>Як здавати щодня: <a href="GETTING-STARTED.html#uk-checkin">GETTING-STARTED, розділ 4</a>. Коротко: спершу звіт дня, потім кнопка «Відкрити мою папку здачі» вгорі сторінки дня, лише файли, ніколи не створюй папок.</li>
 </ol>
-<p class="res">✅ <b>Вийшло, якщо:</b> у Провіднику є Google Drive → My Drive → папка курсу, а COURSE.html відкривається подвійним кліком у браузері.</p>
+<p class="res">✅ <b>Вийшло, якщо:</b> бачиш папку зі своїм ім'ям, у ній Work → Assignment → папки днів, а в папці дня — HAND-IN-HERE.txt.</p>
 <p class="res">🆘 <b>Якщо щось не так:</b></p>
 <ul>
-<li>Папки курсу немає в Shared with me: перевір, що вхід виконано тим акаунтом Google, якому надіслано доступ; не допомагає — спитай координаторку курсу.</li>
-<li>Диска Google Drive немає в Провіднику: перевір, що застосунок запущено (значок біля годинника) і вхід виконано; перезапусти комп'ютер.</li>
-<li>Сторінка відкрилася на drive.google.com або в Google Docs: закрий її й відкрий файл із Провідника Windows.</li>
-<li>Великі проєкти Unreal (IslandCourse, ElectricDreamsSample) тримай на швидкому локальному диску поза цією папкою, щонайменше 250 ГБ вільного місця на все.</li>
+<li>Папка порожня або видно «Потрібен доступ» (You need access): перевір акаунт угорі праворуч. Однаково порожньо? Відповідай на лист Талії й нічого не створюй.</li>
+<li>Папки немає в «Доступні мені»: перевір, чи вгорі праворуч той акаунт Google, якому надіслано доступ; не допомагає — спитай координаторку курсу.</li>
+<li>Сторінка курсу відкрилася на drive.google.com чи в Google Docs: закрий її й відкрий курс за особистим посиланням із листа.</li>
+<li>Великі проєкти Unreal (IslandCourse, ElectricDreamsSample) тримай на швидкому локальному диску, ніколи на Google Drive; щонайменше 250 ГБ вільного місця на все.</li>
 </ul>
-<p class="res">🔒 <b>Безпека:</b> входь у Google лише на сторінці, яку відкриває сам застосунок або accounts.google.com; пароль і коди нікому не передавай.</p>
+<p class="res">🔒 <b>Безпека:</b> входь у Google лише на drive.google.com або accounts.google.com; пароль і коди нікому не передавай.</p>
 <a class="up" href="#uk-toc">↑ Зміст</a></div>
 
 <div class="card" id="uk-s15"><h2>15. 🧭 Якщо все заплуталось</h2>
@@ -577,10 +592,66 @@ html[lang=uk] [data-l=uk],html[lang=en] [data-l=en]{display:block}
 <li><b>Launcher не входить:</b> інтернет, дата й час у Windows, вимкнений VPN, перезапуск Launcher і комп'ютера.</li>
 <li><b>Завантаження застрягло:</b> Downloads → пауза → продовжити; перезапусти Launcher; перевір вільне місце.</li>
 <li><b>Unreal не відкривається:</b> перезапусти ПК, онови драйвер відеокарти, потім Library → стрілка ▼ на плитці 5.8 → Verify.</li>
-<li><b>Робота не синхронізується:</b> перевір, що папка курсу додана в My Drive (розділ 14), що файли лежать у Work\Assignment\Day-NN-…, а не деінде, і що значок Google Drive біля годинника не показує помилку.</li>
+<li><b>Не знаєш, куди здавати:</b> натисни «Відкрити мою папку здачі» на картці «Що здаєш сьогодні» вгорі сторінки дня. Правильна папка — та, де лежить HAND-IN-HERE.txt. Ніколи не створюй папок (GETTING-STARTED, розділ 4).</li>
+<li><b>Питання до Талії:</b> рядок «Question for Thalia» у звіті дня або відповідь на її лист: номер дня, що ти пробуєш, і скриншот.</li>
+<li><b>Unreal гальмує:</b> розділ 16. <b>Клавіша робить не те:</b> розділ 17.</li>
 <li><b>Сайт виглядає не так:</b> кнопку могли перенести; шукай ту саму англійську назву на сторінці.</li>
 </ul>
 <p class="note">📸 <b>Зроби скриншот і спитай тьютора.</b> Win+Shift+S → новий чат у Gemini або ChatGPT → Ctrl+V → опиши, що натиснуто, що видно на екрані і що мало статися. Наприклад: «Встановлюю Unreal Engine 5.8. Натиснуто Install, а Launcher показує помилку зі скриншота. Що робити далі?» Паролі й коди тьютору ніколи не надсилай.</p>
+<a class="up" href="#uk-toc">↑ Зміст</a></div>
+
+<div class="card" id="uk-s16"><h2>16. Слабкий ПК (класу GTX 1650, 16 ГБ пам'яті)</h2>
+<ul class="meta">
+<li><b>Для чого:</b> пройти курс в Unreal 5.8 і на ноутбуці чи ПК з відеокартою на 4 ГБ (класу GTX 1650) та 16 ГБ пам'яті. Ти змінюєш налаштування лише для себе: проєкт, сторінки курсу й скриншоти в них лишаються такими самими.</li>
+<li><b>Ціна:</b> безкоштовно.</li>
+<li><b>Коли:</b> один раз у День 0, щойно відкриється IslandCourse (5 хвилин); ще раз у День 24 для Electric Dreams.</li>
+</ul>
+<p>Epic радить для Unreal 5.8 відеокарту з 8 ГБ пам'яті й 32 ГБ оперативної пам'яті (<a href="https://dev.epicgames.com/documentation/en-us/unreal-engine/hardware-and-software-specifications-for-unreal-engine" target="_blank" rel="noopener">вимоги Epic</a>). На слабшому ПК Unreal теж працює, лише повільніше. Запиши свою відеокарту і її пам'ять у звіт Дня 0: так Талія зможе порадити саме тобі.</p>
+<ol>
+<li><b>Проєкт не змінюй.</b> Quality Preset лишається Maximum (розділ 5). Не створюй проєкт із пресетом Scalable: він вимикає в самому проєкті згладжування й автоекспозицію, і тоді урок про експозицію в День 19 не збігатиметься з твоїм екраном.</li>
+<li><b>Scalability:</b> Settings → Engine Scalability Settings → <b>Medium</b>. Картинка під час будівництва смикається (менше 20 кадрів/с)? Обери <b>Low</b>.</li>
+<li><b>Screen Percentage 50–75 %:</b> знайди Screen Percentage у меню Viewport Options (угорі ліворуч у в'юпорті). Не знаходиш? Відкрий консоль (клавіша ` або поле Cmd унизу ліворуч у редакторі), введи <code>r.ScreenPercentage 75</code> (або <code>50</code>) і натисни Enter. Консольну команду повторюй після кожного перезапуску Unreal.</li>
+<li><b>Менше роботи у фоні:</b> Edit → Editor Preferences, у полі пошуку введи <code>Use Less CPU</code> і познач прапорець <b>Use Less CPU when in Background</b>.</li>
+<li><b>Realtime:</b> Ctrl+R у в'юпорті вимикає й вмикає постійне оновлення картинки. Поки читаєш урок, тримай його вимкненим: ноутбук менше гріється.</li>
+<li><b>Диск і пам'ять:</b> Unreal і проєкти — на SSD. Поки компілюються шейдери, закрий браузер. Перше відкриття IslandCourse на такому ПК може тривати 45–60 хвилин.</li>
+</ol>
+<h3>Lumen і Nanite</h3>
+<ul>
+<li><b>Lumen</b> (відбите світло) на Medium працює з дешевшими налаштуваннями, а відблиски показують лише те, що є на екрані: калюжі й скло віддзеркалюють небо, тільки коли небо в кадрі. На Low Lumen вимикається, і тіньові боки виглядають пласкішими. Для будівництва це нормально, для фінальних скриншотів — ні.</li>
+<li><b>Фінальні скриншоти:</b> перемкни Scalability на High, зроби скриншоти й повернись на Medium. Запиши, з яким налаштуванням Scalability їх знято, у нотатки дня (наприклад, light_recipe.md чи budget.md).</li>
+<li><b>Nanite</b> не вимикай: він допомагає слабкій відеокарті, а Unreal 5.8 і так вмикає його під час імпорту.</li>
+<li><b>Текстур</b> 1K цілком достатньо. Поки компілюються матеріали, дочекайся, щоб напис Compiling Shaders унизу праворуч зник, і лише тоді оцінюй вигляд.</li>
+<li><b>Рівень гальмує</b> через хмари (VolumetricCloud)? Сховай їх значком ока в Outliner, поки працюєш.</li>
+</ul>
+<h3>Electric Dreams і тижні 5–12</h3>
+<ul>
+<li><b>День 24:</b> на ПК з 16 ГБ спершу збільш файл підкачки до 32 ГБ або більше (<a href="#uk-s7">розділ 7</a>, крок 1). Відкрий ElectricDreamsSample один раз на Medium з <code>r.ScreenPercentage 50</code>: так Epic радить для ПК, слабших за мінімум проєкту-зразка (32 ГБ пам'яті, відеокарта на 8 ГБ). Ніколи не відкривай ElectricDreams_Env чи ElectricDreams_PCG.</li>
+<li><b>Відеокарта на 4 ГБ або менше:</b> у День 34 обери полегшений варіант (light route). Electric Dreams не відкривай: вивчи його лісовий граф PCG за скриншотами з відео уроку, а ліс збери у власному графі з безкоштовних дерев Nanite зі списку free-packs-list.md. У migrated.md напиши «полегшений варіант (light route)».</li>
+<li><b>Поки працює Unreal,</b> закривай зайві вкладки браузера й Krita і тримай відкритим лише один проєкт Unreal.</li>
+<li><b>Острів (World Partition):</b> завантажуй лише ту ділянку, з якою працюєш. Увесь острів — лише для великих генерацій у День 39 і День 40; перед ними збережись. Пам'ять понад 15 ГБ? Генеруй двома половинами.</li>
+<li><b>Сторінка дня</b> з важким завданням має рядок для слабкого ПК, який веде сюди.</li>
+</ul>
+<p class="res">✅ <b>Вийшло, якщо:</b> на Medium в'юпорт рухається достатньо плавно, щоб ставити й рухати об'єкти, а напис Compiling Shaders зник.</p>
+<p class="res">🆘 <b>Якщо щось не так:</b> навіть на Low із Screen Percentage 50 % працювати неможливо? Спробуй потужніший ПК через трансляцію (<a href="#uk-s13">розділ 13</a>) і напиши Талії. Не переходь на Unreal 4.27: у ньому немає того, чого навчає курс (імпорту glTF, рівня Basic, Nanite, Lumen, а з 6-го тижня — World Partition, PCG і Level Instances).</p>
+<a class="up" href="#uk-toc">↑ Зміст</a></div>
+
+<div class="card" id="uk-s17"><h2>17. Клавіатура й скорочення</h2>
+<ul class="meta">
+<li><b>Для чого:</b> коли скорочення з уроку нічого не робить або робить щось інше.</li>
+<li><b>Ціна:</b> безкоштовно.</li>
+<li><b>Коли:</b> до Дня 0 (список у розділі 0), далі щоразу, коли клавіша не спрацьовує.</li>
+</ul>
+<ol>
+<li><b>Немає цифрового блока (Numpad).</b> У Blender натисни ` (ліворуч від 1, під Esc): відкриється кругле меню ` (View) з видами Front, Right, Top, Bottom і пунктом View Selected (те саме, що Numpad .). Користуйся ним усюди, де курс каже Numpad 1, 3, 7 чи Ctrl+Numpad 7. Замість Numpad 5 вибери View → Perspective/Orthographic. Інший шлях — Emulate Numpad у Edit → Preferences → Input. Але тоді клавіші 1, 2 і 3 змінюють вид, а вибір вершин, ребер і граней робиш значками в заголовку в'юпорту.</li>
+<li><b>Home показує вид згори</b> замість усієї сцени: на ноутбуці з вбудованим цифровим блоком клавіша Home водночас є Numpad 7. Вимкни NumLock або вибери View → Frame All.</li>
+<li><b>Alt+Z відкриває оверлей NVIDIA</b> замість X-ray: клацни кнопку X-ray у заголовку в'юпорту (два квадрати один на одному, угорі праворуч) або зміни скорочення в налаштуваннях оверлею NVIDIA (значок шестерні).</li>
+<li><b>Коліщатко чи середню кнопку миші вимкнено</b> в програмі для миші: увімкни їх там знову. Або тягни кольорову кулю осей угорі праворуч у в'юпорті Blender, щоб обертати вид; значок руки зсуває вид, лупа наближає. Режим Emulate 3 Button Mouse (Edit → Preferences → Input) займає Alt+ліву кнопку, і виділення петлі клацанням з Alt перестає працювати. Тому куля осей — кращий запасний шлях.</li>
+<li><b>Українська розкладка.</b> Перш ніж вводити назву чи число в Blender, Unreal або Krita, перемкни клавіатуру на англійську (Win+Space). На українській розкладці клавіша ` може не відкривати кругле меню ` у Blender чи консоль Unreal. Консоль Unreal відкривається й з поля Cmd унизу ліворуч у редакторі. Десяткові дроби вводь із крапкою: <code>0.45</code>, а не 0,45.</li>
+<li><b>Меню українською.</b> Курс називає меню англійською. Blender: Edit → Preferences → Interface → Language, у групі Translate зніми прапорці Tooltips та Interface. Krita: Settings → Switch Application Language → English (якщо меню вже українською, шукай у меню налаштувань пункт про мову програми), потім перезапусти Krita.</li>
+<li><b>Кліп чи скриншот не виходить:</b> <a href="#uk-s12">розділ 12</a>.</li>
+</ol>
+<p class="res">✅ <b>Вийшло, якщо:</b> своєю клавіатурою й мишею ти обертаєш вид, показуєш вид згори й усю сцену і вмикаєш X-ray.</p>
+<p class="res">🆘 <b>Якщо щось не так:</b> скорочення однаково робить щось інше? Зроби скриншот і спитай тьютора: напиши, яку клавішу натиснуто, що мало статися і що сталося.</p>
 <a class="up" href="#uk-toc">↑ Зміст</a></div>
 
 <p class="sub">Перевірено за офіційними сторінками сервісів у жовтні 2026 року. Сайти змінюються: якщо щось не збігається, зроби скриншот і спитай тьютора.</p>
@@ -588,11 +659,11 @@ html[lang=uk] [data-l=uk],html[lang=en] [data-l=en]{display:block}
 
 <div data-l="en">
 <h1>🔑 Accounts and installs: step by step</h1>
-<p class="sub">Everything the course needs: every account, every download and every install, step by step. Open the section you need and follow the steps. Button and menu names are in English, as they appear on screen.</p>
+<p class="sub">Everything the course needs: every account, every download and every install, step by step. Start with the Before Day 0 list (section 0), then open the section you need and follow the steps. Button and menu names are in English, as they appear on screen.</p>
 <p class="note">💡 Websites move their buttons now and then. If your screen looks different from what's written here, take a screenshot (Win+Shift+S) and ask your tutor in Gemini or ChatGPT: describe what you clicked and what you see.</p>
 
 <nav class="toc" id="en-toc"><b>Contents</b><ol start="0">
-<li><a href="#en-s0">Before you start</a></li>
+<li><a href="#en-s0">Before Day 0: the list</a></li>
 <li><a href="#en-s1">Google account and Gemini</a></li>
 <li><a href="#en-s2">ChatGPT account</a></li>
 <li><a href="#en-s3">Epic Games account</a></li>
@@ -606,18 +677,34 @@ html[lang=uk] [data-l=uk],html[lang=en] [data-l=en]{display:block}
 <li><a href="#en-s11">Heightmaps (Day 26)</a></li>
 <li><a href="#en-s12">Screenshots and clips</a></li>
 <li><a href="#en-s13">A stronger PC by streaming</a></li>
-<li><a href="#en-s14">Google Drive for desktop</a></li>
+<li><a href="#en-s14">Your hand-in folder on Google Drive</a></li>
 <li><a href="#en-s15">If you feel lost</a></li>
+<li><a href="#en-s16">Weak PC</a></li>
+<li><a href="#en-s17">Keyboard and shortcuts</a></li>
 </ol></nav>
 
-<div class="card" id="en-s0"><h2>0. Before you start</h2>
+<div class="card" id="en-s0"><h2>0. Before Day 0: the list</h2>
 <ul class="meta">
-<li><b>What for:</b> so every sign-up goes smoothly, with no surprises.</li>
+<li><b>What for:</b> your accounts and programs are ready in advance, so Day 0 itself takes about 4 hours.</li>
 <li><b>Cost:</b> free.</li>
-<li><b>When:</b> before Day 0.</li>
+<li><b>When:</b> a day or two before Day 0: about 1 hour 30 minutes, plus the Unreal download (it can run overnight).</li>
 </ul>
 <ol>
-<li><b>An email address you can open right now.</b> A Gmail address is the easiest: the same Google account also opens Gemini (section 1). One address for every course service means less confusion.</li>
+<li><b>Your course link.</b> Open the personal link from your email (it ends in COURSE.html) and bookmark it (Ctrl+D). Open the course every day in the same browser on the same PC: that is where your progress is saved.</li>
+<li><b>Your Google account.</b> Use the account your hand-in folder was shared with: the address is in your email. Never make a new Gmail address for the course, because your folder isn't shared with it. No Google account on that address yet? Create one on that exact address (<a href="#en-s1">section 1</a>).</li>
+<li><b>Your hand-in folder.</b> Open the folder link from your email in a browser that shows exactly that Google account at the top right. A folder with your name opens, with Work inside. Empty, or "You need access"? Reply to Thalia's email and don't create anything (<a href="#en-s14">section 14</a>).</li>
+<li><b>Your tutor.</b> Open Gemini in the same Google account and send a first message (<a href="#en-s1">section 1</a>). ChatGPT is the backup tutor (<a href="#en-s2">section 2</a>). Check: the tutor answers in Ukrainian.</li>
+<li><b>Epic Games and Fab.</b> Make an Epic Games account (<a href="#en-s3">section 3</a>), then open fab.com and sign in with the same account (<a href="#en-s6">section 6</a>, step 1). You use packs from Fab from Day 24.</li>
+<li><b>Epic Games Launcher.</b> Install it and sign in with your Epic account (<a href="#en-s4">section 4</a>, steps 1 to 3). Check: the Launcher shows your Display Name.</li>
+<li><b>Unreal Engine 5.8.</b> Start the install (<a href="#en-s4">section 4</a>, steps 4 to 10). It takes 40 GB or more: keep at least 100 GB free on that drive and start it in the evening. Check: the 5.8 tile shows a progress bar or a Launch button.</li>
+<li><b>Blender.</b> Install it and open it once (<a href="#en-s8">section 8</a>). Check: the splash screen shows a version starting with 5.</li>
+<li><b>Krita.</b> Install it and open it once (<a href="#en-s8">section 8</a>). Check: Krita opens with its welcome page.</li>
+<li><b>A weak PC or an unusual keyboard?</b> Read <a href="#en-s16">section 16</a> and <a href="#en-s17">section 17</a> (5 minutes). Blender or Krita opens with Ukrainian menus? Switch them to English (section 17): the course names menus in English.</li>
+</ol>
+<p class="note">📌 <b>The Unreal download is still running on Day 0?</b> Start anyway: do Lessons 1 and 2 first, and come back to Unreal when the download finishes.</p>
+<h3>Before you sign up anywhere</h3>
+<ol>
+<li><b>An email address you can open right now.</b> Best of all is the address your hand-in folder was shared with (it's in your email): the same Google account also opens Gemini (section 1). One address for every course service means less confusion.</li>
 <li><b>Passwords.</b> A different, long password for each site: 12 characters or more (three or four random words plus numbers work well). Write them in a paper notebook kept at home, or in a password manager. Never share them: not with friends, not with "support" in an email, not with the tutor in a chat. Real support never asks for a password or a code.</li>
 <li><b>Age.</b> Every service sets its own minimum age, and the rules change, so check them on the service's own site. In October 2026 the official pages say:
 <ul>
@@ -639,14 +726,15 @@ If you're under 18, show this page to a parent or guardian and sign up together 
 <ul class="meta">
 <li><b>What for:</b> you paste your lessons into Gemini every day: it's your tutor.</li>
 <li><b>Cost:</b> the free plan is enough.</li>
-<li><b>When:</b> Day 0, then every day.</li>
+<li><b>When:</b> before Day 0, then every day.</li>
 </ul>
+<p class="note">📌 <b>You need a Google account on exactly the address your hand-in folder was shared with</b> (it's in your email). Is it a Gmail address? Then you already have the account: sign in and go to step 9. Another address (for example @ukr.net)? Create a Google account on it with the steps below. Don't make a new Gmail address for the course.</p>
 <h3>Google account</h3>
 <ol>
 <li>Open <a href="https://accounts.google.com/signup" target="_blank" rel="noopener">accounts.google.com/signup</a>. (Google's help: <a href="https://support.google.com/accounts/answer/27441" target="_blank" rel="noopener">Create a Google Account</a>.)</li>
 <li>Enter your <b>First name</b>; the surname is optional (<b>Last name (optional)</b>). Click <b>Next</b>.</li>
 <li>Enter your <b>Birthday</b> and <b>Gender</b>, then <b>Next</b>. Use your real date of birth: it decides which services open for you.</li>
-<li>Pick one of the suggested Gmail addresses, or <b>Create your own Gmail address</b>, then <b>Next</b>.</li>
+<li>On the Gmail address step, don't pick a suggested address: click <b>Use your existing email or phone number</b>, type the address from your email, then <b>Next</b>. Google sends a code to that address: type it in.</li>
 <li>Create a password and type it again, then <b>Next</b>. Write the password down.</li>
 <li>Phone number: Google may ask for one to verify you (an SMS code arrives) or let you <b>Skip</b> it.</li>
 <li>Review your details, <b>Next</b>, read <b>Privacy and Terms</b>, then <b>I agree</b>. Your account page opens.</li>
@@ -654,7 +742,7 @@ If you're under 18, show this page to a parent or guardian and sign up together 
 </ol>
 <h3>Gemini</h3>
 <ol start="9">
-<li>Open <a href="https://gemini.google.com" target="_blank" rel="noopener">gemini.google.com</a>. If you see <b>Sign in</b> at the top right, click it and sign in with your Google account.</li>
+<li>Open <a href="https://gemini.google.com" target="_blank" rel="noopener">gemini.google.com</a>. If you see <b>Sign in</b> at the top right, click it and sign in with the Google account your hand-in folder was shared with.</li>
 <li>A new chat: the <b>New chat</b> button at the top left (can't see it? Click <b>Menu</b> ☰ first).</li>
 <li>To paste a lesson: on the day page click <b>Copy lesson</b>, click the message box at the bottom of Gemini, press <b>Ctrl+V</b>, then <b>Enter</b> (or the send arrow). Every lesson goes in a new chat.</li>
 <li>First check: type "Привіт! Відповідай українською." and send it.</li>
@@ -666,6 +754,7 @@ If you're under 18, show this page to a parent or guardian and sign up together 
 <li>The free limit ran out (Gemini says you've reached a limit): do this lesson in ChatGPT (section 2) by pasting the same lesson text into a new chat there. Gemini's limit resets later.</li>
 <li>Gemini won't open with this account: check the birthday on your Google account and that it isn't a Family Link account (<a href="https://support.google.com/gemini/answer/13278668" target="_blank" rel="noopener">Gemini's requirements</a>). Use ChatGPT meanwhile.</li>
 <li>No SMS arrives: check the number and country code (+380 for Ukraine), wait a few minutes and ask for the code again.</li>
+<li>You can't create a Google account on the address from your email? Create a Gmail address (<b>Create your own Gmail address</b>), send Thalia the new address, and wait until she shares your hand-in folder with it.</li>
 </ul>
 <p class="res">🔒 <b>Safety:</b> never paste passwords, codes, document numbers or your home address into a chat.</p>
 <a class="up" href="#en-toc">↑ Contents</a></div>
@@ -674,11 +763,11 @@ If you're under 18, show this page to a parent or guardian and sign up together 
 <ul class="meta">
 <li><b>What for:</b> a second tutor for when Gemini's limit runs out (or if you prefer ChatGPT).</li>
 <li><b>Cost:</b> the free plan is enough.</li>
-<li><b>When:</b> Day 0 (optional), then whenever you need it.</li>
+<li><b>When:</b> before Day 0 (optional), then whenever you need it.</li>
 </ul>
 <ol>
 <li>Open <a href="https://chatgpt.com" target="_blank" rel="noopener">chatgpt.com</a> and click <b>Sign up for free</b> (or <b>Sign up</b>).</li>
-<li>Choose how: <b>Continue with Google</b> is the easiest if you already have Gmail (pick your account and confirm), or enter an email address and create a password.</li>
+<li>Choose how: <b>Continue with Google</b> is the easiest: pick the Google account from section 1 and confirm. Or enter an email address and create a password.</li>
 <li>If you signed up with email: open the email from OpenAI and confirm your address (a code or a button in the email). It may be in Spam.</li>
 <li>Enter your name and date of birth and continue. Sometimes the service asks for a phone number to verify you.</li>
 <li>A new chat: <b>New chat</b> in the left panel. Paste the lesson (<b>Ctrl+V</b>) and send it (<b>Enter</b>).</li>
@@ -698,7 +787,7 @@ If you're under 18, show this page to a parent or guardian and sign up together 
 <ul class="meta">
 <li><b>What for:</b> one account opens the Epic Games Launcher, Unreal Engine and Fab with its free packs.</li>
 <li><b>Cost:</b> free.</li>
-<li><b>When:</b> Day 0.</li>
+<li><b>When:</b> before Day 0.</li>
 </ul>
 <ol>
 <li>Open <a href="https://www.epicgames.com/id/register" target="_blank" rel="noopener">epicgames.com/id/register</a>. (You can also create the account inside the Launcher with <b>Create account</b>, section 4.)</li>
@@ -723,7 +812,7 @@ If you're under 18, show this page to a parent or guardian and sign up together 
 <ul class="meta">
 <li><b>What for:</b> Unreal Engine is the course's main program; the Launcher installs and updates it.</li>
 <li><b>Cost:</b> free.</li>
-<li><b>When:</b> Day 0. Start the download the evening before (about 40 GB).</li>
+<li><b>When:</b> before Day 0. Start the download in the evening (40 GB or more).</li>
 </ul>
 <ol>
 <li>Open <a href="https://www.unrealengine.com/download" target="_blank" rel="noopener">unrealengine.com/download</a> and click <b>Download Launcher</b>. The installer (an .msi file) saves to your Downloads folder.</li>
@@ -732,7 +821,7 @@ If you're under 18, show this page to a parent or guardian and sign up together 
 <li>Click <b>Unreal Engine</b> on the left, then the <b>Library</b> tab at the top.</li>
 <li>Click the <b>+</b> next to <b>ENGINE VERSIONS</b>: an engine tile appears. Click the version number on the tile and choose <b>5.8</b> (the newest 5.8.x). Even if a newer version is shown by default, choose 5.8: the course is built for it.</li>
 <li>Click <b>Install</b>, read <b>Unreal Engine Pricing</b> and click <b>Accept</b>, then read the <b>End User License Agreement</b>, tick the box and click <b>Accept</b>.</li>
-<li>In <b>Choose install location</b>, click <b>Browse</b> and pick a fast drive (an SSD) with space. The engine takes about 40 GB; the <b>Options</b> window shows the exact size.</li>
+<li>In <b>Choose install location</b>, click <b>Browse</b> and pick a fast drive (an SSD) with space. The engine takes 40 GB or more, so keep at least 100 GB free on that drive; the <b>Options</b> window shows the exact size.</li>
 <li><b>Options</b>: keep the ticks as they are. <b>Core Components</b> are required, and <b>Templates and Feature Packs</b> are needed for the Third Person template. Click <b>Apply</b>.</li>
 <li>Click <b>Install</b>. Progress shows on the tile and under <b>Downloads</b> on the left; you can pause and resume the install.</li>
 <li>When it's done, the tile shows <b>Launch</b>. The first start is slow because Unreal prepares shaders. Don't close the window, even if progress seems stuck.</li>
@@ -760,11 +849,11 @@ If you're under 18, show this page to a parent or guardian and sign up together 
 <ol>
 <li>Launcher, <b>Unreal Engine</b>, <b>Library</b>, <b>Launch</b> on the 5.8 tile. The <b>Unreal Project Browser</b> opens.</li>
 <li>On the left choose the <b>Games</b> category, then the <b>Third Person</b> template.</li>
-<li>On the right, under <b>Project Defaults</b>: <b>Blueprint</b> (not C++); <b>Target Platform</b> Desktop; <b>Quality Preset</b> Maximum; leave <b>Ray Tracing</b> as it is.</li>
-<li><b>Project Location</b>: a folder on a fast local drive, outside the synced course folder, for example <code>D:\Unreal\</code>. <b>Project Name</b>: <code>IslandCourse</code>.</li>
-<li>Click <b>Create</b>. The first opening is slow (shaders): let it finish.</li>
+<li>On the right, under <b>Project Defaults</b>: <b>Blueprint</b> (not C++); <b>Target Platform</b> Desktop; <b>Quality Preset</b> Maximum, even on a weak PC (section 16); leave <b>Ray Tracing</b> as it is.</li>
+<li><b>Project Location</b>: a folder named Unreal on your fastest drive, for example <code>D:\Unreal\</code>, never on Google Drive. <b>Project Name</b>: <code>IslandCourse</code>.</li>
+<li>Click <b>Create</b>. The first opening is slow (shaders): 10 to 30 minutes, and up to 45 to 60 minutes on a weak PC. Close spare browser tabs and let it finish.</li>
 <li>Check: the green <b>Play</b> button at the top, walk the mannequin with W A S D and look with the mouse, then <b>Esc</b> to stop.</li>
-<li>Switch on the <b>Water</b> plugin (an extra part of Unreal that adds oceans, lakes and rivers): <b>Edit</b> → <b>Plugins</b> → type <code>Water</code> in the search box → tick <b>Water</b>. If Unreal says the plugin is Beta or needs other plugins, click <b>Yes</b>. Then click <b>Restart Now</b>.</li>
+<li>Switch on the <b>Water</b> plugin (an extra part of Unreal that adds oceans, lakes and rivers): <b>Edit</b> → <b>Plugins</b> → type <code>Water</code> in the search box → tick only the plugin named <b>Water</b> (not Water Advanced or Water Extras). If Unreal warns that it is Experimental (an early version), or asks to switch on other plugins it needs, click <b>Yes</b>. Then click <b>Restart Now</b>.</li>
 </ol>
 <p class="res">✅ <b>It worked if:</b> the mannequin runs around the level, the <b>Content Drawer</b> (Ctrl+Space) has a <b>LevelPrototyping</b> folder, and after the restart <b>Edit</b> → <b>Plugins</b> still shows <b>Water</b> ticked.</p>
 <h3>What the project already has</h3>
@@ -775,7 +864,7 @@ If you're under 18, show this page to a parent or guardian and sign up together 
 <li><b>Water</b>: the <b>Water</b> plugin you switch on in step 7 adds <b>Water Body Lake</b>, <b>Water Body River</b> and <b>Water Body Ocean</b> to Place Actors. On Day 29 you use them to build the ocean, a river, a lake and a waterfall.</li>
 </ul>
 <p>📁 <b>Folders in Content:</b> <code>Course/DayNN</code> is for practice, <code>Island/…</code> is for the island. You create the level <code>L_Island</code> on Day 26. The folders appear as the day pages ask for them.</p>
-<p class="res">🆘 <b>If something goes wrong:</b> no LevelPrototyping folder? Then the project was made from another template: make a new one from <b>Games</b>, <b>Third Person</b>. The window looks different? Screenshot and ask your tutor.</p>
+<p class="res">🆘 <b>If something goes wrong:</b> no LevelPrototyping folder? Then the project was made from another template: make a new one from <b>Games</b>, <b>Third Person</b>. The window looks different? Screenshot and ask your tutor. The editor is slow? Set it up for a weak PC (section 16).</p>
 <a class="up" href="#en-toc">↑ Contents</a></div>
 
 <div class="card" id="en-s6"><h2>6. Fab, Poly Haven and free packs</h2>
@@ -798,10 +887,10 @@ If you're under 18, show this page to a parent or guardian and sign up together 
 <li><b>Install to Engine</b> (plugins).</li>
 </ul></li>
 <li>When the download finishes, open IslandCourse and the <b>Content Drawer</b>: the pack's new folder is there.</li>
-<li>Packs that only come as FBX or glTF (no Add to Project button): on fab.com open the pack (or <b>My Library</b>), click <b>Download</b> (the download icon), choose the format; the archive saves to Downloads; right-click it, <b>Extract All</b>. In Unreal: <b>Content Drawer</b>, <b>Import</b> (or drag the files into the window), <b>Import All</b>. Import into your day folder (Course/DayNN).</li>
+<li>Packs that only come as FBX or glTF (no Add to Project button): on fab.com open the pack (or <b>My Library</b>), click <b>Download</b> (the download icon), choose the format; the archive saves to Downloads; right-click it, <b>Extract All</b>. In Unreal: <b>Content Drawer</b>, <b>Import</b> (or drag the files into the window), <b>Import All</b>. Import into the day's Content folder (Course/DayNN).</li>
 <li>Another route is Fab inside Unreal: the <b>Window</b> menu, <b>Fab</b> (or the <b>Fab</b> button next to <b>+ Add</b> in the Content Drawer), the <b>My Library</b> icon; the <b>+</b> at the bottom right of a tile adds the pack to the open project (<a href="https://dev.epicgames.com/documentation/unreal-engine/fab-window-in-unreal-engine" target="_blank" rel="noopener">Epic's help</a>).</li>
 </ol>
-<p class="note">🌿 <b>Poly Haven</b> is another allowed free source: textures, HDRI skies and models at <a href="https://polyhaven.com" target="_blank" rel="noopener">polyhaven.com</a>, no account needed, licence CC0. Download the file, import it into your day folder (<code>Course/DayNN</code>) and still write a line in <code>credits.md</code>.</p>
+<p class="note">🌿 <b>Poly Haven</b> is another allowed free source: textures, HDRI skies and models at <a href="https://polyhaven.com" target="_blank" rel="noopener">polyhaven.com</a>, no account needed, licence CC0. Download the file, import it into the day's Content folder (<code>Course/DayNN</code>) and still write a line in <code>credits.md</code>.</p>
 <p class="res">✅ <b>It worked if:</b> the pack is in My Library on fab.com, in Fab Library in the Launcher, and shows as a folder in the Content Drawer.</p>
 <p class="res">🆘 <b>If something goes wrong:</b></p>
 <ul>
@@ -822,7 +911,7 @@ If you're under 18, show this page to a parent or guardian and sign up together 
 <li><b>If your PC has 16 GB of memory</b>, first raise the Windows page file to 32 GB or more (Epic lists 32 GB of RAM for this sample; with 16 GB, open only its small levels): <b>Win+R</b>, <code>sysdm.cpl</code>, <b>Enter</b>, the <b>Advanced</b> tab, <b>Performance: Settings</b>, the <b>Advanced</b> tab, <b>Virtual memory: Change</b>; untick <b>Automatically manage paging file size for all drives</b>, pick your SSD, <b>Custom size</b>: Initial size <code>32768</code>, Maximum size <code>49152</code> (these are MB), <b>Set</b>, <b>OK</b>, and restart the PC.</li>
 <li>Open <a href="https://www.fab.com/listings/d79688f5-29be-4fb2-a650-2d4a813f5306" target="_blank" rel="noopener">Electric Dreams Env on Fab</a>, check that it says <b>Free</b>, then <b>Add to My Library</b>.</li>
 <li>Launcher, <b>Unreal Engine</b>, <b>Library</b>, <b>Fab Library</b>, search "Electric Dreams", <b>Create Project</b>. The sample only shows in Fab Library once a compatible engine version is installed (yours is 5.8).</li>
-<li>Name: <code>ElectricDreamsSample</code>. Folder: a fast local SSD outside the synced course folder, with at least three times the download size free (about 57 to 60 GB, so roughly 180 GB free; the Launcher shows the exact size). Version: 5.8, then <b>Create</b>.</li>
+<li>Name: <code>ElectricDreamsSample</code>. Folder: a fast local SSD (not Google Drive), with at least three times the download size free (about 57 to 60 GB, so roughly 180 GB free; the Launcher shows the exact size). Version: 5.8, then <b>Create</b>.</li>
 <li>While it downloads (Downloads), you can work on the day's other tasks.</li>
 <li>First opening: Launcher, <b>Library</b>, <b>My Projects</b>, ElectricDreamsSample. Unreal compiles shaders for a long time, sometimes more than an hour. Don't close the editor; close the browser to free memory.</li>
 <li>The <b>Startup</b> level opens with on-screen help. The other levels are in the Content Browser under <b>Content</b>, <b>Levels</b>; open only the ones the day page names.</li>
@@ -835,6 +924,7 @@ If you're under 18, show this page to a parent or guardian and sign up together 
 <li>Electric Dreams isn't in Fab Library: check that 5.8 is installed and that you added the pack with the same account; click Refresh.</li>
 <li>Not enough space: pick another drive or free up this one.</li>
 <li>The editor is slow or crashes: close other programs, check the page file, set Scalability to Medium (<b>Settings</b>, <b>Engine Scalability Settings</b>) and set Screen Percentage to 50% in the Viewport Options menu (top left of the viewport), as Epic advises for lower-spec PCs. The sample needs DirectX 12 and an up-to-date graphics driver.</li>
+<li>A graphics card with 4 GB or less (for example a GTX 1650): open the sample once at Medium with <code>r.ScreenPercentage 50</code>, then stop there. On Day 34 you take the light route (section 16).</li>
 </ul>
 <a class="up" href="#en-toc">↑ Contents</a></div>
 
@@ -842,7 +932,7 @@ If you're under 18, show this page to a parent or guardian and sign up together 
 <ul class="meta">
 <li><b>What for:</b> Blender for 3D models; Krita for painting, textures and photo work.</li>
 <li><b>Cost:</b> free, no account needed.</li>
-<li><b>When:</b> Day 0 (GIMP, Inkscape and Photopea are optional).</li>
+<li><b>When:</b> before Day 0 (GIMP, Inkscape and Photopea are optional).</li>
 </ul>
 <h3>Blender</h3>
 <ol>
@@ -879,7 +969,7 @@ If you're under 18, show this page to a parent or guardian and sign up together 
 <li>Above the photo click <b>Download</b>, choose the largest size (the original) and save it. Another route is the <b>Original file</b> link under the photo.</li>
 <li>Add a line to <code>credits.md</code>: file name, author, licence and the link to the file page. For example: <code>Day01 | File:… | author … | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:…</code></li>
 </ol>
-<p class="res">✅ <b>It worked if:</b> the photo is in your day folder and credits.md has a line for it.</p>
+<p class="res">✅ <b>It worked if:</b> the photo is in your day work folder and credits.md has a line for it.</p>
 <p class="res">🆘 <b>If something goes wrong:</b> no Download button? Use the Original file link under the photo. The licence is unclear? Don't use that photo.</p>
 <a class="up" href="#en-toc">↑ Contents</a></div>
 
@@ -894,10 +984,10 @@ If you're under 18, show this page to a parent or guardian and sign up together 
 <li>Zoom to the area you need with the mouse wheel.</li>
 <li>Click the <b>Share</b> button on the right (the share icon): a panel opens.</li>
 <li>Under <b>Image</b>: <b>Format</b> PNG; <b>Scale</b> sets the map scale (for example 1 : 2000), or tick <b>Set custom dimensions</b> and drag a frame on the map around your area.</li>
-<li>Click <b>Download</b>: the file saves to Downloads. Move it into your day folder.</li>
+<li>Click <b>Download</b>: the file saves to Downloads. Move it into your day work folder.</li>
 <li>Credit: "© OpenStreetMap contributors" on the image or next to it, and a line in <code>credits.md</code> (<a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap's rules</a>).</li>
 </ol>
-<p class="res">✅ <b>It worked if:</b> the map PNG is in your day folder and the credit is in credits.md.</p>
+<p class="res">✅ <b>It worked if:</b> the map PNG is in your day work folder and the credit is in credits.md.</p>
 <p class="res">🆘 <b>If something goes wrong:</b> Download gives an error? Make the area or the scale smaller and try again.</p>
 <a class="up" href="#en-toc">↑ Contents</a></div>
 
@@ -920,14 +1010,14 @@ If you're under 18, show this page to a parent or guardian and sign up together 
 <ul class="meta">
 <li><b>What for:</b> handing in work and asking your tutor.</li>
 <li><b>Cost:</b> built into Windows.</li>
-<li><b>When:</b> Day 0, then every day.</li>
+<li><b>When:</b> screenshots every day; clips on Boss days.</li>
 </ul>
 <ol>
 <li><b>Screenshot:</b> <b>Win+Shift+S</b>, select an area; the picture is copied; <b>Ctrl+V</b> pastes it into the chat. On Windows 11 the screenshot is usually also saved in Pictures, Screenshots.</li>
-<li><b>Clip:</b> click inside the Unreal window, then <b>Win+Alt+R</b> to start and <b>Win+Alt+R</b> again to stop (the screen flashes briefly). <b>Win+Alt+M</b> turns the microphone on and off; <b>Win+G</b> opens the Xbox Game Bar.</li>
+<li><b>Clip:</b> click inside the Unreal window, then <b>Win+Alt+R</b> to start and <b>Win+Alt+R</b> again to stop (the screen flashes briefly). <b>Win+Alt+M</b> turns the microphone on and off; <b>Win+G</b> opens the Xbox Game Bar. Backup: Snipping Tool → Record; drag a box no bigger than one window, so the file stays small.</li>
 <li><b>If Win+Alt+R does nothing:</b> <b>Win+I</b>, type <code>xbox</code> in the Settings search, choose <b>Enable Xbox Game Bar</b> and turn the switch on. No Game Bar at all? Install Microsoft's free <a href="https://apps.microsoft.com/detail/9nzkpstsnw4p" target="_blank" rel="noopener">Game Bar</a> app from the Microsoft Store.</li>
 <li><b>Where clips go:</b> Videos, <b>Captures</b>, as MP4 files named with the app, date and time. Change the folder and quality in <b>Settings</b>, <b>Gaming</b>, <b>Captures</b> (<a href="https://support.xbox.com/en-US/help/friends-social-activity/share-socialize/record-game-clips-game-bar-windows-10" target="_blank" rel="noopener">Xbox help</a>).</li>
-<li><b>Where to put them:</b> move the MP4 and the screenshots into the day's folder, <code>Work\Assignment\Day-NN-…\</code>, inside the synced course folder (section 14).</li>
+<li><b>Where to put them:</b> move the MP4 and the screenshots into your day work folder on your PC (for example <code>D:\GAD\Day-NN-…\</code>). At the end of the day, hand them in with the "Open my hand-in folder" button on the "What you hand in today" card at the top of the day page (<a href="GETTING-STARTED.html#en-checkin">GETTING-STARTED, section 4</a>). Clip: 30 to 60 seconds, under 50 MB. Bigger? Open it in Clipchamp (built into Windows 11) → Export → 720p: 720p is accepted too.</li>
 </ol>
 <p class="res">✅ <b>It worked if:</b> an MP4 appears in Videos, Captures, and a screenshot pastes into the chat.</p>
 <p class="res">🆘 <b>If something goes wrong:</b> the clip is empty or black? Click inside the Unreal window before you start: Game Bar records an app's window, not the desktop or File Explorer.</p>
@@ -949,31 +1039,27 @@ If you're under 18, show this page to a parent or guardian and sign up together 
 <p class="res">🔒 <b>Safety:</b> connect only to computers of people you trust, and never give a stranger access to yours.</p>
 <a class="up" href="#en-toc">↑ Contents</a></div>
 
-<div class="card" id="en-s14"><h2>14. Google Drive for desktop (handing in your work)</h2>
+<div class="card" id="en-s14"><h2>14. Your hand-in folder on Google Drive (no install)</h2>
 <ul class="meta">
-<li><b>What for:</b> the course folder lives on Google Drive. Google Drive for desktop syncs it to your PC, and your work reaches the course coordinator automatically.</li>
+<li><b>What for:</b> you hand in your work here, and Thalia, the course coordinator, puts her feedback here. You read the course online, not from this folder.</li>
 <li><b>Cost:</b> free (you need the Google account from section 1).</li>
-<li><b>When:</b> Day 0.</li>
+<li><b>When:</b> check it before Day 0, then use it at the end of every day.</li>
 </ul>
 <ol>
-<li>Open <a href="https://www.google.com/drive/download/" target="_blank" rel="noopener">google.com/drive/download</a> and download <b>Drive for desktop</b> for Windows.</li>
-<li>Run the installer you downloaded, click <b>Yes</b> if Windows asks, and wait until it finishes.</li>
-<li>Click <b>Sign in with browser</b>, sign in with the Google account that has access to the course folder, and confirm.</li>
-<li>A Google Drive icon appears near the clock, and File Explorer gets a <b>Google Drive</b> drive with a <b>My Drive</b> folder.</li>
-<li>Find the shared folder: in your browser open <a href="https://drive.google.com" target="_blank" rel="noopener">drive.google.com</a>, click <b>Shared with me</b> on the left, right-click the course folder → <b>Organize</b> → <b>Add shortcut to Drive</b> → <b>My Drive</b> → <b>Add</b>. Only after this does the folder sync to your PC.</li>
-<li>After a few minutes the folder shows in File Explorer: Google Drive → My Drive → the course folder. Double-click <b>COURSE.html</b> in it.</li>
-<li>Pages open slowly? Right-click the course folder → <b>Google Drive</b> → <b>Offline access</b> → <b>Available offline</b> (on Windows 11 this menu may be behind <b>Show more options</b>).</li>
-<li>Every day, save your hand-in in <code>Work\Assignment\Day-NN-…\</code>; before you shut the PC down, wait until the Google Drive icon says syncing is finished. Feedback from Thalia, the course coordinator, arrives as <code>THALIA-COMMENTS.md</code> in that same day's folder.</li>
+<li>Open the folder link from your email in a browser that shows, at the top right, the Google account the folder was shared with. A different account? Click your picture or initial at the top right of <a href="https://drive.google.com" target="_blank" rel="noopener">drive.google.com</a> and switch.</li>
+<li>A folder with your name opens. Inside it is Work; inside Work is Assignment; inside Assignment are the day folders: Day-00-setup, Day-01-bollard and so on. Every day folder holds HAND-IN-HERE.txt.</li>
+<li>Lost the link? On drive.google.com click <b>Shared with me</b> on the left and find the folder with your name. If you like, add a shortcut: right-click the folder → <b>Organize</b> → <b>Add shortcut</b> → <b>My Drive</b> → <b>Add</b>.</li>
+<li>How to hand in each day: <a href="GETTING-STARTED.html#en-checkin">GETTING-STARTED, section 4</a>. In short: the day report first, then the "Open my hand-in folder" button at the top of the day page, files only, never create a folder.</li>
 </ol>
-<p class="res">✅ <b>It worked if:</b> File Explorer shows Google Drive → My Drive → the course folder, and COURSE.html opens in your browser when you double-click it.</p>
+<p class="res">✅ <b>It worked if:</b> you see the folder with your name, Work → Assignment → the day folders inside it, and HAND-IN-HERE.txt in a day folder.</p>
 <p class="res">🆘 <b>If something goes wrong:</b></p>
 <ul>
-<li>The course folder isn't in Shared with me: check that you signed in with the Google account the access was sent to; if that doesn't help, ask the course coordinator.</li>
-<li>There is no Google Drive drive in File Explorer: check that the app is running (the icon near the clock) and signed in; restart the PC.</li>
-<li>A page opened on drive.google.com or in Google Docs: close it and open the file from File Explorer instead.</li>
-<li>Keep the big Unreal projects (IslandCourse, ElectricDreamsSample) on a fast local drive outside this folder, with at least 250 GB free for everything.</li>
+<li>The folder looks empty or says "You need access": check the account at the top right. Still empty? Reply to Thalia's email and don't create anything.</li>
+<li>The folder isn't in Shared with me: check that the account at the top right is the one the access was sent to; if that doesn't help, ask the course coordinator.</li>
+<li>A course page opened on drive.google.com or in Google Docs: close it and open the course from the personal link in your email.</li>
+<li>Keep the big Unreal projects (IslandCourse, ElectricDreamsSample) on a fast local drive, never on Google Drive, with at least 250 GB free for everything.</li>
 </ul>
-<p class="res">🔒 <b>Safety:</b> sign in to Google only on the page the app opens, or at accounts.google.com; never share a password or a code.</p>
+<p class="res">🔒 <b>Safety:</b> sign in to Google only at drive.google.com or accounts.google.com; never share a password or a code.</p>
 <a class="up" href="#en-toc">↑ Contents</a></div>
 
 <div class="card" id="en-s15"><h2>15. 🧭 If you feel lost</h2>
@@ -989,10 +1075,66 @@ If you're under 18, show this page to a parent or guardian and sign up together 
 <li><b>The Launcher won't sign in:</b> internet, the Windows date and time, VPN off, restart the Launcher and the PC.</li>
 <li><b>A download is stuck:</b> Downloads, pause, resume; restart the Launcher; check the free space.</li>
 <li><b>Unreal won't open:</b> restart the PC, update the graphics driver, then Library, the ▼ arrow on the 5.8 tile, Verify.</li>
-<li><b>Your work isn't syncing:</b> check that the course folder is added to My Drive (section 14), that your files are in Work\Assignment\Day-NN-… and nowhere else, and that the Google Drive icon near the clock shows no error.</li>
+<li><b>Not sure where to hand in:</b> click "Open my hand-in folder" on the "What you hand in today" card at the top of the day page. The right folder is the one with HAND-IN-HERE.txt in it. Never create a folder (GETTING-STARTED, section 4).</li>
+<li><b>A question for Thalia:</b> the "Question for Thalia" line in the day report, or a reply to her email with the day number, what you tried and a screenshot.</li>
+<li><b>Unreal is slow:</b> section 16. <b>A key does something else:</b> section 17.</li>
 <li><b>A site looks different:</b> the button may have moved; look for the same English name on the page.</li>
 </ul>
 <p class="note">📸 <b>Take a screenshot and ask your tutor.</b> Win+Shift+S, a new chat in Gemini or ChatGPT, Ctrl+V, then describe what you clicked, what you see and what should have happened. For example: "I'm installing Unreal Engine 5.8. I clicked Install and the Launcher shows the error in the screenshot. What do I do next?" Never send passwords or codes to the tutor.</p>
+<a class="up" href="#en-toc">↑ Contents</a></div>
+
+<div class="card" id="en-s16"><h2>16. Weak PC (GTX 1650 class, 16 GB of memory)</h2>
+<ul class="meta">
+<li><b>What for:</b> doing the course in Unreal 5.8 on a laptop or PC with a 4 GB graphics card (GTX 1650 class) and 16 GB of memory. You change settings for yourself only: the project, the course pages and their pictures stay the same.</li>
+<li><b>Cost:</b> free.</li>
+<li><b>When:</b> once on Day 0, as soon as IslandCourse opens (5 minutes); again on Day 24 for Electric Dreams.</li>
+</ul>
+<p>Epic recommends 8 GB of graphics memory and 32 GB of RAM for Unreal 5.8 (<a href="https://dev.epicgames.com/documentation/en-us/unreal-engine/hardware-and-software-specifications-for-unreal-engine" target="_blank" rel="noopener">Epic's requirements</a>). Below that, Unreal still works, only more slowly. Write your graphics card and its memory in your Day 0 report, so Thalia can advise you.</p>
+<ol>
+<li><b>Leave the project as it is.</b> Quality Preset stays Maximum (section 5). Don't create the project with the Scalable preset: it switches off anti-aliasing and auto exposure in the project itself, and then Day 19's exposure lesson won't match your screen.</li>
+<li><b>Scalability:</b> Settings → Engine Scalability Settings → <b>Medium</b>. The picture stutters while you build (under 20 frames per second)? Choose <b>Low</b>.</li>
+<li><b>Screen Percentage 50 to 75%:</b> find Screen Percentage in the Viewport Options menu (top left of the viewport). Can't find it? Open the console (the ` key, or the Cmd box at the bottom left of the editor), type <code>r.ScreenPercentage 75</code> (or <code>50</code>) and press Enter. Repeat the console command after every Unreal restart.</li>
+<li><b>Less work in the background:</b> Edit → Editor Preferences, type <code>Use Less CPU</code> in the search box and tick <b>Use Less CPU when in Background</b>.</li>
+<li><b>Realtime:</b> Ctrl+R in the viewport switches live redrawing off and on. Keep it off while you read a lesson, so the laptop stays cool.</li>
+<li><b>Disk and memory:</b> keep Unreal and your projects on the SSD. Close the browser while shaders compile. On such a PC the first opening of IslandCourse can take 45 to 60 minutes.</li>
+</ol>
+<h3>Lumen and Nanite</h3>
+<ul>
+<li><b>Lumen</b> (bounced light) runs at Medium with cheaper settings, and reflections show only what's on screen: puddles and glass reflect the sky only when the sky is in view. At Low, Lumen switches off and shaded sides look flatter. That's fine for building, not for final shots.</li>
+<li><b>Final shots:</b> switch Scalability to High, take the screenshots, then go back to Medium. Write the Scalability setting you used in the day's notes (for example light_recipe.md or budget.md).</li>
+<li><b>Nanite:</b> keep it on. It helps a weak graphics card, and Unreal 5.8 turns it on at import anyway.</li>
+<li><b>Textures:</b> 1K is plenty. While materials compile, wait until "Compiling Shaders" at the bottom right is gone before you judge the look.</li>
+<li><b>A level stutters</b> because of the clouds (VolumetricCloud)? Hide them with the eye icon in the Outliner while you work.</li>
+</ul>
+<h3>Electric Dreams and Weeks 5 to 12</h3>
+<ul>
+<li><b>Day 24:</b> on a 16 GB PC, first raise the page file to 32 GB or more (<a href="#en-s7">section 7</a>, step 1). Open ElectricDreamsSample once at Medium with <code>r.ScreenPercentage 50</code>: Epic advises this for PCs below the sample's minimum (32 GB of memory, an 8 GB graphics card). Never open ElectricDreams_Env or ElectricDreams_PCG.</li>
+<li><b>A graphics card with 4 GB or less:</b> take the light route on Day 34. Don't open Electric Dreams: study its PCG forest graph from the screenshots in the lesson video, and build your forest in your own graph with the free Nanite trees from free-packs-list.md. Write "light route" in migrated.md.</li>
+<li><b>While Unreal runs,</b> close spare browser tabs and Krita, and keep only one Unreal project open.</li>
+<li><b>Your island (World Partition):</b> load only the region you work in. Load the whole island only for the big generates on Day 39 and Day 40, and save first. Memory over 15 GB? Generate in two halves.</li>
+<li><b>A day page with heavy work</b> has a one-line weak-PC note that points here.</li>
+</ul>
+<p class="res">✅ <b>It worked if:</b> at Medium the viewport moves smoothly enough to place and move things, and "Compiling Shaders" is gone.</p>
+<p class="res">🆘 <b>If something goes wrong:</b> still unworkable at Low with Screen Percentage at 50%? Try a stronger PC by streaming (<a href="#en-s13">section 13</a>) and write to Thalia. Don't switch to Unreal 4.27: it lacks what the course teaches (glTF import, the Basic level, Nanite, Lumen, and from Week 6 World Partition, PCG and Level Instances).</p>
+<a class="up" href="#en-toc">↑ Contents</a></div>
+
+<div class="card" id="en-s17"><h2>17. Keyboard and shortcuts</h2>
+<ul class="meta">
+<li><b>What for:</b> when a shortcut from a lesson does nothing, or does something else.</li>
+<li><b>Cost:</b> free.</li>
+<li><b>When:</b> before Day 0 (the list in section 0), then whenever a key doesn't work.</li>
+</ul>
+<ol>
+<li><b>No numpad.</b> In Blender press ` (left of 1, under Esc): the View pie menu opens, with Front, Right, Top, Bottom and View Selected (the same as Numpad .). Use it wherever the course says Numpad 1, 3, 7 or Ctrl+Numpad 7. Instead of Numpad 5, use View → Perspective/Orthographic. Another way is Emulate Numpad in Edit → Preferences → Input. But then the 1, 2 and 3 keys change the view, and you pick vertex, edge and face select with the icons in the viewport header.</li>
+<li><b>Home shows the top view</b> instead of the whole scene: on a laptop with a built-in number pad, the Home key doubles as Numpad 7. Turn NumLock off, or use View → Frame All.</li>
+<li><b>Alt+Z opens the NVIDIA overlay</b> instead of X-ray: click the X-ray button in the viewport header (two overlapping squares, top right), or change the shortcut in the NVIDIA overlay's settings (the cog).</li>
+<li><b>The mouse wheel or middle button is switched off</b> in your mouse's software: switch it back on there. Or drag the coloured axis ball at the top right of Blender's viewport to orbit; the hand icon pans and the magnifier zooms. Emulate 3 Button Mouse (Edit → Preferences → Input) takes over Alt+left-drag, so Alt+click loop select stops working. That makes the axis ball the better fallback.</li>
+<li><b>A Ukrainian keyboard layout.</b> Before you type a name or a number in Blender, Unreal or Krita, switch the keyboard to English (Win+Space). On the Ukrainian layout the ` key may not open Blender's pie menu or Unreal's console. Unreal's console also opens from the Cmd box at the bottom left of the editor. Type decimals with a point: <code>0.45</code>, not 0,45.</li>
+<li><b>Menus in Ukrainian.</b> The course names menus in English. Blender: Edit → Preferences → Interface → Language, then untick Tooltips and Interface under Translate. Krita: Settings → Switch Application Language → English (if the menus are already in Ukrainian, look in the settings menu for the item about the application language), then restart Krita.</li>
+<li><b>A clip or a screenshot doesn't work:</b> <a href="#en-s12">section 12</a>.</li>
+</ol>
+<p class="res">✅ <b>It worked if:</b> with your own keyboard and mouse you can orbit, show the top view and the whole scene, and turn X-ray on.</p>
+<p class="res">🆘 <b>If something goes wrong:</b> a shortcut still does something else? Take a screenshot and ask your tutor: say which key you pressed, what should have happened and what happened.</p>
 <a class="up" href="#en-toc">↑ Contents</a></div>
 
 <p class="sub">Checked against the services' official pages in October 2026. Sites change: if something doesn't match, take a screenshot and ask your tutor.</p>
