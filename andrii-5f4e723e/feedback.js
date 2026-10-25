@@ -1,1 +1,1 @@
-window.FB={"days":{"0":{"s":"reviewed","at":"2026-10-20T23:24Z","score":9,"max":10,"note":{"en":"Day 0 complete and correct: the 1 m cube, the bench block and IslandCourse with Water. Well done!","uk":"День 0 завершено й правильно: куб 1 м, лавка-блок і IslandCourse з Water. Чудово!"}}}};
+window.FB={"days":{"0":{"s":"reviewed","at":"2026-10-25T20:43Z","score":10,"max":10,"note":{"en":"Day 0 is flawless. On to the bollard!","uk":"День 0 бездоганний. Уперед до тумби!"}}}};
