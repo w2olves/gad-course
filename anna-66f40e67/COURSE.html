@@ -280,7 +280,7 @@ function render(){const ae=document.activeElement,fk=ae&&ae.closest&&ae.closest(
  document.getElementById('app').innerHTML=h;
  if(fk){const e=document.querySelector(fk);if(e)e.focus({preventScroll:true})}}
 render();
-const CK='https://script.google.com/macros/s/AKfycbyxLWYT8cF60vCdTzOFup61dNLydlV87wvWu70h7TZR9w_9rz5OH6TNnx44qay-tDJPvQ/exec';function ck(o){try{if(CK.indexOf('https://')!==0)return;const b=JSON.stringify(Object.assign({c:D.learner,l:lang},o));if(navigator.sendBeacon&&navigator.sendBeacon(CK,new Blob([b],{type:'text/plain;charset=utf-8'})))return;fetch(CK,{method:'POST',mode:'no-cors',keepalive:true,body:b})}catch(e){}}ck({p:'map',e:'open'});
+const CK='https://script.google.com/macros/s/AKfycbyxLWYT8cF60vCdTzOFup61dNLydlV87wvWu70h7TZR9w_9rz5OH6TNnx44qay-tDJPvQ/exec';function ck(o){try{if(CK.indexOf('https://')!==0)return;const b=JSON.stringify(Object.assign({c:D.learner.replace(/^ib-(?=[a-z]{2,20}-[0-9a-f]{8}$)/,''),l:lang},o));if(navigator.sendBeacon&&navigator.sendBeacon(CK,new Blob([b],{type:'text/plain;charset=utf-8'})))return;fetch(CK,{method:'POST',mode:'no-cors',keepalive:true,body:b})}catch(e){}}ck({p:'map',e:'open'});
 </script>
 </body>
 </html>
